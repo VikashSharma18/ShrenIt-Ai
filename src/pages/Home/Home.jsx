@@ -5,6 +5,7 @@ import './Home.css';
 const Home = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const canvasRef = useRef(null);
+
   const features = [
     'AI-Powered Learning',
     'Smart Career Guidance',
@@ -14,7 +15,7 @@ const Home = () => {
     'Real-time Analytics'
   ];
 
-  // Dynamic particles initialization
+  // Particle background effect
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
@@ -65,11 +66,10 @@ const Home = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach(particle => {
-        particle.update(); // ✅ Fixed typo here
-        particle.draw();   // ✅ Fixed typo here
+        particle.update();
+        particle.draw();
       });
 
-      // Create connections
       for (let i = 0; i < particles.length; i++) {
         for (let j = i; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -98,7 +98,7 @@ const Home = () => {
     };
   }, []);
 
-  // Feature cycler
+  // Feature cycler logic
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature(prev => (prev + 1) % features.length);
@@ -107,65 +107,64 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="home-container">
-      <canvas ref={canvasRef} className="particle-canvas" />
+    <section className="home-section-wrapper">
+      <canvas ref={canvasRef} className="home-particle-bg" />
 
-      {/* Animated Background Elements */}
-      <div className="geometric-overlay">
-        <div className="floating-cube"></div>
-        <div className="rotating-pyramid"></div>
-        <div className="pulsing-sphere"></div>
+      <div className="home-shapes-overlay">
+        <div className="home-floating-cube"></div>
+        <div className="home-rotating-pyramid"></div>
+        <div className="home-pulsing-sphere"></div>
       </div>
 
-      <div className="content-wrapper">
-        <div className="hero-section">
-          <div className="innovation-badge">
+      <div className="home-content-container">
+        <div className="home-hero-section">
+          <div className="home-badge">
             <span>Innovation in Action</span>
           </div>
 
-          <h1 className="main-heading">
+          <h1 className="home-title">
             Transform Your
-            <span className="gradient-text"> Learning Experience</span>
+            <span className="home-title-gradient"> Learning Experience</span>
             with AI
           </h1>
 
-          <p className="sub-heading">
+          <p className="home-subtitle">
             Harness cutting-edge technology to revolutionize your educational journey
           </p>
 
-          <div className="feature-cycler">
+          <div className="home-feature-cycler">
             {features.map((feature, index) => (
               <div
                 key={feature}
-                className={`feature-item ${index === currentFeature ? 'active' : ''}`}
+                className={`home-feature-item ${index === currentFeature ? 'active' : ''}`}
               >
-                <div className="feature-icon"></div>
+                <div className="home-feature-icon"></div>
                 {feature}
               </div>
             ))}
           </div>
 
-          <div className="cta-container">
-            <button className="primary-cta">
+          <div className="home-cta-buttons">
+            <button className="home-btn-primary">
               Explore AI Tools
-              <span className="hover-effect"></span>
+              <span className="home-btn-hover-effect"></span>
             </button>
-            <button className="secondary-cta">
+            <button className="home-btn-secondary">
               Watch Demo
             </button>
           </div>
         </div>
 
-        <div className="stats-container">
-          <div className="stat-card">
+        <div className="home-stats-section">
+          <div className="home-stat-card">
             <h3>500K+</h3>
             <p>Active Learners</p>
           </div>
-          <div className="stat-card">
+          <div className="home-stat-card">
             <h3>98%</h3>
             <p>Success Rate</p>
           </div>
-          <div className="stat-card">
+          <div className="home-stat-card">
             <h3>50+</h3>
             <p>Industry Experts</p>
           </div>
