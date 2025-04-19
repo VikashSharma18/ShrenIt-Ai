@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMobileOpen(!isMobileOpen);
     document.body.style.overflow = isMobileOpen ? 'auto' : 'hidden';
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -20,11 +29,15 @@ const Header = () => {
   ];
 
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <NavLink to="/" className="logo">
+          <div className="logo-icon">
+            <div className="ai-particle"></div>
+            <div className="ai-particle delay-1"></div>
+            <div className="ai-particle delay-2"></div>
+          </div>
           <span className="logo-text">EduAI Suite</span>
-          <div className="logo-pulse"></div>
         </NavLink>
 
         <nav className={`nav-menu ${isMobileOpen ? 'active' : ''}`}>
