@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
+import { useAuth } from '../../pages/Login/AuthContext';
 
 const Header = () => {
+  const { student } = useAuth();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -13,20 +15,24 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
+  // Dynamic navigation items based on auth state
+  const baseNavItems = [
     { name: 'Home', path: '/' },
     { name: 'Features', path: '/features' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Blogs', path: '/blogs' },
-    { name: 'Login', path: '/login' },
   ];
+
+  const authNavItem = student
+    ? { name: student.name || 'Profile', path: '/profile' }
+    : { name: 'Login', path: '/login' };
+
+  const navItems = [...baseNavItems, authNavItem];
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
