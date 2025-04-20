@@ -9,6 +9,7 @@ import ProtectedRoute from "./components/ProtectedRoute.jsx"
 import Profile from "./pages/Profile/Profile.jsx";
 import AptitudeSprint from "./pages/AllFeatures/AptitudeSprint/AptitudeSprint.jsx";
 import CourseHive from "./pages/AllFeatures/CourseHive/CourseHive.jsx";
+import RoadmapAI from "./pages/AllFeatures/RoadmapAI/RoadmapAI.jsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               {/* Features */}
               <Route path="/aptitudesprint" element={<AptitudeSprint />} />
               <Route path="/coursehive" element={<CourseHive />} />
+              <Route path="/roadmapai" element={<RoadmapAI />} />
             </Route>
           </Route>
         </Routes>

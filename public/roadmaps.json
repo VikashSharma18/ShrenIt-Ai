@@ -1,0 +1,1032 @@
+{
+  "courses": [
+    {
+      "id": "btech_cs",
+      "name": "B.Tech (Computer Science)",
+      "roles": [
+        {
+          "id": "software_engineer",
+          "name": "Software Engineer"
+        },
+        {
+          "id": "data_scientist",
+          "name": "Data Scientist"
+        },
+        {
+          "id": "ai_ml_engineer",
+          "name": "AI/ML Engineer"
+        },
+        {
+          "id": "cybersecurity_analyst",
+          "name": "Cybersecurity Analyst"
+        },
+        {
+          "id": "cloud_architect",
+          "name": "Cloud Architect"
+        },
+        {
+          "id": "devops_engineer",
+          "name": "DevOps Engineer"
+        },
+        {
+          "id": "fullstack_developer",
+          "name": "Full Stack Developer"
+        },
+        {
+          "id": "game_developer",
+          "name": "Game Developer"
+        },
+        {
+          "id": "blockchain_developer",
+          "name": "Blockchain Developer"
+        },
+        {
+          "id": "quantitative_analyst",
+          "name": "Quantitative Analyst"
+        }
+      ]
+    },
+    {
+      "id": "btech_civil",
+      "name": "B.Tech (Civil Engineering)",
+      "roles": [
+        {
+          "id": "structural_engineer",
+          "name": "Structural Engineer"
+        },
+        {
+          "id": "construction_manager",
+          "name": "Construction Manager"
+        },
+        {
+          "id": "transportation_engineer",
+          "name": "Transportation Engineer"
+        },
+        {
+          "id": "environmental_engineer",
+          "name": "Environmental Engineer"
+        },
+        {
+          "id": "geotechnical_engineer",
+          "name": "Geotechnical Engineer"
+        },
+        {
+          "id": "urban_planner",
+          "name": "Urban Planner"
+        },
+        {
+          "id": "water_resource_engineer",
+          "name": "Water Resource Engineer"
+        },
+        {
+          "id": "project_engineer",
+          "name": "Project Engineer"
+        },
+        {
+          "id": "building_surveyor",
+          "name": "Building Surveyor"
+        },
+        {
+          "id": "estimation_engineer",
+          "name": "Estimation Engineer"
+        }
+      ]
+    },
+    {
+      "id": "bca",
+      "name": "BCA",
+      "roles": [
+        {
+          "id": "web_developer",
+          "name": "Web Developer"
+        },
+        {
+          "id": "mobile_app_developer",
+          "name": "Mobile App Developer"
+        },
+        {
+          "id": "database_administrator",
+          "name": "Database Administrator"
+        },
+        {
+          "id": "system_analyst",
+          "name": "System Analyst"
+        },
+        {
+          "id": "software_tester",
+          "name": "Software Tester"
+        },
+        {
+          "id": "network_administrator",
+          "name": "Network Administrator"
+        },
+        {
+          "id": "ui_ux_designer",
+          "name": "UI/UX Designer"
+        },
+        {
+          "id": "it_consultant",
+          "name": "IT Consultant"
+        },
+        {
+          "id": "technical_writer",
+          "name": "Technical Writer"
+        },
+        {
+          "id": "digital_marketing_specialist",
+          "name": "Digital Marketing Specialist"
+        }
+      ]
+    },
+    {
+      "id": "bba",
+      "name": "BBA",
+      "roles": [
+        {
+          "id": "business_analyst",
+          "name": "Business Analyst"
+        },
+        {
+          "id": "marketing_manager",
+          "name": "Marketing Manager"
+        },
+        {
+          "id": "financial_analyst",
+          "name": "Financial Analyst"
+        },
+        {
+          "id": "human_resource_manager",
+          "name": "Human Resource Manager"
+        },
+        {
+          "id": "operations_manager",
+          "name": "Operations Manager"
+        },
+        {
+          "id": "sales_manager",
+          "name": "Sales Manager"
+        },
+        {
+          "id": "supply_chain_manager",
+          "name": "Supply Chain Manager"
+        },
+        {
+          "id": "entrepreneur",
+          "name": "Entrepreneur"
+        },
+        {
+          "id": "retail_manager",
+          "name": "Retail Manager"
+        },
+        {
+          "id": "banking_officer",
+          "name": "Banking Officer"
+        }
+      ]
+    },
+    {
+      "id": "mba",
+      "name": "MBA",
+      "roles": [
+        {
+          "id": "product_manager",
+          "name": "Product Manager"
+        },
+        {
+          "id": "investment_banker",
+          "name": "Investment Banker"
+        },
+        {
+          "id": "management_consultant",
+          "name": "Management Consultant"
+        },
+        {
+          "id": "brand_manager",
+          "name": "Brand Manager"
+        },
+        {
+          "id": "business_development_manager",
+          "name": "Business Development Manager"
+        },
+        {
+          "id": "chief_financial_officer",
+          "name": "Chief Financial Officer"
+        },
+        {
+          "id": "digital_marketing_manager",
+          "name": "Digital Marketing Manager"
+        },
+        {
+          "id": "supply_chain_analyst",
+          "name": "Supply Chain Analyst"
+        },
+        {
+          "id": "corporate_strategy_manager",
+          "name": "Corporate Strategy Manager"
+        },
+        {
+          "id": "venture_capitalist",
+          "name": "Venture Capitalist"
+        }
+      ]
+    },
+    {
+      "id": "mca",
+      "name": "MCA",
+      "roles": [
+        {
+          "id": "software_architect",
+          "name": "Software Architect"
+        },
+        {
+          "id": "data_engineer",
+          "name": "Data Engineer"
+        },
+        {
+          "id": "cloud_solutions_architect",
+          "name": "Cloud Solutions Architect"
+        },
+        {
+          "id": "it_project_manager",
+          "name": "IT Project Manager"
+        },
+        {
+          "id": "machine_learning_engineer",
+          "name": "Machine Learning Engineer"
+        },
+        {
+          "id": "big_data_analyst",
+          "name": "Big Data Analyst"
+        },
+        {
+          "id": "cybersecurity_manager",
+          "name": "Cybersecurity Manager"
+        },
+        {
+          "id": "erp_consultant",
+          "name": "ERP Consultant"
+        },
+        {
+          "id": "research_scientist",
+          "name": "Research Scientist"
+        },
+        {
+          "id": "chief_technology_officer",
+          "name": "Chief Technology Officer"
+        }
+      ]
+    }
+  ],
+  "roadmaps": {
+    "software_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Programming Fundamentals",
+        "content": "Build core programming skills and computer science fundamentals",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Introduction to Programming",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Clean Code by Robert Martin",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "duration": "Months 1-6",
+            "content": "Learn basic programming concepts",
+            "milestones": [
+              "Master Python/Java basics",
+              "Understand data types and variables",
+              "Learn control structures",
+              "Complete 20+ coding exercises"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "duration": "Months 7-12",
+            "content": "Object-oriented programming",
+            "milestones": [
+              "Learn OOP concepts",
+              "Understand data structures",
+              "Build console applications",
+              "Complete 50+ coding problems"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Web Development Basics",
+        "content": "Learn frontend and backend development fundamentals",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Web Development Bootcamp",
+            "link": "#"
+          },
+          {
+            "type": "project",
+            "title": "Build a portfolio website",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "duration": "Months 13-18",
+            "content": "Frontend development",
+            "milestones": [
+              "Learn HTML/CSS/JavaScript",
+              "Build responsive websites",
+              "Understand DOM manipulation",
+              "Complete 3 frontend projects"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "duration": "Months 19-24",
+            "content": "Backend development",
+            "milestones": [
+              "Learn Node.js/Python frameworks",
+              "Understand databases (SQL/NoSQL)",
+              "Build REST APIs",
+              "Complete fullstack project"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Development",
+        "content": "Master software engineering principles and system design",
+        "resources": [
+          {
+            "type": "course",
+            "title": "System Design Masterclass",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Designing Data-Intensive Applications",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "duration": "Months 25-30",
+            "content": "Software architecture",
+            "milestones": [
+              "Learn design patterns",
+              "Understand microservices",
+              "Study cloud computing",
+              "Build scalable application"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "duration": "Months 31-36",
+            "content": "DevOps and deployment",
+            "milestones": [
+              "Learn CI/CD pipelines",
+              "Understand containerization",
+              "Master version control",
+              "Deploy production-grade app"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Career Preparation",
+        "content": "Prepare for job interviews and build professional profile",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Coding Interview Prep",
+            "link": "#"
+          },
+          {
+            "type": "template",
+            "title": "Technical Resume Template",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "duration": "Months 37-42",
+            "content": "Interview preparation",
+            "milestones": [
+              "Practice 100+ coding problems",
+              "Master system design concepts",
+              "Prepare behavioral answers",
+              "Do 10+ mock interviews"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "duration": "Months 43-48",
+            "content": "Job search strategy",
+            "milestones": [
+              "Build strong LinkedIn profile",
+              "Network with professionals",
+              "Apply to 50+ companies",
+              "Negotiate job offers"
+            ]
+          }
+        ]
+      }
+    ],
+    "data_scientist": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Math and Programming",
+        "content": "Build mathematical foundation and programming skills",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Mathematics for Data Science",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Python for Data Analysis",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "duration": "Months 1-6",
+            "content": "Core mathematics",
+            "milestones": [
+              "Master linear algebra",
+              "Understand probability",
+              "Learn statistics basics",
+              "Complete math exercises"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "duration": "Months 7-12",
+            "content": "Programming for DS",
+            "milestones": [
+              "Learn Python basics",
+              "Master NumPy/Pandas",
+              "Understand data structures",
+              "Complete 20+ coding exercises"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Data Analysis",
+        "content": "Learn data manipulation and visualization",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Data Visualization with Python",
+            "link": "#"
+          },
+          {
+            "type": "project",
+            "title": "Exploratory Data Analysis Project",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "duration": "Months 13-18",
+            "content": "Data wrangling",
+            "milestones": [
+              "Master Pandas operations",
+              "Learn data cleaning",
+              "Understand ETL processes",
+              "Complete 3 data projects"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "duration": "Months 19-24",
+            "content": "Data visualization",
+            "milestones": [
+              "Learn Matplotlib/Seaborn",
+              "Master Tableau/PowerBI",
+              "Create dashboards",
+              "Complete visualization project"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Machine Learning",
+        "content": "Learn and implement ML algorithms",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Machine Learning A-Z",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Hands-On ML with Scikit-Learn",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "duration": "Months 25-30",
+            "content": "Supervised learning",
+            "milestones": [
+              "Learn regression models",
+              "Master classification",
+              "Understand evaluation metrics",
+              "Complete Kaggle competition"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "duration": "Months 31-36",
+            "content": "Unsupervised learning",
+            "milestones": [
+              "Learn clustering",
+              "Master dimensionality reduction",
+              "Understand neural networks",
+              "Complete ML project"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Advanced Topics",
+        "content": "Specialize in advanced data science areas",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Deep Learning Specialization",
+            "link": "#"
+          },
+          {
+            "type": "project",
+            "title": "Capstone Project",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "duration": "Months 37-42",
+            "content": "Deep learning",
+            "milestones": [
+              "Learn TensorFlow/PyTorch",
+              "Understand CNNs/RNNs",
+              "Work with NLP",
+              "Complete DL project"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "duration": "Months 43-48",
+            "content": "Deployment and scaling",
+            "milestones": [
+              "Learn ML deployment",
+              "Understand cloud ML services",
+              "Build end-to-end pipeline",
+              "Prepare job portfolio"
+            ]
+          }
+        ]
+      }
+    ],
+    "web_developer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Frontend Fundamentals",
+        "content": "Learn core web development technologies",
+        "resources": [
+          {
+            "type": "course",
+            "title": "HTML/CSS/JavaScript Bootcamp",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Eloquent JavaScript",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "duration": "Months 1-6",
+            "content": "HTML/CSS basics",
+            "milestones": [
+              "Master HTML5 semantics",
+              "Learn CSS styling",
+              "Build responsive layouts",
+              "Create 3 static websites"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "duration": "Months 7-12",
+            "content": "JavaScript programming",
+            "milestones": [
+              "Learn JS fundamentals",
+              "Understand DOM manipulation",
+              "Build interactive websites",
+              "Complete 10+ JS projects"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Frontend Frameworks",
+        "content": "Master modern frontend development",
+        "resources": [
+          {
+            "type": "course",
+            "title": "React/Next.js Masterclass",
+            "link": "#"
+          },
+          {
+            "type": "project",
+            "title": "Build a React Portfolio",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "duration": "Months 13-18",
+            "content": "React development",
+            "milestones": [
+              "Learn React fundamentals",
+              "Understand component architecture",
+              "Master state management",
+              "Build 3 React apps"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "duration": "Months 19-24",
+            "content": "Advanced frontend",
+            "milestones": [
+              "Learn TypeScript",
+              "Understand testing (Jest)",
+              "Master performance optimization",
+              "Complete complex project"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Backend Development",
+        "content": "Learn server-side programming and databases",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Node.js/Express Bootcamp",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Designing Web APIs",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "duration": "Months 25-30",
+            "content": "Backend basics",
+            "milestones": [
+              "Learn Node.js/Express",
+              "Understand REST APIs",
+              "Work with databases",
+              "Build CRUD applications"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "duration": "Months 31-36",
+            "content": "Fullstack development",
+            "milestones": [
+              "Connect frontend to backend",
+              "Implement authentication",
+              "Deploy fullstack app",
+              "Complete capstone project"
+            ]
+          }
+        ]
+      }
+    ],
+    "business_analyst": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Business Fundamentals",
+        "content": "Learn core business concepts and analysis techniques",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Business Analysis Fundamentals",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Business Analysis for Dummies",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "duration": "Months 1-6",
+            "content": "Business concepts",
+            "milestones": [
+              "Learn business structures",
+              "Understand financial statements",
+              "Study market analysis",
+              "Complete case studies"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "duration": "Months 7-12",
+            "content": "Analytical skills",
+            "milestones": [
+              "Master Excel for analysis",
+              "Learn data visualization",
+              "Understand KPIs/metrics",
+              "Complete business reports"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Technical Skills",
+        "content": "Develop technical skills for business analysis",
+        "resources": [
+          {
+            "type": "course",
+            "title": "SQL for Business Analysts",
+            "link": "#"
+          },
+          {
+            "type": "project",
+            "title": "Business Intelligence Project",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "duration": "Months 13-18",
+            "content": "Data analysis",
+            "milestones": [
+              "Learn SQL queries",
+              "Master PowerBI/Tableau",
+              "Understand data modeling",
+              "Complete analysis projects"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "duration": "Months 19-24",
+            "content": "Process modeling",
+            "milestones": [
+              "Learn BPMN notation",
+              "Master requirements gathering",
+              "Understand agile methodologies",
+              "Document business processes"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Analysis",
+        "content": "Master advanced business analysis techniques",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Advanced Business Analysis",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Business Analysis Body of Knowledge",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "duration": "Months 25-30",
+            "content": "Strategic analysis",
+            "milestones": [
+              "Learn SWOT/PESTLE",
+              "Master cost-benefit analysis",
+              "Understand risk assessment",
+              "Complete strategic reports"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "duration": "Months 31-36",
+            "content": "Career preparation",
+            "milestones": [
+              "Build professional portfolio",
+              "Prepare case interviews",
+              "Network with professionals",
+              "Apply for internships/jobs"
+            ]
+          }
+        ]
+      }
+    ],
+    "product_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Product Fundamentals",
+        "content": "Learn core product management concepts",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Product Management 101",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Inspired: How to Create Products",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "duration": "Months 1-6",
+            "content": "Product thinking",
+            "milestones": [
+              "Understand product lifecycle",
+              "Learn market research",
+              "Study user personas",
+              "Analyze competitor products"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "duration": "Months 7-12",
+            "content": "Product strategy",
+            "milestones": [
+              "Learn roadmap planning",
+              "Understand OKRs/KPIs",
+              "Master prioritization",
+              "Create product vision"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Execution Skills",
+        "content": "Develop skills to bring products to market",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Agile Product Management",
+            "link": "#"
+          },
+          {
+            "type": "project",
+            "title": "Product Launch Simulation",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "duration": "Months 13-18",
+            "content": "Agile development",
+            "milestones": [
+              "Learn Scrum/Kanban",
+              "Master backlog grooming",
+              "Understand sprint planning",
+              "Run product ceremonies"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "duration": "Months 19-24",
+            "content": "Go-to-market",
+            "milestones": [
+              "Learn pricing strategies",
+              "Understand distribution",
+              "Master launch planning",
+              "Create GTM strategy"
+            ]
+          }
+        ]
+      }
+    ],
+    "software_architect": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Advanced Programming",
+        "content": "Master advanced programming concepts",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Design Patterns Masterclass",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Clean Architecture",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "duration": "Months 1-6",
+            "content": "Software design",
+            "milestones": [
+              "Master design patterns",
+              "Learn SOLID principles",
+              "Understand architectural styles",
+              "Refactor legacy code"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "duration": "Months 7-12",
+            "content": "System architecture",
+            "milestones": [
+              "Learn microservices",
+              "Understand event-driven architecture",
+              "Master domain-driven design",
+              "Design complex system"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Cloud and Scalability",
+        "content": "Learn to design scalable cloud systems",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Cloud Architecture",
+            "link": "#"
+          },
+          {
+            "type": "project",
+            "title": "Design Cloud-Native App",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "duration": "Months 13-18",
+            "content": "Cloud fundamentals",
+            "milestones": [
+              "Learn AWS/Azure/GCP",
+              "Understand serverless",
+              "Master containerization",
+              "Design cloud solution"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "duration": "Months 19-24",
+            "content": "Scalability",
+            "milestones": [
+              "Learn load balancing",
+              "Understand caching strategies",
+              "Master database scaling",
+              "Design high-traffic system"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -93,6 +93,13 @@ const Features = () => {
       icon: '🧪',
       color: '#2563eb',
       path: '/mockup-labs'
+    },
+    {
+      title: 'Roadmap AI',
+      description: 'AI-powered personalized learning roadmaps with progress tracking and goal setting',
+      icon: '🗺️',
+      color: '#10b981',
+      path: '/roadmapai'
     }
   ];
 
