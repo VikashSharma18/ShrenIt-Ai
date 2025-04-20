@@ -6,6 +6,7 @@ import Features from "./pages/Features/Features";
 import Login from "./pages/Login/Login";
 import { AuthProvider } from "./pages/Login/AuthContext.jsx"
 import ProtectedRoute from "./components/ProtectedRoute.jsx"
+import Profile from "./pages/Profile/Profile.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
               <Route path="/features" element={<Features />} />
+              <Route path="/profile" element={<Profile />} />
             </Route>
           </Route>
         </Routes>

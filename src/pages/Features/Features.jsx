@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { useAuth } from '../../pages/Login/AuthContext';
 import './Features.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const FeatureCard = ({ title, description, icon, color, index }) => {
   const [ref, inView] = useInView({
@@ -9,8 +12,22 @@ const FeatureCard = ({ title, description, icon, color, index }) => {
     threshold: 0.1,
   });
 
+  const { student } = useAuth();
+  console.log(student)
+  const navigate = useNavigate();
+
+  const handleExplore = () => {
+    if (!student) {
+      navigate('/login');
+    } else {
+      // Add your feature exploration logic here
+      console.log(`Exploring ${title}`);
+      // navigate(`/features/${title.toLowerCase()}`); // Example of feature page navigation
+    }
+  };
+
   return (
-    <motion.div 
+    <motion.div
       ref={ref}
       className="feature-card"
       initial={{ opacity: 0, y: 50 }}
@@ -20,7 +37,7 @@ const FeatureCard = ({ title, description, icon, color, index }) => {
       <div className="card-hover-layer" style={{ '--accent-color': color }}></div>
       <div className="card-glow"></div>
       <div className="feature-icon-wrapper">
-        <div 
+        <div
           className="feature-icon"
           style={{ background: `linear-gradient(135deg, ${color} 0%, ${color}80 100%)` }}
         >
@@ -29,7 +46,7 @@ const FeatureCard = ({ title, description, icon, color, index }) => {
       </div>
       <h3 className="feature-title">{title}</h3>
       <p className="feature-description">{description}</p>
-      <button className="feature-cta">
+      <button className="feature-cta" onClick={handleExplore}>
         <span>Explore {title}</span>
         <div className="cta-background" style={{ background: color }}></div>
       </button>
@@ -96,7 +113,7 @@ const Features = () => {
     <section className="features-container">
       <div className="parallax-background">
         {[...Array(20)].map((_, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             className="floating-shape"
             style={{
@@ -115,7 +132,7 @@ const Features = () => {
       </div>
 
       <div className="features-content">
-        <motion.h2 
+        <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
