@@ -1,0 +1,2557 @@
+{
+  "categories": [
+    {
+      "name": "Gen AI",
+      "icon": "🧠",
+      "description": "Generative AI, LLMs, and content creation technologies"
+    },
+    {
+      "name": "AI and Machine Learning",
+      "icon": "🤖",
+      "description": "Machine learning algorithms, neural networks, and AI applications"
+    },
+    {
+      "name": "Software Development",
+      "icon": "💻",
+      "description": "Programming, frameworks, and software engineering practices"
+    },
+    {
+      "name": "Cloud Computing & DevOps",
+      "icon": "☁️",
+      "description": "Cloud platforms, CI/CD pipelines, and infrastructure as code"
+    },
+    {
+      "name": "Cyber Security",
+      "icon": "🔐",
+      "description": "Ethical hacking, threat detection, and security protocols"
+    },
+    {
+      "name": "Data Science & Business Analytics",
+      "icon": "📊",
+      "description": "Data analysis, visualization, and business intelligence tools"
+    },
+    {
+      "name": "Digital Marketing",
+      "icon": "📢",
+      "description": "SEO, social media marketing, and digital advertising strategies"
+    },
+    {
+      "name": "IT Service and Architecture",
+      "icon": "🏗️",
+      "description": "IT infrastructure, system design, and enterprise architecture"
+    },
+    {
+      "name": "Product & Design",
+      "icon": "🎨",
+      "description": "UX/UI design, product management, and prototyping"
+    },
+    {
+      "name": "Project Management",
+      "icon": "📅",
+      "description": "Agile methodologies, scrum, and project planning"
+    },
+    {
+      "name": "Quality Management",
+      "icon": "🏆",
+      "description": "Quality assurance, testing frameworks, and process improvement"
+    },
+    {
+      "name": "Business and Leadership",
+      "icon": "👔",
+      "description": "Management strategies, leadership skills, and organizational behavior"
+    }
+  ],
+  "courses": [
+    
+    {
+      "id": 2,
+      "title": "Generative AI for Beginners",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "gen-ai-beginners.jpg",
+      "intro": "Explore the fascinating world of Generative AI in this beginner-friendly course. Learn how AI creates text, images, and more using cutting-edge models like GPT and DALL-E.",
+      "syllabus": [
+        "▸ Introduction to Generative AI",
+        "▸ Fundamentals of AI Models",
+        "▸ Text Generation with NLP",
+        "▸ Image Generation techniques",
+        "▸ Prompt Engineering",
+        "▸ AI Tools and Platforms"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/generative-ai-for-beginners-free-course-skillup"
+    },
+    {
+      "id": 3,
+      "title": "AI Agents for Beginners",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "ai-agents.jpg",
+      "intro": "Dive into the world of AI agents with this comprehensive course. Learn how AI agents perceive environments, make decisions, and execute actions autonomously.",
+      "syllabus": [
+        "▸ Introduction to AI Agents",
+        "▸ Types of AI Agents",
+        "▸ Understanding Agent Environments",
+        "▸ Decision-Making in AI Agents",
+        "▸ Machine Learning & AI Agents",
+        "▸ Building Simple AI Agents",
+        "▸ Real-World Applications",
+        "▸ Challenges & Future"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/ai-agents-for-beginners-course-skillup"
+    },
+    {
+      "id": 4,
+      "title": "RAG Course for Beginners",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "rag-course.jpg",
+      "intro": "Learn Retrieval-Augmented Generation (RAG), a cutting-edge technique combining information retrieval with generative AI to create accurate, context-aware outputs.",
+      "syllabus": [
+        "▸ Introduction to RAG",
+        "▸ Components of RAG",
+        "▸ RAG Architecture",
+        "▸ Transformer Architecture",
+        "▸ Attention Mechanism",
+        "▸ Transformer Models in NLP"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/rag-course-for-beginners-skillup"
+    },
+    {
+      "id": 5,
+      "title": "Hugging Face Projects",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "hugging-face.jpg",
+      "intro": "Master natural language processing with Hugging Face's transformers library. Build AI projects including text generation, sentiment analysis, and question answering.",
+      "syllabus": [
+        "▸ Introduction to Hugging Face",
+        "▸ Pre-Trained Models",
+        "▸ Fine-Tuning Models",
+        "▸ Dataset Preparation",
+        "▸ Text Generation",
+        "▸ Sentiment Analysis",
+        "▸ Model Deployment"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-hugging-face-nlp-projects-course-skillup"
+    },
+    {
+      "id": 6,
+      "title": "DeepSeek for Beginners",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "deepseek.jpg",
+      "intro": "Master advanced search and retrieval technologies including vector search, semantic search, and neural retrieval models with tools like FAISS and Elasticsearch.",
+      "syllabus": [
+        "▸ Introduction to Search Systems",
+        "▸ Vector Search Basics",
+        "▸ Semantic Search",
+        "▸ Neural Retrieval Models",
+        "▸ Embedding Generation",
+        "▸ Working with Frameworks",
+        "▸ Fine-Tuning Models",
+        "▸ Deployment of Search Systems"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-deepseek-course-skillup"
+    },
+    {
+      "id": 7,
+      "title": "Sora AI for Beginners",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "sora-ai.jpg",
+      "intro": "Learn how Sora AI transforms text prompts into realistic videos, revolutionizing content creation for marketing, filmmaking, and digital media.",
+      "syllabus": [
+        "▸ Introduction to Sora AI",
+        "▸ How Sora AI Works",
+        "▸ Prompt Engineering for Sora",
+        "▸ Hands-On Video Generation",
+        "▸ Applications of Sora AI",
+        "▸ AI Ethics & Responsible Use",
+        "▸ Optimizing Sora AI Videos"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/sora-ai-course-skillup"
+    },
+    {
+      "id": 8,
+      "title": "LangChain Course for Beginners",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "langchain.jpg",
+      "intro": "Master the LangChain framework for developing advanced AI applications with memory management, prompt engineering, and LLM integration.",
+      "syllabus": [
+        "▸ LangChain Basics",
+        "▸ LangChain Architecture",
+        "▸ Memory Types in LangChain",
+        "▸ Conversational Memory",
+        "▸ Dynamic Conversations",
+        "▸ Contextual Understanding",
+        "▸ Integration with LLMs"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/langchain-course-for-beginners-skillup"
+    },
+    {
+      "id": 9,
+      "title": "Mistral AI for Beginners",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "mistral-ai.jpg",
+      "intro": "Introduction to artificial intelligence using Mistral AI, covering model building, data processing, and application development.",
+      "syllabus": [
+        "▸ Introduction to Mistral AI",
+        "▸ AI Basics and Concepts",
+        "▸ Building AI Models",
+        "▸ Data Processing and Analysis",
+        "▸ AI Application Development",
+        "▸ Hands-on Projects",
+        "▸ Deployment and Integration",
+        "▸ Ethics and AI Best Practices"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-mistral-ai-course-skillup"
+    },
+    {
+      "id": 10,
+      "title": "Prompt Engineering Applications",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "prompt-engineering.jpg",
+      "intro": "Master crafting precise prompts to optimize AI responses for chatbots, content generation, automation, coding, and data analysis.",
+      "syllabus": [
+        "▸ Introduction to Prompt Engineering",
+        "▸ Understanding AI Models & NLP",
+        "▸ Types of Prompts",
+        "▸ Crafting Effective Prompts",
+        "▸ Prompt Engineering for Chatbots",
+        "▸ AI-Powered Content Generation",
+        "▸ Advanced Techniques",
+        "▸ Ethical Considerations"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/prompt-engineering-applications-course-skillup"
+    },
+    {
+      "id": 11,
+      "title": "Introduction to Prompt Engineering Fundamentals",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "prompt-fundamentals.jpg",
+      "intro": "Fundamentals of AI, NLP, and Prompt Engineering with real-world case studies and research-based courses.",
+      "syllabus": [
+        "▸ AI and NLP Basics",
+        "▸ NLP Fundamentals",
+        "▸ Introduction to Prompt Engineering",
+        "▸ Types of Prompts",
+        "▸ Crafting Effective Prompts",
+        "▸ Analyzing and Optimizing Prompts",
+        "▸ Fine-Tuning AI Models",
+        "▸ Real-World Case Studies"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/prompt-engineering-free-course-skillup"
+    },
+    {
+      "id": 12,
+      "title": "Introduction to Generative AI",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "intro-genai.jpg",
+      "intro": "Explore how machines autonomously generate new content. Learn fundamental principles and applications of Generative AI across industries.",
+      "syllabus": [
+        "▸ Generative AI Fundamentals",
+        "▸ Generative Models Overview",
+        "▸ Types of Data Generation",
+        "▸ Real-world Applications",
+        "▸ Ethical Considerations",
+        "▸ Training and Optimization",
+        "▸ Case Studies",
+        "▸ Future Trends"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-generative-ai-course-skillup"
+    },
+    {
+      "id": 13,
+      "title": "Introduction to Large Language Models",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "llm-course.jpg",
+      "intro": "Comprehensive exploration of advanced language models and their pivotal role in modern AI applications.",
+      "syllabus": [
+        "▸ Introduction to LLMs",
+        "▸ Fundamentals of LLMs",
+        "▸ Applications across industries",
+        "▸ Ethical Considerations",
+        "▸ Advanced Techniques",
+        "▸ Hands-on Projects",
+        "▸ Future Directions"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-large-language-models-course-skillup"
+    },
+    {
+      "id": 14,
+      "title": "ChatGPT Advanced Course",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "chatgpt-advanced.jpg",
+      "intro": "Explore how ChatGPT can be used across different business scenarios including idea generation, automation, content creation, and marketing.",
+      "syllabus": [
+        "▸ ChatGPT for business",
+        "▸ Generate business ideas",
+        "▸ Automate business processes",
+        "▸ ChatGPT for blogging",
+        "▸ ChatGPT for Affiliate Marketing",
+        "▸ Advanced applications",
+        "▸ Optimization techniques"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-chatgpt-advanced-course-skillup"
+    },
+    {
+      "id": 15,
+      "title": "ChatGPT for Python",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "chatgpt-python.jpg",
+      "intro": "Explore Python fundamentals with a focus on ChatGPT applications including text generation, chatbots, and content summarization.",
+      "syllabus": [
+        "▸ Python Fundamentals with ChatGPT",
+        "▸ Setting Up Learning Environment",
+        "▸ Building Projects with ChatGPT",
+        "▸ Text Generation",
+        "▸ Chatbot Development",
+        "▸ Content Summarization",
+        "▸ Practical Applications"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-chatgpt-for-python-course-skillup"
+    },
+    {
+      "id": 16,
+      "title": "ChatGPT for Data Analytics",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "chatgpt-analytics.jpg",
+      "intro": "Learn essential data analysis techniques and visualization methods to interpret and present data effectively using ChatGPT.",
+      "syllabus": [
+        "▸ ChatGPT Overview",
+        "▸ Data Analysis Techniques",
+        "▸ Data Cleaning",
+        "▸ Exploring Datasets",
+        "▸ Extracting Insights",
+        "▸ Data Visualization",
+        "▸ Creating Charts and Dashboards"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-chatgpt-for-data-analytics-course-skillup"
+    },
+    {
+      "id": 17,
+      "title": "ChatGPT for YouTube Video Creation",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "chatgpt-youtube.jpg",
+      "intro": "Learn to create YouTube video scripts using ChatGPT and edit videos with VEED platform for professional content creation.",
+      "syllabus": [
+        "▸ Creating Video Scripts",
+        "▸ Generating Ideas",
+        "▸ Organizing Content",
+        "▸ SEO Optimization",
+        "▸ Introduction to VEED",
+        "▸ Video Editing Basics",
+        "▸ Adding Captions and Effects"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-chatgpt-for-youtube-course-skillup"
+    },
+    {
+      "id": 18,
+      "title": "Introduction to LeetCode with ChatGPT",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "chatgpt-leetcode.jpg",
+      "intro": "Explore ChatGPT's application in solving LeetCode problems including algorithms, data structures, and complex coding challenges.",
+      "syllabus": [
+        "▸ LeetCode problems overview",
+        "▸ ZigZag Conversion",
+        "▸ Substring with Concatenation",
+        "▸ N-Queens Problem",
+        "▸ Shortest Subarray with Sum",
+        "▸ Split Array With Same Average",
+        "▸ Partition an Array",
+        "▸ Longest Common Subpath"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-chatgpt-for-coding-course-skillup"
+    },
+    {
+      "id": 19,
+      "title": "Introduction to Web Development with ChatGPT",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "chatgpt-webdev.jpg",
+      "intro": "Learn to build websites using ChatGPT with Tailwind CSS, creating information sections and dynamic content generation.",
+      "syllabus": [
+        "▸ What is ChatGPT?",
+        "▸ Building Websites Using ChatGPT",
+        "▸ Tailwind installation",
+        "▸ Creating Information Sections",
+        "▸ Content Generation",
+        "▸ Basic Web Design Principles"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-chatgpt-website-creation-course-skillup"
+    },
+    {
+      "id": 20,
+      "title": "Build Website with AI",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "ai-website.jpg",
+      "intro": "Create stunning websites using AI-powered tools, no-code builders, and smart automation for design, content, and SEO.",
+      "syllabus": [
+        "▸ AI-Powered Web Development",
+        "▸ Choosing AI Website Builder",
+        "▸ AI-Assisted Design & Layout",
+        "▸ AI-Powered Content Generation",
+        "▸ Automating Web Development",
+        "▸ Optimizing Website Performance",
+        "▸ AI-Driven E-Commerce",
+        "▸ AI for Website Security"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/build-website-with-ai-course-skillup"
+    },
+    {
+      "id": 21,
+      "title": "Introduction to Google Gemini",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "gemini-intro.jpg",
+      "intro": "Explore Gemini's capabilities for web development and content creation, learning to harness its AI features for coding and creative workflows.",
+      "syllabus": [
+        "▸ What is Gemini?",
+        "▸ Web Development with Gemini",
+        "▸ Gemini for Coding",
+        "▸ Gemini for Content Creation",
+        "▸ Practical Applications",
+        "▸ Integration Techniques"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-gemini-ai-course-skillup"
+    },
+    {
+      "id": 22,
+      "title": "Gemini for Google Workspace",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "gemini-workspace.jpg",
+      "intro": "Learn to use Gemini, Google's AI-powered assistant to enhance productivity within Google Workspace tools like Gmail, Docs, and Sheets.",
+      "syllabus": [
+        "▸ Introduction to Gemini",
+        "▸ Integrating Gemini with Workspace",
+        "▸ AI-Powered Suggestions",
+        "▸ Automating Tasks",
+        "▸ Gemini in Gmail",
+        "▸ Gemini in Google Docs",
+        "▸ Gemini in Google Sheets",
+        "▸ Gemini in Google Slides"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-gemini-for-google-workspace-course-skillup"
+    },
+    {
+      "id": 23,
+      "title": "Gemini in Google Docs",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "gemini-docs.jpg",
+      "intro": "Master text generation, editing and proofreading in Google Docs using Gemini's AI capabilities for enhanced productivity.",
+      "syllabus": [
+        "▸ Introduction to Gemini",
+        "▸ Generating Content",
+        "▸ Customizing Prompts",
+        "▸ Edit and Refine Text",
+        "▸ Proofreading and Grammar",
+        "▸ Style Improvements",
+        "▸ Practical Applications"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-gemini-in-google-docs-course-skillup"
+    },
+    {
+      "id": 24,
+      "title": "Gemini in Google Sheets",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "gemini-sheets.jpg",
+      "intro": "Learn to create customized planners, trackers, and schedules powered by Gemini's AI in Google Sheets for personal and professional use.",
+      "syllabus": [
+        "▸ Generate Templates",
+        "▸ Customizing Spreadsheet Output",
+        "▸ Inserting Data Sources",
+        "▸ Applying Custom Formatting",
+        "▸ Troubleshooting Prompts",
+        "▸ Practical Applications",
+        "▸ Business Analytics Uses"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-gemini-in-google-sheets-course-skillup"
+    },
+    {
+      "id": 25,
+      "title": "Gemini in Google Slides",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "gemini-slides.jpg",
+      "intro": "Incorporate Gemini into presentations, learning to create and format images directly within Google Slides for professional results.",
+      "syllabus": [
+        "▸ Gemini integration",
+        "▸ Image generation via Gemini",
+        "▸ Styling images",
+        "▸ Incorporating AI visuals",
+        "▸ Presentation enhancement",
+        "▸ Practical tips and guidelines"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-gemini-in-google-slides-course-skillup"
+    },
+    {
+      "id": 26,
+      "title": "Gemini in Google Meet",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "gemini-meet.jpg",
+      "intro": "Enhance virtual collaboration with Gemini's integration in Google Meet for automated meeting assistance and real-time insights.",
+      "syllabus": [
+        "▸ Gemini Integration",
+        "▸ Automated Meeting Assistance",
+        "▸ Streamlining Management",
+        "▸ Custom Meeting Backgrounds",
+        "▸ Video/Audio Enhancement",
+        "▸ Real-time Insights",
+        "▸ Decision-Making Automation"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-gemini-in-google-meet-course-skillup"
+    },
+    {
+      "id": 27,
+      "title": "Gemini in Gmail",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "gemini-gmail.jpg",
+      "intro": "Use Gemini to save time, improve communication, and boost productivity in Gmail with smart suggestions and automated workflows.",
+      "syllabus": [
+        "▸ Introduction to Gemini",
+        "▸ Email Automation",
+        "▸ Smart Suggestions",
+        "▸ Workflow Optimization",
+        "▸ Personalized Responses",
+        "▸ Integration Tips",
+        "▸ Advanced Features"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-gemini-in-gmail-course-skillup"
+    },
+    {
+      "id": 28,
+      "title": "Introduction to Prompt Engineering with GitHub Copilot",
+      "category": "Gen AI",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "copilot-prompt.jpg",
+      "intro": "Master GitHub Copilot's capabilities through prompt engineering to optimize AI-powered code suggestions and streamline development workflows.",
+      "syllabus": [
+        "▸ Introduction to GitHub Copilot",
+        "▸ Basics of Prompt Engineering",
+        "▸ Designing Effective Prompts",
+        "▸ Optimizing Code Generation",
+        "▸ Language-Specific Prompting",
+        "▸ Integrating into Workflows",
+        "▸ Ethical and Best Practices"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-copilot-prompt-engineering-course-skillup"
+    },
+    {
+      "id": 29,
+      "title": "Create Engaging Video with Google Vids",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "google-vids.jpg",
+      "intro": "Master video creation with Google Vids tool for crafting high-quality content with animations, transitions, text overlays, and music.",
+      "syllabus": [
+        "▸ Introduction to Google Vids",
+        "▸ Setting Up Projects",
+        "▸ Video Editing Essentials",
+        "▸ Adding Animations",
+        "▸ Incorporating Text and Overlays",
+        "▸ Audio Integration",
+        "▸ Working with Media Assets",
+        "▸ Color Correction",
+        "▸ Exporting and Sharing"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/create-engaging-video-with-google-vids-free-course-skillup"
+    },
+    {
+      "id": 30,
+      "title": "Introduction to Responsible AI",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "responsible-ai.jpg",
+      "intro": "Understand Google's 7 AI principles for ethical AI development, covering privacy, transparency, and reducing harmful bias in AI systems.",
+      "syllabus": [
+        "▸ What is Responsible AI",
+        "▸ Stages of AI Development",
+        "▸ Aligning AI with Values",
+        "▸ Privacy and Transparency",
+        "▸ Reducing Bias",
+        "▸ Ethical Considerations",
+        "▸ Case Studies"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-responsible-ai-course-skillup"
+    },
+    {
+      "id": 31,
+      "title": "Introduction to Image Generation",
+      "category": "Gen AI",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "image-generation.jpg",
+      "intro": "Explore AI-powered image generation technologies including GANs and VAEs with hands-on projects and real-world applications.",
+      "syllabus": [
+        "▸ AI and Image Generation",
+        "▸ Generative Adversarial Networks",
+        "▸ Variational Autoencoders",
+        "▸ Neural Networks",
+        "▸ Algorithms and Approaches",
+        "▸ Practical Applications",
+        "▸ Future Technologies"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-image-generation-course-skillup"
+    },
+    {
+      "id": 32,
+      "title": "Python for Beginners",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "python-beginners.jpg",
+      "intro": "Start your journey as a software developer with Python, a versatile language used in algorithms, statistical computing, and web development. Learn fundamentals and practical applications across industries.",
+      "syllabus": [
+        "▸ Python Installation",
+        "▸ Jupyter Notebook",
+        "▸ Python Variables and Numbers",
+        "▸ Python Tuples and Strings",
+        "▸ Python Dictionaries and Sets",
+        "▸ Control Structures",
+        "▸ Functions in Python",
+        "▸ Objects and Classes",
+        "▸ Top Python Libraries",
+        "▸ Web Scraping using Python"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-python-basics-free-course-skillup"
+    },
+    {
+      "id": 33,
+      "title": "Blockchain Developer",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "blockchain-dev.jpg",
+      "intro": "Master decentralized app development using Ethereum and Hyperledger Fabric. Learn smart contracts, distributed ledgers, and blockchain implementation for this high-demand field.",
+      "syllabus": [
+        "▸ Overview of Blockchain",
+        "▸ Bitcoin Blockchain",
+        "▸ Ethereum Platform",
+        "▸ Deploying Smart Contracts",
+        "▸ Hyperledger Framework",
+        "▸ Multichain Implementation",
+        "▸ Blockchain Industry Prospects"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-blockchain-basics-skillup"
+    },
+    {
+      "id": 34,
+      "title": "Introduction to IoT",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "iot-course.jpg",
+      "intro": "Explore the Internet of Things ecosystem, including device communication, security considerations, and enterprise applications of connected devices.",
+      "syllabus": [
+        "▸ IoT Fundamentals",
+        "▸ Origin and Impact of IoT",
+        "▸ Building Blocks of IoT",
+        "▸ Design Considerations",
+        "▸ Security in IoT Systems",
+        "▸ Enterprise IoT Solutions"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-iot-basics-skillup"
+    },
+    {
+      "id": 35,
+      "title": "JavaScript for Beginners",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "js-beginners.jpg",
+      "intro": "Master JavaScript fundamentals including DOM manipulation, form validation, and asynchronous programming to build dynamic websites and web apps.",
+      "syllabus": [
+        "▸ JavaScript Syntax Fundamentals",
+        "▸ Working with Functions",
+        "▸ Arrays and Objects",
+        "▸ DOM Manipulation",
+        "▸ Form Validation",
+        "▸ Asynchronous Programming",
+        "▸ Regular Expressions"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-javascript-basics-free-course-skillup"
+    },
+    {
+      "id": 36,
+      "title": "ReactJS for Beginners",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "reactjs-beginners.jpg",
+      "intro": "Learn to build dynamic user interfaces with ReactJS, including components, props, state management, and integration with NodeJS.",
+      "syllabus": [
+        "▸ ReactJS Installation",
+        "▸ React Components",
+        "▸ Nesting Components",
+        "▸ React Props and State",
+        "▸ React with Redux",
+        "▸ React Native vs Flutter",
+        "▸ ReactJS Project Tutorial"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-react-js-basics-free-course-skillup"
+    },
+    {
+      "id": 37,
+      "title": "R Programming for Beginners",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "r-programming.jpg",
+      "intro": "Master data manipulation, visualization, and time series analysis using R, the powerful statistical programming language.",
+      "syllabus": [
+        "▸ R Programming Basics",
+        "▸ Variables and Data Types",
+        "▸ Vectors and Matrices",
+        "▸ Data Frames",
+        "▸ Data Manipulation (dplyr/tidyr)",
+        "▸ Data Visualization",
+        "▸ Time Series Analysis"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/r-programming-free-course-skillup"
+    },
+    {
+      "id": 38,
+      "title": "Angular Basics",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "angular-basics.jpg",
+      "intro": "Build responsive enterprise applications with Angular framework, learning components, dependency injection, forms, and routing.",
+      "syllabus": [
+        "▸ Angular Components",
+        "▸ Dependency Injection",
+        "▸ Angular Forms",
+        "▸ Angular Services",
+        "▸ Angular Bootstrap",
+        "▸ Angular Routing",
+        "▸ React vs Angular vs Vue"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-angular-basics-free-course-skillup"
+    },
+    {
+      "id": 39,
+      "title": "Introduction to C++",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "cpp-intro.jpg",
+      "intro": "Master foundational C++ concepts including object-oriented programming, memory management, and STL for building high-performance applications.",
+      "syllabus": [
+        "▸ C++ Installation",
+        "▸ Data Types and Variables",
+        "▸ Control Structures",
+        "▸ Functions",
+        "▸ Pointers",
+        "▸ Classes and OOP",
+        "▸ C++ STL",
+        "▸ GUI Development"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-course-to-learn-cpp-basics-skillup"
+    },
+    {
+      "id": 40,
+      "title": "Java Programming for Beginners",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "java-beginners.jpg",
+      "intro": "Learn Java fundamentals including OOP concepts, exception handling, collections framework, and web development basics.",
+      "syllabus": [
+        "▸ Java Basics",
+        "▸ Control Structures",
+        "▸ Object-Oriented Programming",
+        "▸ Exception Handling",
+        "▸ Input/Output",
+        "▸ Java Collections",
+        "▸ Web Development Basics"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-java-beginners-course-skillup"
+    },
+    {
+      "id": 41,
+      "title": "Android App Development For Beginners",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "android-dev.jpg",
+      "intro": "Build your first Android applications from scratch, learning essential tools and architecture while creating a functional calculator app.",
+      "syllabus": [
+        "▸ Android App Evolution",
+        "▸ Development Environment Setup",
+        "▸ App Architecture",
+        "▸ UI Design",
+        "▸ Event Handling",
+        "▸ Calculator App Project"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-app-development-course-skillup"
+    },
+    {
+      "id": 42,
+      "title": "Python Django 101",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "django-course.jpg",
+      "intro": "Build web applications with Django framework, covering database integration, user authentication, and deployment strategies.",
+      "syllabus": [
+        "▸ Django Overview",
+        "▸ Building Simple Applications",
+        "▸ Database Integration",
+        "▸ Dynamic Web Pages",
+        "▸ User Authentication",
+        "▸ Form Management",
+        "▸ Deployment Strategies"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-python-django-course-skillup"
+    },
+    {
+      "id": 43,
+      "title": "Getting Started with NodeJS",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "nodejs-course.jpg",
+      "intro": "Learn to build server-side applications using Node.js, covering NPM, Express framework, authentication, and database integration.",
+      "syllabus": [
+        "▸ Node.js Architecture",
+        "▸ Node Package Manager",
+        "▸ Express Framework",
+        "▸ Authentication",
+        "▸ MySQL and MongoDB",
+        "▸ Building REST APIs"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-nodejs-basics-free-course-skillup"
+    },
+    {
+      "id": 44,
+      "title": "Full-Stack Development 101",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "fullstack-dev.jpg",
+      "intro": "Master both front-end and back-end development skills including HTML, CSS, JavaScript, server-side scripting, and database management.",
+      "syllabus": [
+        "▸ Front-End Development",
+        "▸ Back-End Development",
+        "▸ Database Management",
+        "▸ API Integration",
+        "▸ Problem Solving",
+        "▸ Project Deployment"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-full-stack-development-free-skillup"
+    },
+    {
+      "id": 45,
+      "title": "Introduction to MEAN Stack",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "mean-stack.jpg",
+      "intro": "Learn to build web applications using MongoDB, ExpressJS, Angular, and Node.js - the complete JavaScript stack for full-stack development.",
+      "syllabus": [
+        "▸ MEAN Stack Overview",
+        "▸ MongoDB Fundamentals",
+        "▸ ExpressJS Basics",
+        "▸ Angular Framework",
+        "▸ Node.js Integration",
+        "▸ Full-Stack Implementation"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-mean-stack-program-skillup"
+    },
+    {
+      "id": 46,
+      "title": "Fundamentals of MERN Stack",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "mern-stack.jpg",
+      "intro": "Build modern web applications using MongoDB, Express, React, and Node.js with this comprehensive MERN stack introduction.",
+      "syllabus": [
+        "▸ MERN Stack Introduction",
+        "▸ MongoDB Database",
+        "▸ Express.js Framework",
+        "▸ React Fundamentals",
+        "▸ Node.js Server",
+        "▸ Connecting Frontend/Backend",
+        "▸ User Authentication"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-mern-stack-program-skillup"
+    },
+    {
+      "id": 47,
+      "title": "ReactJS Project for Beginners",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "react-project.jpg",
+      "intro": "Build a real-world Expense Tracker application while learning ReactJS components, state management, hooks, and deployment.",
+      "syllabus": [
+        "▸ ReactJS Basics",
+        "▸ React Hooks",
+        "▸ Component Design",
+        "▸ Form Handling",
+        "▸ State Management",
+        "▸ Data Persistence",
+        "▸ App Deployment"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/reactjs-projects-for-beginners-course-skillup"
+    },
+    {
+      "id": 48,
+      "title": "JavaScript Coding Interview Preparation",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "js-interview.jpg",
+      "intro": "Master common JavaScript interview questions and coding challenges with practical exercises and problem-solving strategies.",
+      "syllabus": [
+        "▸ JavaScript Concepts Review",
+        "▸ Data Structures",
+        "▸ Algorithms",
+        "▸ Problem-Solving Patterns",
+        "▸ Interview Strategies",
+        "▸ Live Coding Practice",
+        "▸ Performance Optimization"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/javascript-free-interview-course-skillup"
+    },
+    {
+      "id": 49,
+      "title": "TypeScript Basics",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "typescript.jpg",
+      "intro": "Learn TypeScript fundamentals including types, interfaces, and generics to build robust JavaScript applications with static typing.",
+      "syllabus": [
+        "▸ TypeScript Introduction",
+        "▸ Development Setup",
+        "▸ TypeScript Generics",
+        "▸ React with TypeScript",
+        "▸ Node.js with TypeScript",
+        "▸ Advanced Concepts",
+        "▸ TypeScript Projects"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-typescript-course-skillup"
+    },
+    {
+      "id": 50,
+      "title": "Introduction to Express JS",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "expressjs.jpg",
+      "intro": "Master ExpressJS framework for Node.js, learning routing, middleware, RESTful API development, and database integration.",
+      "syllabus": [
+        "▸ ExpressJS Core Principles",
+        "▸ Configuration Setup",
+        "▸ Routing and Requests",
+        "▸ Middleware Functions",
+        "▸ RESTful APIs",
+        "▸ Error Handling",
+        "▸ Database Integration"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-expressjs-course-skillup"
+    },
+    {
+      "id": 51,
+      "title": "Programming with Python 3.X",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "python3.jpg",
+      "intro": "Learn modern Python 3 programming with practical exercises covering syntax, data structures, and application development.",
+      "syllabus": [
+        "▸ Python 3 Syntax",
+        "▸ Data Structures",
+        "▸ Control Flow",
+        "▸ Functions",
+        "▸ File Handling",
+        "▸ Error Handling",
+        "▸ Practical Projects"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-python-programming-course-skillup"
+    },
+    {
+      "id": 52,
+      "title": "Introduction to Numpy",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "numpy.jpg",
+      "intro": "Master numerical computing in Python with Numpy library, covering arrays, arithmetic operations, and integration with Matplotlib.",
+      "syllabus": [
+        "▸ Numpy Introduction",
+        "▸ Installation Setup",
+        "▸ Numpy Arrays",
+        "▸ Array Manipulation",
+        "▸ Arithmetic Operations",
+        "▸ Histograms with Matplotlib"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-numpy-basics-free-course-skillup"
+    },
+    {
+      "id": 53,
+      "title": "Introduction to HTML",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "html-course.jpg",
+      "intro": "Learn HTML fundamentals to structure web pages, including forms, navigation bars, and essential elements for front-end development.",
+      "syllabus": [
+        "▸ HTML Basics",
+        "▸ Forms and Inputs",
+        "▸ Navigation Bars",
+        "▸ Content Boxes",
+        "▸ Image Sliders",
+        "▸ Web Design Principles"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-html-course-for-beginners-skillup"
+    },
+    {
+      "id": 54,
+      "title": "Introduction to CSS",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "css-course.jpg",
+      "intro": "Master CSS styling including layouts, animations, and responsive design to create professional, visually appealing websites.",
+      "syllabus": [
+        "▸ CSS Fundamentals",
+        "▸ Selectors and Properties",
+        "▸ Box Model",
+        "▸ Flexbox and Grid",
+        "▸ Animations/Transitions",
+        "▸ Media Queries",
+        "▸ Best Practices"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-css-basics-free-training-course-skillup"
+    },
+    {
+      "id": 55,
+      "title": "Introduction to PHP Basics",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "php-basics.jpg",
+      "intro": "Learn server-side scripting with PHP, covering form validation, CRUD operations, and building dynamic web applications.",
+      "syllabus": [
+        "▸ PHP and XAMPP Setup",
+        "▸ Programming Concepts",
+        "▸ OOP in PHP",
+        "▸ MySQL Integration",
+        "▸ Form Validation",
+        "▸ CRUD Operations",
+        "▸ REST API Basics"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-php-basics-free-course-skillup"
+    },
+    {
+      "id": 56,
+      "title": "Web Development for Beginners",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "web-dev.jpg",
+      "intro": "Start your web development journey with fundamentals of HTML, CSS, and JavaScript for building basic websites and applications.",
+      "syllabus": [
+        "▸ Web Architecture",
+        "▸ HTML Basics",
+        "▸ CSS Styling",
+        "▸ JavaScript Fundamentals",
+        "▸ DOM Manipulation",
+        "▸ Basic Projects"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-quiz-website-development-course-skillup"
+    },
+    {
+      "id": 57,
+      "title": "Introduction to Front End Development",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "frontend-dev.jpg",
+      "intro": "Master essential front-end tools including Git, HTML, CSS, JavaScript, and frameworks like React and Angular.",
+      "syllabus": [
+        "▸ Git and GitHub",
+        "▸ HTML Structure",
+        "▸ CSS Styling",
+        "▸ JavaScript Basics",
+        "▸ React Fundamentals",
+        "▸ Angular Introduction"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/front-end-developer-free-course-skillup"
+    },
+    {
+      "id": 58,
+      "title": "C Programming Basics",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "c-programming.jpg",
+      "intro": "Learn foundational C programming concepts including data types, pointers, memory management, and function pointers.",
+      "syllabus": [
+        "▸ Why Learn C",
+        "▸ Visual Studio Code Setup",
+        "▸ Data Types",
+        "▸ Variables",
+        "▸ Operations",
+        "▸ Pointers",
+        "▸ Pointer to Function"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-c-course-skillup"
+    },
+    {
+      "id": 59,
+      "title": "Fundamentals of Software Development",
+      "category": "Software Development",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "software-dev.jpg",
+      "intro": "Comprehensive introduction to software engineering principles, OOP concepts, data structures, and development methodologies.",
+      "syllabus": [
+        "▸ Programming Fundamentals",
+        "▸ SDLC",
+        "▸ Object-Oriented Programming",
+        "▸ Data Structures",
+        "▸ Version Control",
+        "▸ Debugging",
+        "▸ Testing"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-software-development-free-skillup"
+    },
+    {
+      "id": 60,
+      "title": "Basics of Data Structure And Algorithm",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "dsa.jpg",
+      "intro": "Master fundamental data structures and algorithms including arrays, linked lists, and time complexity analysis.",
+      "syllabus": [
+        "▸ Data Structures Introduction",
+        "▸ Time Complexity",
+        "▸ Pointers in C",
+        "▸ Arrays",
+        "▸ Linked Lists",
+        "▸ Doubly Linked Lists"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-data-structures-algorithms-course-skillup"
+    },
+    {
+      "id": 61,
+      "title": "OOPs in Java Programming",
+      "category": "Software Development",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "java-oops.jpg",
+      "intro": "Master object-oriented programming in Java including encapsulation, inheritance, and polymorphism for building robust applications.",
+      "syllabus": [
+        "▸ OOP Concepts",
+        "▸ Classes and Objects",
+        "▸ Encapsulation",
+        "▸ Inheritance",
+        "▸ Polymorphism",
+        "▸ Design Patterns"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/free-java-object-oriented-programming-course-skillup"
+    },
+    {
+      "id": 62,
+      "title": "Introduction to Six Sigma",
+      "category": "Quality Management",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "six-sigma.jpg",
+      "intro": "A data-driven approach for enhancing corporate procedures and getting rid of errors. Learn the fundamental ideas of Six Sigma, including the DMAIC approach, tools, and how to implement Six Sigma in real-world projects.",
+      "syllabus": [
+          "▸ Basics of Six Sigma",
+          "▸ Introduction to Six Sigma",
+          "▸ Overview of Six Sigma",
+          "▸ Six Sigma Green Belt: Define",
+          "▸ Six Sigma Green Belt: Measure",
+          "▸ Six Sigma Green Belt: Analyse",
+          "▸ Six Sigma Green Belt: Improve"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-six-sigma-basics-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Six%20Sigma"
+  },
+  {
+      "id": 63,
+      "title": "Lean Management",
+      "category": "Quality Management",
+      "difficulty": "🟢Beginner",
+      "platform": "Simplilearn",
+      "image": "lean-management.jpg",
+      "intro": "Learn the ideas and tenets for effective management, optimize workflows, and maximize business value. Discover how to detect ineffective tasks, enhance customer value, and eliminate waste.",
+      "syllabus": [
+          "▸ What Is Lean",
+          "▸ Principles of Lean",
+          "▸ Types of Waste",
+          "▸ Lean Management Tools (Five-S, Kaizen, Kanban, etc.)",
+          "▸ Lean in Manufacturing",
+          "▸ Lean in Service (Healthcare case study)"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/introduction-to-lean-management-basics-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Lean%20Management"
+  },
+  {
+      "id": 64,
+      "title": "Minitab",
+      "category": "Quality Management",
+      "difficulty": "🟡Intermediate",
+      "platform": "Simplilearn",
+      "image": "minitab.jpg",
+      "intro": "Gain foundational knowledge and hands-on experience using Minitab software for statistical analysis. Learn to identify trends, perform hypothesis testing, and optimize processes for Six Sigma projects.",
+      "syllabus": [
+          "▸ Introduction to Minitab",
+          "▸ Graphical Analysis",
+          "▸ Control Charts",
+          "▸ Measurement System Analysis",
+          "▸ Process Capability",
+          "▸ Hypothesis Testing",
+          "▸ Correlation and Regression",
+          "▸ Design of Experiments"
+      ],
+      "redirectUrl": "https://www.simplilearn.com/learn-minitab-basics-online-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Minitab%3Csup%3E%C2%AE%3C/sup%3E"
+  },
+  {
+    "id": 65,
+    "title": "PMP Basics",
+    "category": "Project Management",
+    "difficulty": "🟢Beginner",
+    "platform": "Simplilearn",
+    "image": "pmp-basics.jpg",
+    "intro": "A free PMP certification online program powered by Google Cloud, covering essential project management concepts. Ideal for beginners preparing for PMP certification, with a focus on practical skills and frameworks.",
+    "syllabus": [
+        "▸ What Is Project Management",
+        "▸ Job Roles In Project Management",
+        "▸ Project Planning & Time Management",
+        "▸ Cost & Quality Management",
+        "▸ PMP Communication & HR Management",
+        "▸ Risk, Stakeholder, and Integration Management",
+        "▸ Earned Value Management",
+        "▸ Top 10 Project Management Tools (2020)",
+        "▸ Agile & Trello Tutorials",
+        "▸ PMP Interview Q&A"
+    ],
+    "redirectUrl": "https://www.simplilearn.com/free-online-pmp-course-for-beginners-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=PMP%20Basics"
+},
+{
+    "id": 66,
+    "title": "Introduction to JIRA",
+    "category": "Project Management",
+    "difficulty": "🟢Beginner",
+    "platform": "Simplilearn",
+    "image": "jira.jpg",
+    "intro": "Learn to install, configure, and leverage Jira for project management and collaboration. Hands-on exercises cover workflows, dashboards, and issue tracking.",
+    "syllabus": [
+        "▸ What is Jira?",
+        "▸ Jira Installation on Windows",
+        "▸ Jira Components (Projects, Issues, Workflows)",
+        "▸ Key Features for Project Tracking"
+    ],
+    "redirectUrl": "https://www.simplilearn.com/free-jira-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20JIRA"
+},
+{
+    "id": 67,
+    "title": "Introduction to PMI-RMP",
+    "category": "Project Management",
+    "difficulty": "🟡Intermediate",
+    "platform": "Simplilearn",
+    "image": "pmi-rmp.jpg",
+    "intro": "Master risk management in projects with PMI-RMP®. Learn frameworks, principles, and processes to identify, analyze, and mitigate risks effectively.",
+    "syllabus": [
+        "▸ What is PMI-RMP®?",
+        "▸ Risk Management Framework",
+        "▸ Risk Management Principles",
+        "▸ Project Risk Management Process"
+    ],
+    "redirectUrl": "https://www.simplilearn.com/free-risk-management-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20PMI-RMP%C2%AE"
+},
+{
+    "id": 68,
+    "title": "Introduction to PRINCE2",
+    "category": "Project Management",
+    "difficulty": "🟢Beginner",
+    "platform": "Simplilearn",
+    "image": "prince2.jpg",
+    "intro": "Explore PRINCE2®, a structured project management method. Learn to manage scope, budget, and stakeholders with this flexible framework.",
+    "syllabus": [
+        "▸ What is a Project?",
+        "▸ Need for Project Management Methodology",
+        "▸ Variables of Project (Scope, Budget)",
+        "▸ PRINCE2® Structure & Benefits"
+    ],
+    "redirectUrl": "https://www.simplilearn.com/free-prince2-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20PRINCE2%C2%AE"
+},
+{
+    "id": 69,
+    "title": "Introduction to Kanban",
+    "category": "Project Management",
+    "difficulty": "🟢Beginner",
+    "platform": "Simplilearn",
+    "image": "kanban.jpg",
+    "intro": "Optimize workflows with Kanban. Learn core principles, WIP limits, and board setup to enhance team productivity and continuous improvement.",
+    "syllabus": [
+        "▸ Core Principles of Kanban",
+        "▸ Setting Up Kanban Boards",
+        "▸ Limiting Work in Progress (WIP)",
+        "▸ Workflow Optimization",
+        "▸ Real-World Case Studies"
+    ],
+    "redirectUrl": "https://www.simplilearn.com/free-kanban-certification-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Kanban"
+},
+{
+    "id": 70,
+    "title": "Introduction to Scrumban",
+    "category": "Project Management",
+    "difficulty": "🟡Intermediate",
+    "platform": "Simplilearn",
+    "image": "scrumban.jpg",
+    "intro": "Combine Scrum and Kanban with Scrumban. Learn hybrid methodologies to streamline workflows, reduce bottlenecks, and boost team agility.",
+    "syllabus": [
+        "▸ Basics of Scrumban",
+        "▸ Key Principles of Scrum & Kanban",
+        "▸ Scrumban Board Setup",
+        "▸ Workflow Optimization",
+        "▸ Real-World Applications"
+    ],
+    "redirectUrl": "https://www.simplilearn.com/free-scrumban-certification-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Scrumban"
+},
+{
+    "id": 71,
+    "title": "Introduction to Agile",
+    "category": "Project Management",
+    "difficulty": "🟢Beginner",
+    "platform": "Simplilearn",
+    "image": "agile.jpg",
+    "intro": "Master Agile methodology, including Scrum and Kanban frameworks. Learn iterative development, roles, ceremonies, and tools like Jira and Trello.",
+    "syllabus": [
+        "▸ Agile Manifesto & Principles",
+        "▸ Scrum Roles & Ceremonies",
+        "▸ Kanban Workflows",
+        "▸ Iterative Development",
+        "▸ Agile Planning & Estimation",
+        "▸ Continuous Improvement",
+        "▸ Agile Tools (Jira, Trello)"
+    ],
+    "redirectUrl": "https://www.simplilearn.com/fundamentals-of-agile-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Agile%20Course"
+},
+{
+  "id": 72,
+  "title": "Canva for Beginners",
+  "category": "Product & Design",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "canva.jpg",
+  "intro": "A free Canva course with a certificate, teaching you to create captivating posters, ads, and social media visuals using Canva's user-friendly tools. Perfect for students, entrepreneurs, and professionals looking to enhance their design skills.",
+  "syllabus": [
+      "▸ Creating Posters & Ads",
+      "▸ Designing Instagram Content",
+      "▸ Advanced Canva Tools",
+      "▸ Hands-on Design Projects"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-canva-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Canva%20For%20Beginners"
+},
+{
+  "id": 73,
+  "title": "Project Management 101: Who is a Product Manager?",
+  "category": "Product & Design",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "product-management.jpg",
+  "intro": "This free Product Management course covers fundamental concepts, career roadmaps, and essential tools. Ideal for beginners exploring Product Manager roles, with a self-paced 1-hour curriculum and a completion certificate.",
+  "syllabus": [
+      "▸ Introduction to Product Management",
+      "▸ Product Manager Roadmap",
+      "▸ Product Management Tools (Part 1 & 2)",
+      "▸ Decision-Making & Problem-Solving"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/product-management-101-free-program-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Product%20Management%20101:%20Who%20is%20a%20Product%20Manager"
+},
+{
+  "id": 74,
+  "title": "UI/UX Basics",
+  "category": "Product & Design",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "ui-ux.jpg",
+  "intro": "Learn the essentials of UI/UX design, including roles, responsibilities, and top tools in 2024. Gain hands-on insights into creating intuitive digital experiences.",
+  "syllabus": [
+      "▸ Introduction to UI/UX Design",
+      "▸ Roles & Responsibilities",
+      "▸ Top UI/UX Tools (2024)",
+      "▸ Design Principles & Best Practices"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-graphic-design-beginner-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=UI/UX%20Basics"
+},
+{
+  "id": 75,
+  "title": "Introduction to Figma Basics",
+  "category": "Product & Design",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "figma.jpg",
+  "intro": "Master Figma’s interface, mockup creation, and prototyping tools. Learn workflow tips and tricks to design efficiently, from layouts to interactive prototypes.",
+  "syllabus": [
+      "▸ Figma Interface Overview",
+      "▸ Creating Detailed Mockups",
+      "▸ Prototyping & User Interaction",
+      "▸ Workflow Optimization Tips"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-figma-course-with-certificate-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Figma%20Basics"
+},
+{
+  "id": 76,
+  "title": "Introduction to Adobe XD",
+  "category": "Product & Design",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "adobe-xd.jpg",
+  "intro": "A comprehensive Adobe XD course covering UI/UX design, prototyping, and collaboration tools. Includes hands-on projects for real-world design scenarios.",
+  "syllabus": [
+      "▸ Adobe XD Interface & Navigation",
+      "▸ Artboard Management",
+      "▸ Interactive Prototyping",
+      "▸ Reusable Components",
+      "▸ Collaboration Features",
+      "▸ Responsive Design Techniques"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-adobe-xd-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Adobe%20XD"
+},
+{
+  "id": 77,
+  "title": "Introduction to Digital Marketing Fundamentals",
+  "category": "Digital Marketing",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "digital-marketing-fundamentals.jpg",
+  "intro": "A comprehensive free course covering Social Media Marketing (SMM), SEO, Marketing Analytics, and essential digital marketing tools. Gain hands-on experience and a completion certificate to validate your foundational skills.",
+  "syllabus": [
+      "▸ Social Media Marketing (SMM)",
+      "▸ Search Engine Optimization (SEO)",
+      "▸ Marketing Analytics & Data-Driven Decisions",
+      "▸ Digital Marketing Tools (Email, Content, Mobile)",
+      "▸ Influencer & Affiliate Marketing",
+      "▸ Search Engine Marketing (SEM)"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-digital-marketing-basics-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Digital%20Marketing%20Fundamentals%20Course"
+},
+{
+  "id": 78,
+  "title": "Digital Marketing Strategy",
+  "category": "Digital Marketing",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "digital-marketing-strategy.jpg",
+  "intro": "Learn to create winning digital marketing strategies, leverage storytelling, and measure campaign success. Ideal for professionals aiming to align marketing efforts with business goals.",
+  "syllabus": [
+      "▸ Digital Marketing Strategy Framework",
+      "▸ Crafting Brand Narratives",
+      "▸ Audience Research & Market Analysis",
+      "▸ Marketing Calendar Planning",
+      "▸ Performance Metrics & Optimization"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-digital-marketing-strategy-training-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Digital%20Marketing%20Strategy"
+},
+{
+  "id": 79,
+  "title": "Facebook Marketing and Advertising",
+  "category": "Digital Marketing",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "facebook-marketing.jpg",
+  "intro": "Master Facebook’s algorithm, ad manager, and business tools. Learn to create high-converting ads, optimize pages, and leverage Facebook Commerce for business growth.",
+  "syllabus": [
+      "▸ Facebook Algorithm & News Feed Ranking",
+      "▸ Business Pages, Groups, and Live Streaming",
+      "▸ Facebook Ad Manager & Targeting Strategies",
+      "▸ Conversion Tracking with Facebook Pixel",
+      "▸ Facebook Shop & Dynamic Ads"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-facebook-marketing-and-advertising-training-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Facebook%20Marketing%20&%20Advertising"
+},
+{
+  "id": 80,
+  "title": "Introduction to Search Engine Optimization (SEO)",
+  "category": "Digital Marketing",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "seo.jpg",
+  "intro": "Learn SEO fundamentals, search engine workings, and on-page/off-page techniques. Hands-on exercises to optimize websites and drive organic traffic.",
+  "syllabus": [
+      "▸ SEO Basics & Importance",
+      "▸ How Search Engines Work",
+      "▸ On-Page, Off-Page & Technical SEO",
+      "▸ Keyword Research & Clustering"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-advanced-seo-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Search%20Engine%20Optimization%20(SEO)"
+},
+{
+  "id": 81,
+  "title": "YouTube and Video Marketing",
+  "category": "Digital Marketing",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "youtube-marketing.jpg",
+  "intro": "Boost your YouTube presence with SEO, ad strategies, and mobile video techniques. Includes real-world case studies and influencer collaboration tips.",
+  "syllabus": [
+      "▸ YouTube SEO & Channel Optimization",
+      "▸ Video Ad Formats & Campaigns",
+      "▸ Mobile Video Engagement",
+      "▸ Instagram Reels & Cross-Platform Promotion"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-youtube-and-video-marketing-training-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=YouTube%20and%20Video%20Marketing"
+},
+{
+  "id": 82,
+  "title": "Digital Marketing Tools and Techniques",
+  "category": "Digital Marketing",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "digital-tools.jpg",
+  "intro": "Explore SEO, email marketing, web analytics, and competitor analysis tools. Practical exercises to integrate tools into marketing campaigns.",
+  "syllabus": [
+      "▸ SEO & Paid Marketing Tools",
+      "▸ Email Campaign Automation",
+      "▸ Web Analytics (Google Analytics)",
+      "▸ Competitor Spying Tools"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/digital-marketing-tools-techniques-free-online-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Digital%20Marketing%20Tools%20and%20Techniques"
+},
+{
+  "id": 83,
+  "title": "Basics of Snapchat Marketing",
+  "category": "Digital Marketing",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "snapchat-marketing.jpg",
+  "intro": "Learn to create marketable Snapchat content, brand partnerships, and ad strategies. Ideal for influencers and marketers targeting young audiences.",
+  "syllabus": [
+      "▸ Snapchat Ad Formats",
+      "▸ Brand Storytelling",
+      "▸ Influencer Collaborations"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-snapchat-marketing-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Basics%20of%20Snapchat%20Marketing"
+},
+{
+  "id": 84,
+  "title": "Introduction to Google Ads",
+  "category": "Digital Marketing",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "google-ads.jpg",
+  "intro": "A 13-hour beginner-friendly course covering AdWords, keyword targeting, display ads, and bidding strategies. Includes a completion certificate.",
+  "syllabus": [
+      "▸ AdWords Account Structure",
+      "▸ Keyword Match Types & Text Ads",
+      "▸ Display Network Targeting",
+      "▸ Bidding Strategies & Quality Score"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-google-ads-fundamentals-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Google%20Ads"
+},
+{
+  "id": 85,
+  "title": "Instagram Marketing Basics",
+  "category": "Digital Marketing",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "instagram-marketing.jpg",
+  "intro": "Master Instagram marketing with 2-hour video lessons. Covers profile optimization, Reels, Stories, influencer collaborations, and ad campaigns.",
+  "syllabus": [
+      "▸ Business Profile Setup",
+      "▸ Content Strategy for Feeds & Reels",
+      "▸ Influencer Marketing",
+      "▸ Instagram Ads & Analytics"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-instagram-marketing-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Instagram%20Marketing%20Basics"
+},
+{
+  "id": 86,
+  "title": "Advanced Email Marketing",
+  "category": "Digital Marketing",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "email-marketing.jpg",
+  "intro": "A 5-hour certification course covering list-building, automation, copywriting, and landing pages. Learn to create high-converting email campaigns.",
+  "syllabus": [
+      "▸ List-Building Strategies",
+      "▸ Persuasive Copywriting",
+      "▸ Automated Email Sequences",
+      "▸ Performance Metrics (Open Rates, CTR)"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-email-marketing-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Advanced%20Email%20Marketing"
+},
+{
+  "id": 87,
+  "title": "Introduction to Data Science",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "data-science.jpg",
+  "intro": "A comprehensive free course covering Python libraries, statistical analysis, machine learning, and NLP. Designed for beginners, it includes 7 hours of self-paced video lessons and real-world applications.",
+  "syllabus": [
+      "▸ Python Libraries (NumPy, Pandas, Scikit-learn)",
+      "▸ Exploratory Data Analysis (EDA)",
+      "▸ Descriptive & Inferential Statistics",
+      "▸ Supervised & Unsupervised Learning",
+      "▸ Natural Language Processing (NLP)",
+      "▸ Model Building & Evaluation"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/data-science-free-course-for-beginners-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Data%20Science"
+},
+{
+  "id": 88,
+  "title": "Introduction to MS Excel",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "excel.jpg",
+  "intro": "Master Excel for data organization, visualization, and analysis. Learn sorting, functions, pivot tables, macros, and dashboard creation. Ideal for beginners seeking foundational spreadsheet skills.",
+  "syllabus": [
+      "▸ Sorting, Filtering & Data Validation",
+      "▸ Excel Functions (VLOOKUP, SUMIF)",
+      "▸ Pivot Tables & Charts",
+      "▸ Macros & VBA Automation",
+      "▸ Interactive Dashboards"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-ms-excel-free-training-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20MS%20Excel"
+},
+{
+  "id": 89,
+  "title": "Power BI for Beginners",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "power-bi.jpg",
+  "intro": "Transform raw data into actionable insights with Power BI. Learn data loading, DAX formulas, and interactive dashboard creation. Includes hands-on projects for practical experience.",
+  "syllabus": [
+      "▸ Data Loading & Transformation",
+      "▸ Interactive Reports & Dashboards",
+      "▸ DAX (Data Analysis Expressions)",
+      "▸ Data Visualization Best Practices",
+      "▸ Real-World Projects"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-power-bi-basics-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Power%20BI%20for%20Beginners"
+},
+{
+  "id": 90,
+  "title": "Business Analytics with Excel",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "business-analytics.jpg",
+  "intro": "Refine Excel skills for business analytics. Covers data cleaning, statistical analysis, pivot tables, and macros. Apply concepts to real-world scenarios for data-driven decision-making.",
+  "syllabus": [
+      "▸ Data Cleaning & Preparation",
+      "▸ Statistical Analysis in Excel",
+      "▸ Pivot Tables & Dashboarding",
+      "▸ Macros for Automation",
+      "▸ Business Case Studies"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-business-analytics-excel-fundamentals-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Business%20Analytics%20with%20Excel"
+},
+{
+  "id": 91,
+  "title": "Introduction to Data Analytics",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "data-analytics.jpg",
+  "intro": "Learn data collection, preprocessing, and analysis techniques. Covers descriptive, predictive, and prescriptive analytics. Ideal for Business Analysts and Managers.",
+  "syllabus": [
+      "▸ Types of Data Analytics",
+      "▸ Data Visualization Techniques",
+      "▸ Data Science Methodologies",
+      "▸ Analytics Adoption Frameworks",
+      "▸ AI Trends in Analytics"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-data-analytics-for-beginners-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Data%20Analytics%20Course"
+},
+{
+  "id": 92,
+  "title": "Data Analyst 101",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "data-analyst.jpg",
+  "intro": "Master Excel formulas and functions for data analysis. Covers mathematical, text, financial, and advanced functions like VLOOKUP. Hands-on exercises reinforce learning.",
+  "syllabus": [
+      "▸ Excel Basics & Navigation",
+      "▸ Mathematical & Text Functions",
+      "▸ Advanced Functions (VLOOKUP)",
+      "▸ Financial Functions",
+      "▸ Date & Time Calculations"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-excel-formulas-function-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Data%20Analyst%20101"
+},
+{
+  "id": 93,
+  "title": "Excel Dashboard for Beginners",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "excel-dashboard.jpg",
+  "intro": "Learn to create interactive Excel dashboards with pivot tables, charts, slicers, and timelines. Ideal for data visualization specialists and business analysts.",
+  "syllabus": [
+      "▸ Pivot Tables & Charts",
+      "▸ Slicers & Timelines",
+      "▸ Dashboard Design Best Practices",
+      "▸ Data Visualization Techniques",
+      "▸ Sharing & Presenting Dashboards"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/introduction-to-excel-dashboard-for-beginners-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Excel%20Dashboard%20for%20Beginners"
+},
+{
+  "id": 94,
+  "title": "Python Libraries for Data Science",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "python-libraries.jpg",
+  "intro": "Explore NumPy, Pandas, Matplotlib, Scikit-Learn, and TensorFlow for data manipulation, visualization, and machine learning. Hands-on projects included.",
+  "syllabus": [
+      "▸ NumPy for Numerical Computing",
+      "▸ Pandas for Data Manipulation",
+      "▸ Matplotlib for Visualization",
+      "▸ Scikit-Learn for Machine Learning",
+      "▸ TensorFlow for Deep Learning"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-python-libraries-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Python%20Libraries%20for%20Data%20Science"
+},
+{
+  "id": 95,
+  "title": "Introduction to Data Visualization",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "data-visualization.jpg",
+  "intro": "Master data visualization tools like Tableau, Power BI, and ggplot2. Learn to create interactive dashboards and communicate insights effectively.",
+  "syllabus": [
+      "▸ Tableau Fundamentals",
+      "▸ Power BI Reports & Dashboards",
+      "▸ Excel Charting Techniques",
+      "▸ ggplot2 for Custom Visualizations",
+      "▸ Visualization Best Practices"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-data-visualization-course-online-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Data%20Visualization"
+},
+{
+  "id": 96,
+  "title": "Power BI Data Modeling Basics",
+  "category": "Data Science & Business Analytics",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "power-bi-modeling.jpg",
+  "intro": "Learn to design efficient data models in Power BI. Hands-on exercises cover structuring data, creating relationships, and deriving actionable insights.",
+  "syllabus": [
+      "▸ Power BI Data Modeling Techniques",
+      "▸ Structuring & Organizing Data",
+      "▸ Creating Relationships",
+      "▸ Practical Exercises",
+      "▸ Certification Preparation"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-power-bi-data-modelling-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Power%20BI%20Data%20Modelling%20Basics%20Tutorial%20Course"
+},
+{
+  "id": 97,
+  "title": "Introduction to Cyber Security",
+  "category": "Cyber Security",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "cyber-security.jpg",
+  "intro": "A foundational course covering cyber security fundamentals, threat actors, network security controls, and incident management. Ideal for beginners, security consultants, and executives seeking to understand security protocols.",
+  "syllabus": [
+      "▸ Cyber Security Fundamentals",
+      "▸ Threat Actors & Attack Types",
+      "▸ Network Security Controls",
+      "▸ BYOD Security Testing",
+      "▸ Risk Assessment & Mitigation"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-cyber-security-basics-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Cyber%20Security"
+},
+{
+  "id": 98,
+  "title": "Introduction to Cloud Security",
+  "category": "Cyber Security",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "cloud-security.jpg",
+  "intro": "Learn to secure cloud architectures with a focus on data encryption, access control, and compliance. Covers cloud service models (IaaS, PaaS, SaaS) and deployment strategies.",
+  "syllabus": [
+      "▸ Cloud Security Concepts & Architecture",
+      "▸ Data Encryption & Key Management",
+      "▸ Cloud Platform & Infrastructure Security",
+      "▸ Legal Risk & Compliance",
+      "▸ Security Policies & Procedures"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-cloud-security-basics-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Cloud%20Security"
+},
+{
+  "id": 99,
+  "title": "Introduction to Cybercrime",
+  "category": "Cyber Security",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "cybercrime.jpg",
+  "intro": "Explore common cyberattacks like phishing, DDoS, and SQL injection. Learn prevention strategies and mitigation techniques to protect organizational and personal data.",
+  "syllabus": [
+      "▸ Types of Cyber Attacks (Phishing, Malware)",
+      "▸ SQL Injection & DDoS Attacks",
+      "▸ Insider Threats & Brute Force Attacks",
+      "▸ Network Security Terminologies",
+      "▸ Cyber Attack Prevention Strategies"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-cybercrime-course-for-beginners-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Cybercrime"
+},
+{
+  "id": 100,
+  "title": "Introduction to CISSP Security Assessment & Testing",
+  "category": "Cyber Security",
+  "difficulty": "🔴Advanced",
+  "platform": "Simplilearn",
+  "image": "cissp.jpg",
+  "intro": "Master CISSP Domains 6 & 7: Security Assessment, Testing, and Operations. Covers vulnerability assessment, incident response, and security operations best practices.",
+  "syllabus": [
+      "▸ Security Assessment Methodologies",
+      "▸ Advanced Vulnerability Testing",
+      "▸ Incident Response & Management",
+      "▸ Security Operations Frameworks",
+      "▸ Compliance & Audit Best Practices"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-cissp-security-assessment-testing-operations-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20CISSP%20Security%20Assessment%20&%20Testing%20and%20Security%20Operations"
+},
+{
+  "id": 101,
+  "title": "Introduction to Cryptography",
+  "category": "Cyber Security",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "cryptography.jpg",
+  "intro": "Learn encryption techniques like AES, RSA, and SHA. Covers symmetric/asymmetric cryptography, digital signatures, and SSL handshakes for data protection.",
+  "syllabus": [
+      "▸ Symmetric & Asymmetric Encryption",
+      "▸ DES, AES & RSA Algorithms",
+      "▸ Digital Signatures & Hashing (SHA, MD5)",
+      "▸ SSL/TLS Protocols",
+      "▸ Cryptographic Attack Prevention"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-cryptography-basics-free-skillup-course?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Cryptography%20for%20Beginners"
+},
+{
+  "id": 102,
+  "title": "Ethical Hacking Basics",
+  "category": "Cyber Security",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "ethical-hacking.jpg",
+  "intro": "A beginner-friendly course on ethical hacking, covering penetration testing, trojan countermeasures, and network packet analysis. Includes a free certification.",
+  "syllabus": [
+      "▸ Penetration Testing Fundamentals",
+      "▸ Backdoor Trojans & Countermeasures",
+      "▸ IDS, Firewalls & Honeypots",
+      "▸ Network Packet Analysis",
+      "▸ Mobile & Web Security Testing"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/ethical-hacking-course-free-beginners-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Ethical%20Hacking%20Basics"
+},
+{
+  "id": 103,
+  "title": "Introduction to ChatGPT for Cybersecurity",
+  "category": "Cyber Security",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "chatgpt-security.jpg",
+  "intro": "Leverage ChatGPT for threat detection, password management, and compliance monitoring. Learn to automate cybersecurity tasks with AI-driven tools.",
+  "syllabus": [
+      "▸ ChatGPT in Threat Detection",
+      "▸ Automated Incident Response",
+      "▸ Password Generation & Management",
+      "▸ Compliance Monitoring Automation",
+      "▸ Integration with Messaging Platforms"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-chatgpt-cybersecurity-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20ChatGPT%20for%20Cybersecurity"
+},
+{
+  "id": 104,
+  "title": "Introduction to Kali Linux Basics",
+  "category": "Cyber Security",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "kali-linux.jpg",
+  "intro": "Master Kali Linux for penetration testing and mobile security with Kali Nethunter. Hands-on guidance for installing and using security assessment tools.",
+  "syllabus": [
+      "▸ Kali Linux Installation & Setup",
+      "▸ Penetration Testing Tools",
+      "▸ Vulnerability Assessment",
+      "▸ Kali Nethunter for Mobile Security",
+      "▸ Ethical Hacking Techniques"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-kali-linux-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Kali%20Linux%20Basics"
+},
+{
+  "id": 105,
+  "title": "Introduction to Cloud Computing",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "cloud-computing.jpg",
+  "intro": "A foundational course covering cloud computing basics, adoption strategies, and security. Learn about public cloud services, pricing models, and the future of cloud ecosystems.",
+  "syllabus": [
+      "▸ Cloud Computing Fundamentals",
+      "▸ Public Cloud Services & Pricing",
+      "▸ Security & Privacy in Cloud",
+      "▸ Cloud Adoption Strategies",
+      "▸ Business Applications of Cloud"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/introduction-to-cloud-computing-basics-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Cloud%20Computing"
+},
+{
+  "id": 106,
+  "title": "Azure Fundamentals",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "azure.jpg",
+  "intro": "Master Microsoft Azure’s cloud platform, covering virtual machines, data services, and machine learning. Compare Azure with AWS and Google Cloud for comprehensive cloud expertise.",
+  "syllabus": [
+      "▸ Azure Virtual Machines & Networks",
+      "▸ Azure Data Factory & Active Directory",
+      "▸ Machine Learning in Azure",
+      "▸ AWS vs Azure vs Google Cloud",
+      "▸ Azure Use Cases & Interview Prep"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-azure-basics-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Azure%20Fundamentals"
+},
+{
+  "id": 107,
+  "title": "Introduction to Selenium",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "selenium.jpg",
+  "intro": "Learn Selenium for automated web testing. Covers test scripting, web element interaction, cross-browser testing, and advanced techniques like parallel execution with Selenium Grid.",
+  "syllabus": [
+      "▸ Selenium Setup & Configuration",
+      "▸ Writing & Executing Test Scripts",
+      "▸ Web Element Interaction",
+      "▸ Cross-Browser Testing",
+      "▸ Selenium Grid for Parallel Execution"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-selenium-basics-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Selenium"
+},
+{
+  "id": 108,
+  "title": "Google Drive",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "google-drive.jpg",
+  "intro": "Master Google Drive for cloud storage and collaboration. Learn file management, sharing permissions, and conversion tools for efficient workflow automation.",
+  "syllabus": [
+      "▸ Uploading & Organizing Files",
+      "▸ Shared Drives & Collaboration",
+      "▸ File Conversion & Link Sharing",
+      "▸ Role-Based Permissions",
+      "▸ Search & Advanced Settings"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-google-drive-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Google%20Drive"
+},
+{
+  "id": 109,
+  "title": "Getting Started with Docker",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "docker.jpg",
+  "intro": "Learn Docker for containerization, including images, containers, and registries. Compare Docker with VMs and explore Docker Swarm and Compose for orchestration.",
+  "syllabus": [
+      "▸ Docker Installation & Setup",
+      "▸ Containers vs Virtual Machines",
+      "▸ Docker Images & Registries",
+      "▸ Docker Swarm & Compose",
+      "▸ DevOps Integration with Docker"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-docker-basics-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Getting%20Started%20with%20Docker"
+},
+{
+  "id": 110,
+  "title": "Introduction to DevOps Tools",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "devops-tools.jpg",
+  "intro": "Explore the DevOps toolchain with Git, Jenkins, Docker, Kubernetes, and Ansible. Hands-on demos for CI/CD, containerization, and infrastructure automation.",
+  "syllabus": [
+      "▸ Git & GitHub for Version Control",
+      "▸ Jenkins for CI/CD Automation",
+      "▸ Docker & Kubernetes for Containers",
+      "▸ Ansible for Infrastructure as Code",
+      "▸ AWS Deployment Strategies"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/devops-tools-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Devops%20Tools"
+},
+{
+  "id": 111,
+  "title": "DevOps 101: What is DevOps?",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "devops.jpg",
+  "intro": "A comprehensive introduction to DevOps principles, covering CI/CD, containerization, IaC (Terraform), monitoring (Prometheus/Grafana), and security integration.",
+  "syllabus": [
+      "▸ DevOps Fundamentals & Principles",
+      "▸ CI/CD Pipelines",
+      "▸ Docker & Kubernetes Basics",
+      "▸ Infrastructure as Code (Terraform)",
+      "▸ Security in DevOps (DevSecOps)"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-devops-basics-free-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=DevOps%20101:%20What%20is%20DevOps"
+},
+{
+  "id": 112,
+  "title": "AWS Networking Basics",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "aws-networking.jpg",
+  "intro": "Master AWS networking concepts like VPC, Elastic Load Balancer, and connectivity options. Ideal for cloud engineers and DevOps professionals.",
+  "syllabus": [
+      "▸ Amazon VPC & Subnetting",
+      "▸ Network Protocols & OSI Model",
+      "▸ Elastic Load Balancer (ELB)",
+      "▸ Network Monitoring & Troubleshooting",
+      "▸ Hybrid Cloud Connectivity"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-aws-networking-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=AWS%20Networking%20Basics"
+},
+{
+  "id": 113,
+  "title": "AWS Foundations: Machine Learning Basics",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "aws-ml.jpg",
+  "intro": "Learn machine learning on AWS, covering algorithms, deep learning, and the ML pipeline (data collection to deployment). Includes hands-on AWS tools.",
+  "syllabus": [
+      "▸ Machine Learning Fundamentals",
+      "▸ Supervised vs Unsupervised Learning",
+      "▸ Deep Learning Basics",
+      "▸ AWS ML Pipeline (SageMaker)",
+      "▸ Model Evaluation & Deployment"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-aws-foundations-machine-learning-basics-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=AWS%20Foundations:%20Machine%20Learning%20Basics"
+},
+{
+  "id": 114,
+  "title": "Trust and Security with Google Cloud",
+  "category": "Cloud Computing & DevOps",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "google-cloud-security.jpg",
+  "intro": "Explore Google Cloud’s security framework, including authentication, compliance tools, and threat mitigation. Covers data sovereignty and third-party audits.",
+  "syllabus": [
+      "▸ Google Cloud Security Framework",
+      "▸ Authentication & Authorization",
+      "▸ Compliance & Auditing Tools",
+      "▸ Data Sovereignty & Residency",
+      "▸ Threat Detection & Response"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-trust-and-security-with-google-cloud-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Trust%20and%20Security%20with%20Google%20Cloud"
+},
+{
+  "id": 119,
+  "title": "Business Analysis Basics",
+  "category": "Business and Leadership",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "business-analysis.jpg",
+  "intro": "Gain a foundational understanding of business analytics, data analysis, and how they can be applied to make informed business decisions. Ideal for beginners exploring data-driven decision-making.",
+  "syllabus": [
+      "▸ Story on the need for a Business Analyst",
+      "▸ Business Analyst Roles and Responsibilities",
+      "▸ Skills required to become a Business Analyst",
+      "▸ Business Analysis Knowledge Areas",
+      "▸ Business Analysis with Excel and Demo",
+      "▸ Business Analyst vs. Data Analyst",
+      "▸ Interview Questions and Answers"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/introduction-to-business-analysis-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Business%20Analysis%20Basics"
+},
+{
+  "id": 115,
+  "title": "Digital Transformation Course for Leaders",
+  "category": "Business and Leadership",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "digital-transformation.jpg",
+  "intro": "A self-paced online course covering blockchain, IoT, DevOps, AI & machine learning. Perfect for managers, IT professionals, and marketers looking to drive digital transformation.",
+  "syllabus": [
+      "▸ Blueprint of digital transformation",
+      "▸ DevOps methodologies",
+      "▸ Digital integration (cloud computing, AI/ML)",
+      "▸ Advancement of digital strategy",
+      "▸ Certification upon completion"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-digital-transformation-training-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Digital%20Transformation%20Course%20for%20Leaders"
+},
+{
+  "id": 116,
+  "title": "Getting Started with Business Analysis",
+  "category": "Business and Leadership",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "business-analysis-fundamentals.jpg",
+  "intro": "Explore the foundations of business analysis, including BABOK V3 framework, planning, elicitation, requirements management, and solution evaluation.",
+  "syllabus": [
+      "▸ Introduction to Business Analysis",
+      "▸ BABOK V3 framework",
+      "▸ Business Analysis Planning and Monitoring",
+      "▸ Elicitation and Collaboration",
+      "▸ Requirements Life Cycle Management",
+      "▸ Strategy Analysis",
+      "▸ Requirement Analysis and Design Definition",
+      "▸ Solution Evaluation"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/cbap-basics-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Getting%20Started%20with%20Business%20Analysis"
+},
+{
+  "id": 117,
+  "title": "Getting Started with Interview Preparation",
+  "category": "Business and Leadership",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "interview-preparation.jpg",
+  "intro": "Boost your confidence with expert advice on CV creation, interview techniques (virtual/in-person), and positioning yourself as a top applicant.",
+  "syllabus": [
+      "▸ How to Introduce Yourself In an Interview",
+      "▸ Resume Tips For Freshers",
+      "▸ Interview Tips For Freshers",
+      "▸ Top 7 Telephonic Interview Tips",
+      "▸ 8 Tips To Master Group Discussion",
+      "▸ Top 10 Interview Questions And Answers",
+      "▸ Appraisal Meeting Tips For Employees"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/interview-preparation-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Getting%20Started%20with%20Interview%20Preparation"
+},
+{
+  "id": 118,
+  "title": "Digital Leadership in Business",
+  "category": "Business and Leadership",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "digital-leadership.jpg",
+  "intro": "Master the fundamentals of digital leadership, team management during transformation, and strategies to overcome barriers in today's tech-driven business landscape.",
+  "syllabus": [
+      "▸ Understanding Change",
+      "▸ Personal Leadership principles",
+      "▸ Team Leadership during change",
+      "▸ Organizational Leadership strategies",
+      "▸ Leading Disruptive Change"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/introduction-to-digital-leadership-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Digital%20Leadership%20in%20Business"
+},
+{
+  "id": 120,
+  "title": "Machine Learning using Python",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "ml-python.jpg",
+  "intro": "Build a solid foundation in machine learning with Python, covering supervised/unsupervised learning, regression, SVMs, and deep learning fundamentals for real-world applications.",
+  "syllabus": [
+      "▸ Supervised vs Unsupervised Learning",
+      "▸ Time Series Modeling",
+      "▸ Linear/Logistic Regression",
+      "▸ Kernel SVM",
+      "▸ K-Means Clustering",
+      "▸ Random Forests & Decision Trees",
+      "▸ Deep Learning Fundamentals"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-machine-learning-basics-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Machine%20Learning%20using%20Python"
+},
+{
+  "id": 121,
+  "title": "Introduction to Artificial Intelligence",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "ai-fundamentals.jpg",
+  "intro": "Discover AI basics, including machine learning algorithms, neural networks, and NLP through theory and hands-on exercises for industry applications.",
+  "syllabus": [
+      "▸ AI History & Applications",
+      "▸ Machine Learning Basics",
+      "▸ Neural Networks",
+      "▸ Natural Language Processing"
+  ],
+  "redirectUrl": "http://simplilearn.com/learn-ai-basics-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Artificial%20Intelligence"
+},
+{
+  "id": 122,
+  "title": "Artificial Intelligence Beginners Guide: What is AI?",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "ai-beginners.jpg",
+  "intro": "A structured introduction to AI concepts, ethics, and industry applications, with hands-on exercises and a free certificate upon completion.",
+  "syllabus": [
+      "▸ AI vs Machine Learning",
+      "▸ Ethical AI Development",
+      "▸ Industry Applications",
+      "▸ Career Opportunities"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-ai-program-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Artificial%20Intelligence%20Beginners%20Guide:%20What%20is%20AI?"
+},
+{
+  "id": 123,
+  "title": "Deep Learning for Beginners",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "deep-learning.jpg",
+  "intro": "Master neural networks, TensorFlow, and Keras to handle complex data patterns like images and text, with real-world dataset applications.",
+  "syllabus": [
+      "▸ Neural Network Architectures",
+      "▸ TensorFlow & PyTorch",
+      "▸ CNN/RNN Implementation",
+      "▸ Model Optimization"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/introduction-to-deep-learning-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Deep%20Learning%20for%20Beginners"
+},
+{
+  "id": 124,
+  "title": "Machine Learning for Beginners",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "ml-beginners.jpg",
+  "intro": "An introductory course covering fundamental ML concepts, algorithms, and their practical implementations for absolute beginners.",
+  "syllabus": [
+      "▸ ML Basics & Terminology",
+      "▸ Common Algorithms Overview",
+      "▸ Data Preprocessing",
+      "▸ Simple Model Building"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-machine-learning-beginners-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Machine%20Learning%20for%20Beginners"
+},
+{
+  "id": 125,
+  "title": "Getting Started with Machine Learning Algorithms",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "ml-algorithms.jpg",
+  "intro": "Comprehensive guide to ML algorithms including linear regression, decision trees, SVM, K-means clustering, and Q-learning reinforcement techniques.",
+  "syllabus": [
+      "▸ Supervised Learning (Regression/Classification)",
+      "▸ Unsupervised Learning (Clustering/PCA)",
+      "▸ Reinforcement Learning",
+      "▸ Practical Implementation"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-machine-learning-algorithms-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Getting%20Started%20with%20Machine%20Learning%20Algorithms"
+},
+{
+  "id": 126,
+  "title": "Innovating with Google Cloud Artificial Intelligence",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "google-cloud-ai.jpg",
+  "intro": "1-hour crash course on leveraging Google Cloud's AI/ML tools (BigQuery ML, AutoML) to drive business value without prior expertise.",
+  "syllabus": [
+      "▸ AI/ML Business Use Cases",
+      "▸ Google Cloud AI Tools",
+      "▸ AutoML Implementation",
+      "▸ Pre-trained APIs"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-google-cloud-ai-innovation-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Innovating%20with%20Google%20Cloud%20Artificial%20Intelligence"
+},
+{
+  "id": 127,
+  "title": "Natural Language Processing (NLP) and Text Mining Tutorial for Beginners",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "nlp-text-mining.jpg",
+  "intro": "Learn NLP fundamentals including text preprocessing, sentiment analysis, and topic modeling using Python libraries like NLTK and spaCy.",
+  "syllabus": [
+      "▸ Text Preprocessing Techniques",
+      "▸ Sentiment Analysis",
+      "▸ Named Entity Recognition",
+      "▸ Topic Modeling"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-basics-of-natural-language-processing-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Natural%20Language%20Processing%20(NLP)%20and%20Text%20Mining%20Tutorial%20for%20Beginners"
+},
+{
+  "id": 128,
+  "title": "Introduction to Machine Learning with R",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "ml-r.jpg",
+  "intro": "Practical implementation of ML algorithms (regression, clustering, SVM) in R with real-world datasets and time series analysis.",
+  "syllabus": [
+      "▸ R Programming Basics",
+      "▸ Linear/Logistic Regression",
+      "▸ Decision Trees & Random Forests",
+      "▸ Hierarchical Clustering"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-course-on-machine-learning-with-r-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Machine%20Learning%20with%20R"
+},
+{
+  "id": 129,
+  "title": "Introduction to Data Mining Course",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "data-mining.jpg",
+  "intro": "4-hour course covering data preprocessing, association rules, clustering, and using tools like R Studio for actionable insights.",
+  "syllabus": [
+      "▸ Data Cleaning/Integration",
+      "▸ Decision Trees & Naive Bayes",
+      "▸ Market Basket Analysis",
+      "▸ RapidMiner Tutorials"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-introduction-to-data-mining-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Data%20Mining%20Course"
+},
+{
+  "id": 130,
+  "title": "Create Image Captioning Models",
+  "category": "AI and Machine Learning",
+  "difficulty": "⚡Advanced",
+  "platform": "Simplilearn",
+  "image": "image-captioning.jpg",
+  "intro": "Build encoder-decoder models with CNNs/RNNs to generate automated image captions using attention mechanisms and Google Cloud tools.",
+  "syllabus": [
+      "▸ CNN Feature Extraction",
+      "▸ RNN Text Processing",
+      "▸ Attention Mechanisms",
+      "▸ Model Evaluation"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-image-captioning-models-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Create%20Image%20Captioning%20Models"
+},
+{
+  "id": 131,
+  "title": "Introduction to MATLAB",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "matlab.jpg",
+  "intro": "Learn MATLAB fundamentals for numerical computing, data visualization, and algorithm development in scientific and engineering applications.",
+  "syllabus": [
+      "▸ MATLAB Interface Basics",
+      "▸ Matrix Operations",
+      "▸ Data Visualization",
+      "▸ Scripting & Functions"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-matlab-online-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20MATLAB"
+},
+{
+  "id": 132,
+  "title": "Image Recognition Basics for Beginners Course",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "image-recognition.jpg",
+  "intro": "Hands-on course building AI models to classify cat/dog images using neural networks, with practical implementation walkthroughs.",
+  "syllabus": [
+      "▸ Neural Network Basics",
+      "▸ Image Preprocessing",
+      "▸ Model Training",
+      "▸ Performance Evaluation"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-image-recognition-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Image%20Recognition%20using%20Machine%20Learning"
+},
+{
+  "id": 133,
+  "title": "TensorFlow for Beginners",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "tensorflow.jpg",
+  "intro": "Foundational TensorFlow training covering data flow graphs, linear regression, and object detection APIs for AI/ML applications.",
+  "syllabus": [
+      "▸ TensorFlow Architecture",
+      "▸ Linear Regression Models",
+      "▸ Object Detection API",
+      "▸ RNN Implementation"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-tensorflow-basics-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=TensorFlow%20for%20Beginners"
+},
+{
+  "id": 134,
+  "title": "Beginners Guide for Deep Learning",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "deep-learning-guide.jpg",
+  "intro": "Introductory course explaining neural networks, backpropagation, and deep learning frameworks for image/text processing.",
+  "syllabus": [
+      "▸ Neural Network Basics",
+      "▸ Activation Functions",
+      "▸ Backpropagation",
+      "▸ CNN/RNN Overview"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-deep-learning-program-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Beginners%20guide%20for%20Deep%20Learning"
+},
+{
+  "id": 135,
+  "title": "Introduction to Deep Learning with Keras",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "keras.jpg",
+  "intro": "Build neural networks using Keras and TensorFlow 2.0, comparing version differences and implementing sequential models.",
+  "syllabus": [
+      "▸ Keras API Basics",
+      "▸ TensorFlow 1.0 vs 2.0",
+      "▸ Sequential Models",
+      "▸ Model Evaluation"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/learn-keras-for-beginners-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Deep%20Learning%20with%20Keras"
+},
+{
+  "id": 136,
+  "title": "Introduction to Neural Network",
+  "category": "AI and Machine Learning",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "neural-network.jpg",
+  "intro": "Learn perceptrons, feedforward/backpropagation, CNNs/RNNs, and ethical AI considerations through brain-inspired computational models.",
+  "syllabus": [
+      "▸ Perceptrons & Activation",
+      "▸ Feedforward/Backpropagation",
+      "▸ CNN/RNN Architectures",
+      "▸ Ethical AI Practices"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/neural-network-training-from-scratch-free-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Neural%20Network"
+},
+{
+  "id": 137,
+  "title": "AI and ML Projects Course",
+  "category": "AI and Machine Learning",
+  "difficulty": "⚡Advanced",
+  "platform": "Simplilearn",
+  "image": "ai-projects.jpg",
+  "intro": "Hands-on projects in face recognition, fake news detection, and recommendation systems using TensorFlow/PyTorch for portfolio development.",
+  "syllabus": [
+      "▸ Face Recognition System",
+      "▸ Fake News Detection",
+      "▸ Loan Approval Predictor",
+      "▸ Movie Recommendation Engine"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-ai-ml-projects-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=AI%20ML%20Projects%20Course"
+},
+{
+  "id": 138,
+  "title": "Introduction to Diffusion Models",
+  "category": "AI and Machine Learning",
+  "difficulty": "⚡Advanced",
+  "platform": "Simplilearn",
+  "image": "diffusion-models.jpg",
+  "intro": "Advanced generative AI course covering noise scheduling, U-Net architectures, and DDIM for image/data generation with TensorFlow/PyTorch.",
+  "syllabus": [
+      "▸ Noise Scheduling",
+      "▸ U-Net Architectures",
+      "▸ Guided Diffusion",
+      "▸ DDIM Sampling"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/diffusion-models-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Diffusion%20Models"
+},
+{
+  "id": 139,
+  "title": "Introduction to ITIL® Foundation 4",
+  "category": "IT Service and Architecture",
+  "difficulty": "🟡Intermediate",
+  "platform": "Simplilearn",
+  "image": "itil-foundation.jpg",
+  "intro": "Master IT Service Management (ITSM) fundamentals with the latest ITIL® 4 framework, covering value co-creation, service relationships, and the service value system through real-world case studies.",
+  "syllabus": [
+      "▸ ITIL® 4 Framework Overview",
+      "▸ Value Co-Creation Concepts",
+      "▸ Four Dimensions of Service Management",
+      "▸ ITIL® Service Value System",
+      "▸ Real-world ITSM Case Studies"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-itil-v-four-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20ITIL%C2%AE%20Foundation%204"
+},
+{
+  "id": 140,
+  "title": "Digital Security Fundamentals",
+  "category": "IT Service and Architecture",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "digital-security.jpg",
+  "intro": "Essential training for protecting your digital life, covering online safety practices, profile protection, and spam detection for personal and professional security.",
+  "syllabus": [
+      "▸ Digital Safety Best Practices",
+      "▸ Online Profile Protection",
+      "▸ Spam Threat Identification",
+      "▸ Basic Cybersecurity Hygiene"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/free-it-safety-and-security-essentials-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Digital%20Security%20Fundamentals"
+},
+{
+  "id": 141,
+  "title": "Introduction to Computer Networking Course",
+  "category": "IT Service and Architecture",
+  "difficulty": "🟢Beginner",
+  "platform": "Simplilearn",
+  "image": "computer-networking.jpg",
+  "intro": "Comprehensive guide to network types, protocols, IP addressing, and hardware (routers/switches), designed to prepare beginners for IT roles and certification paths like CCNA.",
+  "syllabus": [
+      "▸ Network Types & Topologies",
+      "▸ IP Addressing & Routing",
+      "▸ Network Hardware Basics",
+      "▸ Data Transmission Principles",
+      "▸ Network Security Fundamentals"
+  ],
+  "redirectUrl": "https://www.simplilearn.com/introduction-to-computer-networking-course-skillup?utm_source=SkillUp_HomePage&utm_medium=explore_free_courses&utm_campaign=Introduction%20to%20Computer%20Networking%20Course"
+}
+  ]
+}

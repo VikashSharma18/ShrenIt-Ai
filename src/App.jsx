@@ -7,6 +7,8 @@ import Login from "./pages/Login/Login";
 import { AuthProvider } from "./pages/Login/AuthContext.jsx"
 import ProtectedRoute from "./components/ProtectedRoute.jsx"
 import Profile from "./pages/Profile/Profile.jsx";
+import AptitudeSprint from "./pages/AllFeatures/AptitudeSprint/AptitudeSprint.jsx";
+import CourseHive from "./pages/AllFeatures/CourseHive/CourseHive.jsx";
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
             <Route element={<ProtectedRoute />}>
               <Route path="/features" element={<Features />} />
               <Route path="/profile" element={<Profile />} />
+
+              {/* Features */}
+              <Route path="/aptitudesprint" element={<AptitudeSprint />} />
+              <Route path="/coursehive" element={<CourseHive />} />
             </Route>
           </Route>
         </Routes>

@@ -5,24 +5,20 @@ import { useAuth } from '../../pages/Login/AuthContext';
 import './Features.css';
 import { useNavigate } from 'react-router-dom';
 
-
-const FeatureCard = ({ title, description, icon, color, index }) => {
+const FeatureCard = ({ title, description, icon, color, index, path }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
   const { student } = useAuth();
-  console.log(student)
   const navigate = useNavigate();
 
   const handleExplore = () => {
     if (!student) {
       navigate('/login');
     } else {
-      // Add your feature exploration logic here
-      console.log(`Exploring ${title}`);
-      // navigate(`/features/${title.toLowerCase()}`); // Example of feature page navigation
+      navigate(path);
     }
   };
 
@@ -60,37 +56,43 @@ const Features = () => {
       title: 'CourseHive',
       description: 'AI-powered course curation system with dynamic learning path optimization',
       icon: '📚',
-      color: '#6366f1'
+      color: '#6366f1',
+      path: '/coursehive'
     },
     {
       title: 'Interview Decoded',
       description: 'Real-time AI interview simulation with performance analytics & feedback',
       icon: '💼',
-      color: '#06b6d4'
+      color: '#06b6d4',
+      path: '/interview-decoded'
     },
     {
       title: 'Aptitude Sprint',
       description: 'Adaptive testing engine with predictive performance modeling',
       icon: '📈',
-      color: '#2563eb'
+      color: '#2563eb',
+      path: '/aptitudesprint'
     },
     {
       title: 'Quick Notes Ai',
       description: 'Neural-powered note transformation with smart knowledge mapping',
       icon: '✍️',
-      color: '#6366f1'
+      color: '#6366f1',
+      path: '/quick-notes-ai'
     },
     {
       title: 'Campus Connect',
       description: 'Collaborative learning ecosystem with intelligent peer matching',
       icon: '🌐',
-      color: '#06b6d4'
+      color: '#06b6d4',
+      path: '/campus-connect'
     },
     {
       title: 'MockUp Labs',
       description: 'Virtual project environments with AI-driven assessment matrices',
       icon: '🧪',
-      color: '#2563eb'
+      color: '#2563eb',
+      path: '/mockup-labs'
     }
   ];
 
@@ -146,7 +148,12 @@ const Features = () => {
 
         <div className="features-grid">
           {features.map((feature, index) => (
-            <FeatureCard key={feature.title} {...feature} index={index} />
+            <FeatureCard 
+              key={feature.title} 
+              {...feature} 
+              index={index}
+              path={feature.path}
+            />
           ))}
         </div>
       </div>
