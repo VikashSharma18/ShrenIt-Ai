@@ -5,7 +5,7 @@ import './Header.css';
 import { useAuth } from '../../pages/Login/AuthContext';
 
 const Header = () => {
-  const { student } = useAuth();
+  const { student, admin } = useAuth(); // Access admin from AuthContext
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -26,10 +26,12 @@ const Header = () => {
     { name: 'Features', path: '/features' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Blogs', path: '/blogs' },
-    { name: 'Admin', path: '/blogs' },
+    { name: 'Admin', path: '/admin' },
   ];
 
-  const authNavItem = student
+  const authNavItem = admin
+    ? { name: admin.name || 'Admin', path: '/admin' } // Show admin's name
+    : student
     ? { name: student.name || 'Profile', path: '/profile' }
     : { name: 'Login', path: '/login' };
 
@@ -52,7 +54,7 @@ const Header = () => {
             <NavLink
               key={item.name}
               to={item.path}
-              className={({ isActive }) => 
+              className={({ isActive }) =>
                 `nav-item ${isActive ? 'active' : ''}`
               }
               onClick={() => setIsMobileOpen(false)}

@@ -11,6 +11,7 @@ import AptitudeSprint from "./pages/AllFeatures/AptitudeSprint/AptitudeSprint.js
 import CourseHive from "./pages/AllFeatures/CourseHive/CourseHive.jsx";
 import RoadmapAI from "./pages/AllFeatures/RoadmapAI/RoadmapAI.jsx";
 import InterviewDecoded from "./pages/AllFeatures/InterviewDecoded/InterviewDecoded.jsx";
+import Admin from "./pages/Admin/Admin.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/admin" element={<Admin />} />
 
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>

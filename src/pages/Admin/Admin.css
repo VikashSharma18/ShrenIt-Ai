@@ -1,0 +1,314 @@
+/* Admin.css */
+.admin-login__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem;
+}
+
+.admin-login__card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transform: translateY(0);
+    animation: adminSlideUp 0.6s ease;
+}
+
+@keyframes adminSlideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.admin-login__title {
+    text-align: center;
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.admin-login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.admin-input__group {
+    position: relative;
+}
+
+.admin-login__input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: transparent;
+    z-index: 1;
+}
+
+.admin-login__input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.admin-input__label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #718096;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background: white;
+    padding: 0 0.3rem;
+}
+
+.admin-login__input:focus~.admin-input__label,
+.admin-login__input:not(:placeholder-shown)~.admin-input__label {
+    top: 0;
+    font-size: 0.8rem;
+    color: #667eea;
+}
+
+.admin-login__submit {
+    background: #667eea;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-login__submit:hover {
+    background: #764ba2;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-error__message {
+    color: #e53e3e;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: -0.5rem;
+}
+
+/* Dashboard Styles */
+.admin-dashboard__container {
+    /* margin-top: 10rem; */
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 10rem auto;
+    padding: 2rem 1rem;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.admin-title {
+    font-size: 2rem;
+    color: #2d3748;
+    font-weight: 700;
+}
+
+.admin-logout-btn {
+    background: #e53e3e;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-logout-btn:hover {
+    background: #c53030;
+    transform: translateY(-1px);
+}
+
+.admin-section__title {
+    font-size: 1.5rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.admin-student-form {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.admin-form__title {
+    font-size: 1.2rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+}
+
+.admin-form__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-form__input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.admin-form__input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.admin-form__submit {
+    background: #48bb78;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-form__submit:hover {
+    background: #38a169;
+    transform: translateY(-1px);
+}
+
+.admin-table__container {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.admin-table__scroll {
+    overflow-x: auto;
+}
+
+.admin-students-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.admin-students-table th,
+.admin-students-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-students-table th {
+    background-color: #f7fafc;
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.admin-table__row:hover {
+    background-color: #f7fafc;
+}
+
+.admin-table__actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.admin-table__btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.admin-table__btn--delete {
+    background: #fc8181;
+    color: white;
+}
+
+.admin-table__btn--delete:hover {
+    background: #f56565;
+}
+
+.admin-table__btn--update {
+    background: #63b3ed;
+    color: white;
+}
+
+.admin-table__btn--update:hover {
+    background: #4299e1;
+}
+
+@media (max-width: 768px) {
+    .admin-students-table {
+        display: block;
+        width: 100%;
+    }
+
+    .admin-students-table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .admin-students-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1rem;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .admin-students-table thead {
+        display: none;
+    }
+
+    .admin-table__actions {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-form__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
