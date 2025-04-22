@@ -10,6 +10,7 @@ import Profile from "./pages/Profile/Profile.jsx";
 import AptitudeSprint from "./pages/AllFeatures/AptitudeSprint/AptitudeSprint.jsx";
 import CourseHive from "./pages/AllFeatures/CourseHive/CourseHive.jsx";
 import RoadmapAI from "./pages/AllFeatures/RoadmapAI/RoadmapAI.jsx";
+import InterviewDecoded from "./pages/AllFeatures/InterviewDecoded/InterviewDecoded.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/aptitudesprint" element={<AptitudeSprint />} />
               <Route path="/coursehive" element={<CourseHive />} />
               <Route path="/roadmapai" element={<RoadmapAI />} />
+              <Route path="/interview-decoded" element={<InterviewDecoded />} />
             </Route>
           </Route>
         </Routes>
