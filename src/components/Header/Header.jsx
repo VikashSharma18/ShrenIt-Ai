@@ -26,6 +26,7 @@ const Header = () => {
     { name: 'Features', path: '/features' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Blogs', path: '/blogs' },
+    { name: 'Admin', path: '/blogs' },
   ];
 
   const authNavItem = student
