@@ -14,6 +14,15 @@ const Admin = () => {
     const [newStudent, setNewStudent] = useState({ name: '', email: '', course: '', sem: '' });
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const storedAdmin = localStorage.getItem('admin');
+        if (storedAdmin) {
+            setIsLoggedIn(true);
+            fetchStudents();
+            subscribeToStudentChanges();
+        }
+    }, []);
+
     const fetchStudents = async () => {
         const { data, error } = await supabase.from('student').select('*');
         if (error) {
@@ -21,6 +30,24 @@ const Admin = () => {
         } else {
             setStudents(data);
         }
+    };
+
+    const subscribeToStudentChanges = () => {
+        const subscription = supabase
+            .channel('student-changes')
+            .on(
+                'postgres_changes',
+                { event: '*', schema: 'public', table: 'student' },
+                (payload) => {
+                    console.log('Change received:', payload);
+                    fetchStudents();
+                }
+            )
+            .subscribe();
+
+        return () => {
+            supabase.removeChannel(subscription);
+        };
     };
 
     const handleLogin = async (e) => {
@@ -40,8 +67,10 @@ const Admin = () => {
             if (!admin) throw new Error('Incorrect password');
 
             setAdmin(admin);
+            localStorage.setItem('admin', JSON.stringify(admin));
             setIsLoggedIn(true);
             fetchStudents();
+            subscribeToStudentChanges();
         } catch (err) {
             setError(err.message || 'Login failed. Please check your credentials.');
         }
@@ -49,6 +78,7 @@ const Admin = () => {
 
     const handleLogout = () => {
         admin_logout();
+        localStorage.removeItem('admin');
         setIsLoggedIn(false);
         navigate('/');
     };
@@ -61,7 +91,6 @@ const Admin = () => {
             return;
         }
         if (data && data.length > 0) {
-            setStudents([...students, data[0]]);
             setNewStudent({ name: '', email: '', course: '', sem: '' });
         }
     };
@@ -70,8 +99,6 @@ const Admin = () => {
         const { error } = await supabase.from('student').delete().eq('id', id);
         if (error) {
             console.error('Error deleting student:', error);
-        } else {
-            setStudents(students.filter(student => student.id !== id));
         }
     };
 
@@ -79,8 +106,6 @@ const Admin = () => {
         const { error } = await supabase.from('student').update(updatedStudent).eq('id', id);
         if (error) {
             console.error('Error updating student:', error);
-        } else {
-            setStudents(students.map(student => (student.id === id ? { ...student, ...updatedStudent } : student)));
         }
     };
 

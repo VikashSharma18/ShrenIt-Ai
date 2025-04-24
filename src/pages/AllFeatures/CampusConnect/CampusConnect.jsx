@@ -3,6 +3,7 @@ import { useAuth } from "../../Login/AuthContext";
 import { supabase } from "../../../services/supabase";
 import { io } from "socket.io-client";
 import moment from "moment";
+import { motion, AnimatePresence } from "framer-motion";
 import "./CampusConnect.css";
 
 const CampusConnect = () => {
@@ -16,51 +17,47 @@ const CampusConnect = () => {
   const [sentMessageIds] = useState(new Set());
   const [shouldScroll, setShouldScroll] = useState(false);
 
-  useEffect(() => {
-    // Initialize socket connection
-    const newSocket = io(
-      import.meta.env.VITE_SERVER_URL || "http://localhost:5000"
-    );
-    setSocket(newSocket);
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.3 } },
+  };
 
-    // Clean up on component unmount
+  const messageVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+    exit: { opacity: 0, x: -100 },
+  };
+
+  const studentVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  useEffect(() => {
+    const newSocket = io(import.meta.env.VITE_SERVER_URL || "http://localhost:5000");
+    setSocket(newSocket);
     return () => newSocket.disconnect();
   }, []);
 
   useEffect(() => {
     if (student && socket) {
-      // Join the course room
       socket.emit("joinRoom", { userId: student.id, course: student.course });
-
-      // Listen for new messages
       socket.on("message", (message) => {
-        // Check if we've already processed this message ID
         if (!sentMessageIds.has(message.id)) {
-          setMessages((prevMessages) => [...prevMessages, message]);
-          // Only auto-scroll for messages from others
-          if (message.senderId !== student.id) {
-            setShouldScroll(true);
-          }
+          setMessages((prev) => [...prev, message]);
+          if (message.senderId !== student.id) setShouldScroll(true);
         }
       });
-
-      // Fetch existing messages and students
       fetchMessages();
       fetchCourseStudents();
     }
-
-    // Cleanup socket listener on re-render
-    return () => {
-      if (socket) {
-        socket.off("message");
-      }
-    };
+    return () => socket?.off("message");
   }, [student, socket, sentMessageIds]);
 
   useEffect(() => {
-    // Scroll to bottom when messages change, but only if shouldScroll is true
     if (shouldScroll) {
-      scrollToBottom();
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
       setShouldScroll(false);
     }
   }, [messages, shouldScroll]);
@@ -68,35 +65,23 @@ const CampusConnect = () => {
   const fetchMessages = async () => {
     try {
       setLoading(true);
-      if (!student || !student.course) return;
+      if (!student?.course) return;
 
       const { data, error } = await supabase
         .from("messages")
-        .select(
-          `
-          id,
-          content,
-          created_at,
-          sender_name,
-          user_id
-        `
-        )
+        .select(`id, content, created_at, sender_name, user_id`)
         .eq("course_id", student.course)
         .order("created_at", { ascending: true });
 
       if (error) throw error;
 
-      // Format the messages to be compatible with our UI
-      const formattedMessages = data.map((msg) => ({
+      setMessages(data.map(msg => ({
         id: msg.id,
         text: msg.content,
         senderId: msg.user_id,
         senderName: msg.sender_name,
         time: msg.created_at,
-      }));
-
-      setMessages(formattedMessages);
-      // Set shouldScroll to true after initial messages load
+      })));
       setShouldScroll(true);
     } catch (error) {
       console.error("Error fetching messages:", error);
@@ -107,7 +92,7 @@ const CampusConnect = () => {
 
   const fetchCourseStudents = async () => {
     try {
-      if (!student || !student.course) return;
+      if (!student?.course) return;
 
       const { data, error } = await supabase
         .from("student")
@@ -115,10 +100,9 @@ const CampusConnect = () => {
         .eq("course", student.course);
 
       if (error) throw error;
-
       setCourseStudents(data);
     } catch (error) {
-      console.error("Error fetching course students:", error);
+      console.error("Error fetching students:", error);
     }
   };
 
@@ -127,7 +111,6 @@ const CampusConnect = () => {
     if (!newMessage.trim() || !student) return;
 
     try {
-      // Insert message into Supabase
       const { data, error } = await supabase
         .from("messages")
         .insert({
@@ -140,10 +123,6 @@ const CampusConnect = () => {
         .single();
 
       if (error) {
-        // If DB error occurs, use Socket.io only
-        console.error("Database insertion error:", error);
-
-        // Create a temporary message
         const tempId = Date.now().toString();
         const tempMessage = {
           id: tempId,
@@ -152,13 +131,8 @@ const CampusConnect = () => {
           senderName: student.name,
           time: new Date().toISOString(),
         };
-
-        // Add to local messages and track the ID
         sentMessageIds.add(tempId);
         setMessages((prev) => [...prev, tempMessage]);
-        // Don't auto-scroll for sent messages
-
-        // Emit via socket
         socket.emit("chatMessage", {
           userId: student.id,
           userName: student.name,
@@ -166,139 +140,175 @@ const CampusConnect = () => {
           message: newMessage.trim(),
           messageId: tempId,
         });
-
-        setNewMessage("");
-        return;
+      } else {
+        const formattedMessage = {
+          id: data.id,
+          text: data.content,
+          senderId: data.user_id,
+          senderName: data.sender_name,
+          time: data.created_at,
+        };
+        sentMessageIds.add(data.id);
+        setMessages((prev) => [...prev, formattedMessage]);
+        socket.emit("chatMessage", {
+          userId: student.id,
+          userName: student.name,
+          course: student.course,
+          message: newMessage.trim(),
+          messageId: formattedMessage.id,
+        });
       }
-
-      // Format message for the UI
-      const formattedMessage = {
-        id: data.id,
-        text: data.content,
-        senderId: data.user_id,
-        senderName: data.sender_name,
-        time: data.created_at,
-      };
-
-      // Add to local messages and track the ID to prevent duplication
-      sentMessageIds.add(data.id);
-      setMessages((prev) => [...prev, formattedMessage]);
-      // Don't auto-scroll for sent messages
-
-      // Emit the message to the socket for other users
-      socket.emit("chatMessage", {
-        userId: student.id,
-        userName: student.name,
-        course: student.course,
-        message: newMessage.trim(),
-        messageId: formattedMessage.id,
-      });
-
-      // Clear input field
       setNewMessage("");
     } catch (error) {
       console.error("Error sending message:", error);
     }
   };
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  // Get the first initial of a name for avatar
-  const getInitial = (name) => {
-    return name ? name.charAt(0).toUpperCase() : "?";
-  };
-
-  // Format time using moment.js
-  const formatTime = (timestamp) => {
-    return moment(timestamp).format("h:mm A");
-  };
+  const getInitial = (name) => name?.charAt(0).toUpperCase() || "?";
+  const formatTime = (timestamp) => moment(timestamp).format("h:mm A");
 
   if (!student) {
     return (
-      <div className="no-course-message">
+      <motion.div
+        className="no-course-message"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <h2>Please login to use CampusConnect</h2>
-      </div>
+      </motion.div>
     );
   }
 
   if (!student.course) {
     return (
-      <div className="no-course-message">
+      <motion.div
+        className="no-course-message"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <h2>You are not enrolled in any course</h2>
-        <p>
-          Please update your profile with your course information to use
-          CampusConnect.
-        </p>
-      </div>
+        <p>Please update your profile to use CampusConnect.</p>
+      </motion.div>
     );
   }
 
   return (
-    <div className="campus-connect-container">
-      {/* Sidebar with course information and student list */}
-      <div className="sidebar">
+    <motion.div
+      className="campus-connect-container"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      {/* Sidebar */}
+      <motion.div
+        className="sidebar"
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", stiffness: 120 }}
+      >
         <div className="course-info">
           <h3>{student.course}</h3>
           <p>{courseStudents.length} students enrolled</p>
         </div>
-        <div className="student-list">
-          {courseStudents.map((s) => (
-            <div key={s.id} className="student-item">
-              <div className="student-avatar">{getInitial(s.name)}</div>
-              <div className="student-details">
-                <div className="student-name">{s.name}</div>
-                <div className="student-course">Semester: {s.sem}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Chat section */}
+        <motion.div className="student-list">
+          <AnimatePresence>
+            {courseStudents.map((student) => (
+              <motion.div
+                key={student.id}
+                className="student-item"
+                variants={studentVariants}
+                initial="hidden"
+                animate="visible"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="student-avatar">{getInitial(student.name)}</div>
+                <div className="student-details">
+                  <div className="student-name">{student.name}</div>
+                  <div className="student-course">Sem {student.sem}</div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </motion.div>
+
+      {/* Chat Section */}
       <div className="chat-section">
         <div className="chat-header">{student.course} Group Chat</div>
+
         <div className="messages-container">
           {loading ? (
-            <div style={{ textAlign: "center", padding: "20px" }}>
-              Loading messages...
+            <div className="loading-container">
+              <div className="loading-dots">
+                {[...Array(3)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="dot"
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.2, delay: i * 0.2 }}
+                  />
+                ))}
+              </div>
             </div>
           ) : messages.length === 0 ? (
-            <div style={{ textAlign: "center", padding: "20px" }}>
-              No messages yet. Start the conversation!
-            </div>
+            <motion.div
+              className="empty-state"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <i className="fas fa-comment-dots"></i>
+              <p>No messages yet. Start chatting!</p>
+            </motion.div>
           ) : (
-            messages.map((msg) => (
-              <div
-                key={msg.id}
-                className={`message ${
-                  msg.senderId === student.id ? "sent" : "received"
-                }`}
-              >
-                {msg.senderId !== student.id && (
-                  <div style={{ fontWeight: "bold", marginBottom: "5px" }}>
-                    {msg.senderName}
-                  </div>
-                )}
-                <div>{msg.text}</div>
-                <div className="message-time">{formatTime(msg.time)}</div>
-              </div>
-            ))
+            <AnimatePresence>
+              {messages.map((msg) => (
+                <motion.div
+                  key={msg.id}
+                  className={`message ${msg.senderId === student.id ? "sent" : "received"}`}
+                  variants={messageVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  layout
+                >
+                  {msg.senderId !== student.id && (
+                    <div className="message-sender">{msg.senderName}</div>
+                  )}
+                  <div className="message-content">{msg.text}</div>
+                  <div className="message-time">{formatTime(msg.time)}</div>
+                </motion.div>
+              ))}
+              <div ref={messagesEndRef} />
+            </AnimatePresence>
           )}
-          <div ref={messagesEndRef} />
         </div>
-        <form onSubmit={sendMessage} className="message-input">
+
+        <motion.form
+          onSubmit={sendMessage}
+          className="message-input"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
           <input
             type="text"
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
             placeholder="Type a message..."
+            autoComplete="off"
           />
-          <button type="submit">Send</button>
-        </form>
+          <motion.button
+            type="submit"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label="Send message"
+          >
+            <i className="fas fa-paper-plane"></i>
+          </motion.button>
+        </motion.form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
