@@ -9,19 +9,42 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [connectionError, setConnectionError] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
+
+  // Retry strategy for failed requests
+  const retryRequest = async (requestFn, maxRetries = 3) => {
+    let lastError;
+    for (let i = 0; i < maxRetries; i++) {
+      try {
+        // Exponential backoff: 1s, 2s, 4s...
+        if (i > 0) {
+          await new Promise(r => setTimeout(r, 1000 * Math.pow(2, i - 1)));
+        }
+        return await requestFn();
+      } catch (err) {
+        lastError = err;
+        console.log(`Attempt ${i+1} failed, ${i < maxRetries - 1 ? 'retrying...' : 'giving up.'}`);
+      }
+    }
+    throw lastError;
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
+    setConnectionError(false);
 
     try {
-      const { data: studentData, error: fetchError } = await supabase
-        .from('student')
-        .select('*')
-        .ilike('email', email.trim().toLowerCase());
+      // Use retry mechanism for the request
+      const { data: studentData, error: fetchError } = await retryRequest(() => 
+        supabase
+          .from('student')
+          .select('*')
+          .ilike('email', email.trim().toLowerCase())
+      );
 
       if (fetchError) throw fetchError;
       if (!studentData?.length) throw new Error('No account found with this email');
@@ -32,7 +55,16 @@ const Login = () => {
       login(student);
       navigate('/');
     } catch (err) {
-      setError(err.message || 'Login failed. Please check your credentials.');
+      console.error('Login error:', err);
+      if (err.message?.includes('fetch') || 
+          err.message?.includes('network') || 
+          err.message?.includes('timeout') ||
+          err instanceof TypeError) {
+        setConnectionError(true);
+        setError('Connection error. Please check your internet connection and try again.');
+      } else {
+        setError(err.message || 'Login failed. Please check your credentials.');
+      }
     } finally {
       setLoading(false);
     }
@@ -63,7 +95,21 @@ const Login = () => {
             />
           </div>
 
-          {error && <div className="error-message">{error}</div>}
+          {error && (
+            <div className={`error-message ${connectionError ? 'connection-error' : ''}`}>
+              {error}
+              {connectionError && (
+                <div className="retry-suggestion">
+                  The server might be down or unreachable. You can try:
+                  <ul>
+                    <li>Checking your internet connection</li>
+                    <li>Waiting a few minutes and trying again</li>
+                    <li>Contacting your administrator if the problem persists</li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
 
           <button type="submit" disabled={loading}>
             {loading ? 'Authenticating...' : 'Login'}

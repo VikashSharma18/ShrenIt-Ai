@@ -12,6 +12,7 @@ import CourseHive from "./pages/AllFeatures/CourseHive/CourseHive.jsx";
 import RoadmapAI from "./pages/AllFeatures/RoadmapAI/RoadmapAI.jsx";
 import InterviewDecoded from "./pages/AllFeatures/InterviewDecoded/InterviewDecoded.jsx";
 import Admin from "./pages/Admin/Admin.jsx";
+import CampusConnect from "./pages/AllFeatures/CampusConnect/CampusConnect.jsx";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <Route path="/coursehive" element={<CourseHive />} />
               <Route path="/roadmapai" element={<RoadmapAI />} />
               <Route path="/interview-decoded" element={<InterviewDecoded />} />
+              <Route path="/campus-connect" element={<CampusConnect />} />
             </Route>
           </Route>
         </Routes>

@@ -118,3 +118,24 @@
         font-size: 1.75rem;
     }
 }
+
+.connection-error {
+  background-color: #fff4e5;
+  border: 1px solid #ffa940;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.retry-suggestion {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.retry-suggestion ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.retry-suggestion li {
+  margin-bottom: 3px;
+}
