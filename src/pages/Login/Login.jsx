@@ -13,12 +13,10 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  // Retry strategy for failed requests
   const retryRequest = async (requestFn, maxRetries = 3) => {
     let lastError;
     for (let i = 0; i < maxRetries; i++) {
       try {
-        // Exponential backoff: 1s, 2s, 4s...
         if (i > 0) {
           await new Promise(r => setTimeout(r, 1000 * Math.pow(2, i - 1)));
         }
@@ -38,7 +36,6 @@ const Login = () => {
     setConnectionError(false);
 
     try {
-      // Use retry mechanism for the request
       const { data: studentData, error: fetchError } = await retryRequest(() => 
         supabase
           .from('student')
@@ -71,11 +68,11 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-glassmorphism">
-        <h2 className="login-title">Student Portal Login</h2>
-        <form onSubmit={handleLogin} className="login-form">
-          <div className="input-group">
+    <div className="loginpg-container">
+      <div className="loginpg-glassmorphism">
+        <h2 className="loginpg-title">Student Portal Login</h2>
+        <form onSubmit={handleLogin} className="loginpg-form">
+          <div className="loginpg-input-group">
             <label>University Email</label>
             <input
               type="email"
@@ -85,7 +82,7 @@ const Login = () => {
             />
           </div>
 
-          <div className="input-group">
+          <div className="loginpg-input-group">
             <label>Password</label>
             <input
               type="password"
@@ -96,10 +93,10 @@ const Login = () => {
           </div>
 
           {error && (
-            <div className={`error-message ${connectionError ? 'connection-error' : ''}`}>
+            <div className={`loginpg-error-message ${connectionError ? 'loginpg-connection-error' : ''}`}>
               {error}
               {connectionError && (
-                <div className="retry-suggestion">
+                <div className="loginpg-retry-suggestion">
                   The server might be down or unreachable. You can try:
                   <ul>
                     <li>Checking your internet connection</li>
@@ -111,11 +108,11 @@ const Login = () => {
             </div>
           )}
 
-          <button type="submit" disabled={loading}>
+          <button type="submit" disabled={loading} className="loginpg-button">
             {loading ? 'Authenticating...' : 'Login'}
           </button>
 
-          <div className="contact-admin">
+          <div className="loginpg-contact-admin">
             Need access? <a href="/contact-admin">Contact Administrator</a>
           </div>
         </form>

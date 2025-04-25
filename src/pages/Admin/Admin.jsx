@@ -12,6 +12,8 @@ const Admin = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [students, setStudents] = useState([]);
     const [newStudent, setNewStudent] = useState({ name: '', email: '', course: '', sem: '' });
+    const [editingStudent, setEditingStudent] = useState(null);
+    const [notification, setNotification] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -23,10 +25,16 @@ const Admin = () => {
         }
     }, []);
 
+    const showNotification = (message, type = 'success') => {
+        setNotification({ message, type });
+        setTimeout(() => setNotification(null), 3000);
+    };
+
     const fetchStudents = async () => {
         const { data, error } = await supabase.from('student').select('*');
         if (error) {
             console.error('Error fetching students:', error);
+            showNotification('Error fetching students', 'error');
         } else {
             setStudents(data);
         }
@@ -38,16 +46,11 @@ const Admin = () => {
             .on(
                 'postgres_changes',
                 { event: '*', schema: 'public', table: 'student' },
-                (payload) => {
-                    console.log('Change received:', payload);
-                    fetchStudents();
-                }
+                () => fetchStudents()
             )
             .subscribe();
 
-        return () => {
-            supabase.removeChannel(subscription);
-        };
+        return () => supabase.removeChannel(subscription);
     };
 
     const handleLogin = async (e) => {
@@ -87,58 +90,115 @@ const Admin = () => {
         e.preventDefault();
         const { data, error } = await supabase.from('student').insert([newStudent]);
         if (error) {
-            console.error('Error adding student:', error);
+            showNotification('Error adding student: ' + error.message, 'error');
             return;
         }
-        if (data && data.length > 0) {
-            setNewStudent({ name: '', email: '', course: '', sem: '' });
-        }
+        setNewStudent({ name: '', email: '', course: '', sem: '' });
+        showNotification('Student added successfully');
     };
 
     const handleDeleteStudent = async (id) => {
         const { error } = await supabase.from('student').delete().eq('id', id);
         if (error) {
-            console.error('Error deleting student:', error);
+            showNotification('Error deleting student: ' + error.message, 'error');
+        } else {
+            showNotification('Student deleted successfully');
         }
     };
 
-    const handleUpdateStudent = async (id, updatedStudent) => {
-        const { error } = await supabase.from('student').update(updatedStudent).eq('id', id);
+    const handleUpdateStudent = async (e) => {
+        e.preventDefault();
+        const { error } = await supabase
+            .from('student')
+            .update(editingStudent)
+            .eq('id', editingStudent.id);
+        
         if (error) {
-            console.error('Error updating student:', error);
+            showNotification('Error updating student: ' + error.message, 'error');
+        } else {
+            showNotification('Student updated successfully');
+            setEditingStudent(null);
         }
     };
 
     if (isLoggedIn) {
         return (
-            <div className="admin-dashboard__container">
-                <header className="admin-header">
-                    <h1 className="admin-title">Admin Dashboard</h1>
-                    <button onClick={handleLogout} className="admin-logout-btn">
+            <div className="adminPage_dashboard__container">
+                {notification && (
+                    <div className={`adminPage_notification adminPage_notification--${notification.type}`}>
+                        {notification.message}
+                    </div>
+                )}
+
+                {editingStudent && (
+                    <div className="adminPage_modal">
+                        <div className="adminPage_modal__content">
+                            <h3>Update Student</h3>
+                            <form onSubmit={handleUpdateStudent}>
+                                <input
+                                    type="text"
+                                    placeholder="Full Name"
+                                    value={editingStudent.name}
+                                    onChange={(e) => setEditingStudent({ ...editingStudent, name: e.target.value })}
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    value={editingStudent.email}
+                                    onChange={(e) => setEditingStudent({ ...editingStudent, email: e.target.value })}
+                                    required
+                                />
+                                <input
+                                    type="text"
+                                    placeholder="Course"
+                                    value={editingStudent.course}
+                                    onChange={(e) => setEditingStudent({ ...editingStudent, course: e.target.value })}
+                                    required
+                                />
+                                <input
+                                    type="text"
+                                    placeholder="Semester"
+                                    value={editingStudent.sem}
+                                    onChange={(e) => setEditingStudent({ ...editingStudent, sem: e.target.value })}
+                                    required
+                                />
+                                <div className="adminPage_modal__actions">
+                                    <button type="button" onClick={() => setEditingStudent(null)}>
+                                        Cancel
+                                    </button>
+                                    <button type="submit">Update</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                )}
+
+                <header className="adminPage_header">
+                    <h1 className="adminPage_title">Admin Dashboard</h1>
+                    <button onClick={handleLogout} className="adminPage_logout-btn">
                         Logout
                     </button>
                 </header>
 
-                <section className="admin-content__section">
-                    <h2 className="admin-section__title">Student Management</h2>
+                <section className="adminPage_content__section">
+                    <h2 className="adminPage_section__title">Student Management</h2>
 
-                    <form onSubmit={handleAddStudent} className="admin-student-form">
-                        <h3 className="admin-form__title">Add New Student</h3>
-                        <div className="admin-form__grid">
+                    <form onSubmit={handleAddStudent} className="adminPage_student-form">
+                        <h3 className="adminPage_form__title">Add New Student</h3>
+                        <div className="adminPage_form__grid">
                             <input
                                 type="text"
                                 placeholder="Full Name"
                                 value={newStudent.name}
                                 onChange={(e) => setNewStudent({ ...newStudent, name: e.target.value })}
-                                className="admin-form__input"
                                 required
                             />
                             <input
                                 type="email"
-                                placeholder="Email Address"
+                                placeholder="Email"
                                 value={newStudent.email}
                                 onChange={(e) => setNewStudent({ ...newStudent, email: e.target.value })}
-                                className="admin-form__input"
                                 required
                             />
                             <input
@@ -146,7 +206,6 @@ const Admin = () => {
                                 placeholder="Course"
                                 value={newStudent.course}
                                 onChange={(e) => setNewStudent({ ...newStudent, course: e.target.value })}
-                                className="admin-form__input"
                                 required
                             />
                             <input
@@ -154,19 +213,18 @@ const Admin = () => {
                                 placeholder="Semester"
                                 value={newStudent.sem}
                                 onChange={(e) => setNewStudent({ ...newStudent, sem: e.target.value })}
-                                className="admin-form__input"
                                 required
                             />
                         </div>
-                        <button type="submit" className="admin-form__submit">
+                        <button type="submit" className="adminPage_form__submit">
                             Add Student
                         </button>
                     </form>
 
-                    <div className="admin-table__container">
-                        <h3 className="admin-table__title">Current Students</h3>
-                        <div className="admin-table__scroll">
-                            <table className="admin-students-table">
+                    <div className="adminPage_table__container">
+                        <h3 className="adminPage_table__title">Current Students</h3>
+                        <div className="adminPage_table__scroll">
+                            <table className="adminPage_students-table">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
@@ -178,26 +236,21 @@ const Admin = () => {
                                 </thead>
                                 <tbody>
                                     {students.map((student) => (
-                                        <tr key={student.id} className="admin-table__row">
+                                        <tr key={student.id}>
                                             <td data-label="Name">{student.name}</td>
                                             <td data-label="Email">{student.email}</td>
                                             <td data-label="Course">{student.course}</td>
                                             <td data-label="Semester">{student.sem}</td>
-                                            <td data-label="Actions" className="admin-table__actions">
+                                            <td data-label="Actions" className="adminPage_table__actions">
                                                 <button
                                                     onClick={() => handleDeleteStudent(student.id)}
-                                                    className="admin-table__btn admin-table__btn--delete"
+                                                    className="adminPage_table__btn adminPage_table__btn--delete"
                                                 >
                                                     Delete
                                                 </button>
                                                 <button
-                                                    onClick={() => {
-                                                        const updatedName = prompt('Enter new name:', student.name);
-                                                        if (updatedName) {
-                                                            handleUpdateStudent(student.id, { name: updatedName });
-                                                        }
-                                                    }}
-                                                    className="admin-table__btn admin-table__btn--update"
+                                                    onClick={() => setEditingStudent(student)}
+                                                    className="adminPage_table__btn adminPage_table__btn--update"
                                                 >
                                                     Update
                                                 </button>
@@ -214,34 +267,30 @@ const Admin = () => {
     }
 
     return (
-        <div className="admin-login__container">
-            <div className="admin-login__card">
-                <h2 className="admin-login__title">Admin Portal</h2>
-                <form onSubmit={handleLogin} className="admin-login__form">
-                    <div className="admin-input__group">
+        <div className="adminPage_login__container">
+            <div className="adminPage_login__card">
+                <h2 className="adminPage_login__title">Admin Portal</h2>
+                <form onSubmit={handleLogin} className="adminPage_login__form">
+                    <div className="adminPage_input__group">
                         <input
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="admin-login__input"
-                            placeholder=" "
                             required
                         />
-                        <label className="admin-input__label">Email</label>
+                        <label>Email</label>
                     </div>
-                    <div className="admin-input__group">
+                    <div className="adminPage_input__group">
                         <input
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="admin-login__input"
-                            placeholder=" "
                             required
                         />
-                        <label className="admin-input__label">Password</label>
+                        <label>Password</label>
                     </div>
-                    {error && <div className="admin-error__message">{error}</div>}
-                    <button type="submit" className="admin-login__submit">
+                    {error && <div className="adminPage_error__message">{error}</div>}
+                    <button type="submit" className="adminPage_login__submit">
                         Sign In
                     </button>
                 </form>
