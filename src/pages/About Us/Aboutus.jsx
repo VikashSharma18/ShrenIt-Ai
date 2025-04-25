@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Aboutus.css';
-import founderImage from '../../assets/profile.png'; // Replace with actual image path
+// import founderImage from '../../assets/profile.png'; // Replace with actual image path
 
 function Aboutus() {
   const containerVariants = {
@@ -39,7 +39,7 @@ function Aboutus() {
         >
           <div className="about-image-frame">
             <img 
-              src={founderImage} 
+              // src={founderImage} 
               alt="Founder" 
               className="about-portrait"
             />

@@ -274,20 +274,30 @@ const Admin = () => {
                     <div className="adminPage_input__group">
                         <input
                             type="email"
+                            id="email"
+                            className="adminPage_login__input"
+                            placeholder=" "
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
-                        <label>Email</label>
+                        <label htmlFor="email" className="adminPage_input__label">
+                            Email
+                        </label>
                     </div>
                     <div className="adminPage_input__group">
                         <input
                             type="password"
+                            id="password"
+                            className="adminPage_login__input"
+                            placeholder=" "
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
-                        <label>Password</label>
+                        <label htmlFor="password" className="adminPage_input__label">
+                            Password
+                        </label>
                     </div>
                     {error && <div className="adminPage_error__message">{error}</div>}
                     <button type="submit" className="adminPage_login__submit">

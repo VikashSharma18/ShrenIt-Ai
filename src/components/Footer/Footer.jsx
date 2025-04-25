@@ -3,6 +3,14 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
+  const handleCopyEmail = () => {
+    const email = "vikashs16598@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      alert("Email copied to clipboard!");
+    }).catch(err => {
+      console.error("Failed to copy email: ", err);
+    });
+  };
   return (
     <footer className="main-footer">
       <div className="footer-content">
@@ -33,11 +41,8 @@ const Footer = () => {
         <div className="footer-section">
           <h5 className="footer-subheading">Quick Links</h5>
           <nav className="footer-nav">
-            <a href="#" className="footer-link">About Us</a>
-            <a href="#" className="footer-link">Courses</a>
-            <a href="#" className="footer-link">Careers</a>
-            <a href="#" className="footer-link">Blog</a>
-            <a href="#" className="footer-link">Privacy Policy</a>
+            <a href="/aboutus" className="footer-link">About Us</a>
+            <a href="/features" className="footer-link">Features</a>
           </nav>
         </div>
 
@@ -48,23 +53,23 @@ const Footer = () => {
               <svg className="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z" />
               </svg>
-              support@eduaisuite.com
+              vikashs16598@gmail.com
             </p>
             <p className="contact-item">
               <svg className="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z" />
               </svg>
-              +1 (555) 123-4567
+              +91 82482 67908
             </p>
           </div>
-          <button className="footer-cta">
+          <button className="footer-cta" onClick={handleCopyEmail}>
             Schedule Demo
             <span className="cta-arrow">→</span>
           </button>
         </div>
 
         <div className="footer-section">
-          <h5 className="footer-subheading">Newsletter</h5>
+          {/* <h5 className="footer-subheading">Newsletter</h5>
           <form className="newsletter-form">
             <input
               type="email"
@@ -74,18 +79,14 @@ const Footer = () => {
             <button type="submit" className="newsletter-btn">
               Subscribe
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
 
       <div className="footer-bottom">
         <p className="copyright">
-          © {new Date().getFullYear()} EduAI Suite. All rights reserved.
+          © {new Date().getFullYear()} Shrenit AI. All rights reserved.
         </p>
-        <div className="legal-links">
-          <a href="#" className="legal-link">Terms of Service</a>
-          <a href="#" className="legal-link">Privacy Policy</a>
-        </div>
       </div>
     </footer>
   );

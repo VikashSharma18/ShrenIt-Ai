@@ -49,6 +49,7 @@ const Header = () => {
   const baseNavItems = [
     { name: 'Home', path: '/' },
     { name: 'Features', path: '/features' },
+    { name: 'About Us', path: '/aboutus' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Admin', path: '/admin' },
   ];

@@ -48,6 +48,7 @@ function App() {
             <Route path="/login" element={<Login id="login" />} />
             <Route path="/admin" element={<Admin id="admin" />} />
             <Route path="/faq" element={<FAQ id="faq" />} />
+            <Route path="/aboutus" element={<Aboutus id="aboutus" />} />
 
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
