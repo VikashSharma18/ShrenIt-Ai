@@ -58,11 +58,16 @@
   position: relative;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background: var(--gradient);
+  /* border-radius: 50%;
+  background: var(--gradient); */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
 }
 
 .ai-particle {

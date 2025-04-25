@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: OFLGoudyStMTT
+font link: https://fonts.google.com/specimen/Sorts+Mill+Goudy
+font author: Barry Schwartz
+font author site: http://crudfactory.com/
+Slogan Font: Aleo-Light.otf
+
+icon designer: Matthew Hock
+icon designer link: /matthewhock
+        
+{"bg":"transparent","icon-gradient-0":"#920DE9","icon-gradient-1":"#1536F1","font":"#000000","slogan":"#141414"}
+      
