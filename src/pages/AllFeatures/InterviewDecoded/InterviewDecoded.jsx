@@ -10,7 +10,7 @@ const InterviewDecoded = () => {
   const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
 
   useEffect(() => {
-    fetch('/questions_by_topic.json1')
+    fetch('/questions_by_topic1.json')
       .then(res => res.json())
       .then(data => {
         setData(data);
