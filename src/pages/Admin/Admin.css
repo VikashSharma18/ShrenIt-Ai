@@ -4,12 +4,12 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(60deg, #2e1a47 30%, #22142c 50%, #000000 100%);
   padding: 1rem;
 }
 
 .adminPage_login__card {
-  background: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(60deg, #302341 30%, #22142c 50%, #2e1a47 100%);
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@
 
 .adminPage_login__title {
   text-align: center;
-  color: #2d3748;
+  color: white;
   font-size: 1.8rem;
   margin-bottom: 2rem;
   font-weight: 600;
@@ -78,8 +78,8 @@
   padding: 0 0.3rem;
 }
 
-.adminPage_login__input:focus~.adminPage_input__label,
-.adminPage_login__input:not(:placeholder-shown)~.adminPage_input__label {
+.adminPage_login__input:focus ~ .adminPage_input__label,
+.adminPage_login__input:not(:placeholder-shown) ~ .adminPage_input__label {
   top: 0;
   font-size: 0.8rem;
   color: #667eea;
@@ -441,4 +441,57 @@
   .adminPage_modal__actions button {
     width: 100%;
   }
+}
+
+/* --------------- Input Field-------------- */
+.adminPage_login__input {
+  padding: 1rem 1rem 0.5rem;
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.06
+  ); /* translucent bg for glass effect */
+  color: white;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.adminPage_login__input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 5px 2px rgba(99, 102, 241, 0.35);
+}
+
+/* Optional: Adjust the label to float stylishly */
+.adminPage_input__label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #aaa;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+.adminPage_input__group {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+/* Move label up when input has value or is focused */
+.adminPage_login__input:focus + .adminPage_input__label,
+.adminPage_login__input:not(:placeholder-shown) + .adminPage_input__label {
+  top: 0.4rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  color: #bfbefc;
+  background: #2e1a47;
+  padding: 0 0.3rem;
+  border-radius: 4px;
 }

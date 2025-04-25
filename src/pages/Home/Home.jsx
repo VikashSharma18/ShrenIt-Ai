@@ -176,37 +176,26 @@
 
 // export default Home;
 
-
-
-
-
-
-
-
-
-
-
-
-import React, { useState, useEffect, useRef } from 'react';
-import './Home.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./Home.css";
 
 const Home = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const canvasRef = useRef(null);
 
   const features = [
-    'AI-Powered Learning',
-    'Smart Career Guidance',
-    'Interactive Coding',
-    'Personalized Roadmaps',
-    'Industry Partnerships',
-    'Real-time Analytics'
+    "AI-Powered Learning",
+    "Smart Career Guidance",
+    "Interactive Coding",
+    "Personalized Roadmaps",
+    "Industry Partnerships",
+    "Real-time Analytics",
   ];
 
   // Particle background effect
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     let animationFrameId;
 
     const resizeCanvas = () => {
@@ -215,12 +204,14 @@ const Home = () => {
     };
 
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
 
     class Particle {
       constructor() {
         this.reset();
-        this.color = `rgba(${Math.random() * 100 + 155}, ${Math.random() * 100 + 155}, 255, 0.1)`;
+        this.color = `rgba(${Math.random() * 100 + 155}, ${
+          Math.random() * 100 + 155
+        }, 255, 0.1)`;
       }
 
       reset() {
@@ -235,7 +226,12 @@ const Home = () => {
         this.x += Math.cos(this.angle) * this.speed;
         this.y += Math.sin(this.angle) * this.speed;
 
-        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+        if (
+          this.x < 0 ||
+          this.x > canvas.width ||
+          this.y < 0 ||
+          this.y > canvas.height
+        ) {
           this.reset();
         }
       }
@@ -253,7 +249,7 @@ const Home = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      particles.forEach(particle => {
+      particles.forEach((particle) => {
         particle.update();
         particle.draw();
       });
@@ -281,7 +277,7 @@ const Home = () => {
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -289,7 +285,7 @@ const Home = () => {
   // Feature cycler logic
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentFeature(prev => (prev + 1) % features.length);
+      setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -317,14 +313,17 @@ const Home = () => {
           </h1>
 
           <p className="home-subtitle">
-            Harness cutting-edge technology to revolutionize your educational journey
+            Harness cutting-edge technology to revolutionize your educational
+            journey
           </p>
 
           <div className="home-feature-cycler">
             {features.map((feature, index) => (
               <div
                 key={feature}
-                className={`home-feature-item ${index === currentFeature ? 'active' : ''}`}
+                className={`home-feature-item ${
+                  index === currentFeature ? "active" : ""
+                }`}
               >
                 <div className="home-feature-icon"></div>
                 {feature}
@@ -337,18 +336,17 @@ const Home = () => {
               Explore AI Tools
               <span className="home-btn-hover-effect"></span>
             </button>
-            <button className="home-btn-secondary">
-              Watch Demo
-            </button>
+            <button className="home-btn-secondary">Watch Demo</button>
           </div>
         </div>
 
-        <div className="home-stats-section">
+        {/* <div className="home-stats-section">
           <div className="home-stat-card">
             <h3>500K+</h3>
             <p>Active Learners</p>
           </div>
           <div className="home-stat-card">
+
             <h3>98%</h3>
             <p>Success Rate</p>
           </div>
@@ -356,7 +354,7 @@ const Home = () => {
             <h3>50+</h3>
             <p>Industry Experts</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
