@@ -4,14 +4,14 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useAuth } from "../../pages/Login/AuthContext";
 import logo from "../../assets/default.png";
-import Logo from "/images/logoo.png";
+import Logo from "/logo/logo/Logoo.png";
 
 const Header = () => {
-  const { student, admin } = useAuth(); // Access admin from AuthContext
+  const { student, admin } = useAuth();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home"); // Track active section
-  const navigate = useNavigate(); // React Router's navigation function
+  const [activeSection, setActiveSection] = useState("home");
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMobileOpen(!isMobileOpen);
@@ -85,7 +85,7 @@ const Header = () => {
               src={Logo}
               alt="Shrenit AI"
               classname="logo"
-              style={{ width: "200px", maxHeight: "75px" }}
+              style={{ width: "200px", maxHeight: "100px" }}
             />
           </div>
         </NavLink>

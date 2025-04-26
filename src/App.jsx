@@ -16,6 +16,7 @@ import CampusConnect from "./pages/AllFeatures/CampusConnect/CampusConnect.jsx";
 import FAQ from "./pages/FAQ/FAQ.jsx";
 import Aboutus from "./pages/About Us/Aboutus.jsx";
 import "./App.css"; // Add global styles for smooth scrolling
+import QuickNotesAi from "./pages/AllFeatures/QuickNotesAi/QuickNotesAi.jsx";
 
 function App() {
   return (
@@ -56,11 +57,27 @@ function App() {
               <Route path="/profile" element={<Profile id="profile" />} />
 
               {/* Features */}
-              <Route path="/aptitudesprint" element={<AptitudeSprint id="aptitudesprint" />} />
-              <Route path="/coursehive" element={<CourseHive id="coursehive" />} />
+              <Route
+                path="/aptitudesprint"
+                element={<AptitudeSprint id="aptitudesprint" />}
+              />
+              <Route
+                path="/quick-notes-ai"
+                element={<QuickNotesAi id="aptitudesprint" />}
+              />
+              <Route
+                path="/coursehive"
+                element={<CourseHive id="coursehive" />}
+              />
               <Route path="/roadmapai" element={<RoadmapAI id="roadmapai" />} />
-              <Route path="/interview-decoded" element={<InterviewDecoded id="interview-decoded" />} />
-              <Route path="/campus-connect" element={<CampusConnect id="campus-connect" />} />
+              <Route
+                path="/interview-decoded"
+                element={<InterviewDecoded id="interview-decoded" />}
+              />
+              <Route
+                path="/campus-connect"
+                element={<CampusConnect id="campus-connect" />}
+              />
             </Route>
           </Route>
         </Routes>
