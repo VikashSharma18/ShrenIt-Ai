@@ -1,157 +1,174 @@
 :root {
-    --primary-blue: #2563eb;
-    --ai-purple: #6366f1;
-    --tech-cyan: #06b6d4;
-    --deep-navy: #0f172a;
-    --gradient: linear-gradient(135deg, var(--ai-purple), var(--tech-cyan));
+  --primary-blue: #2563eb;
+  --ai-purple: #6366f1;
+  --tech-cyan: #06b6d4;
+  --deep-navy: #0f172a;
+  --gradient: linear-gradient(135deg, var(--ai-purple), var(--tech-cyan));
+  --dark-bg-start: #2e1a47;
+  --dark-bg-mid: #22142c;
+  --dark-bg-end: #000000;
 }
 
+/* Dark Mode Background Container */
 .profile-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background: linear-gradient(45deg, #f8fafc, #e2e8f0);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(
+    60deg,
+    var(--dark-bg-start) 30%,
+    var(--dark-bg-mid) 50%,
+    var(--dark-bg-end) 100%
+  );
 }
 
+/* Card with Glassmorphism */
 .profile-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    width: 100%;
-    max-width: 800px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    overflow: hidden;
+  background: linear-gradient(60deg, #302341 30%, #22142c 50%, #2e1a47 100%);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
 }
 
+/* Header */
 .profile-header {
-    padding: 2rem;
-    background: var(--gradient);
-    position: relative;
+  padding: 2rem;
+  background: var(--gradient);
+  position: relative;
 }
 
 .profile-title {
-    color: white;
-    margin: 0;
-    font-size: 2rem;
-    text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .profile-gradient-bar {
-    height: 4px;
-    background: var(--gradient);
-    width: 100px;
-    margin: 1rem auto 0;
-    border-radius: 2px;
+  height: 4px;
+  background: var(--gradient);
+  width: 100px;
+  margin: 1rem auto 0;
+  border-radius: 2px;
 }
 
+/* Content Area */
 .profile-content {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .profile-info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .profile-info-item {
-    background: rgba(99, 102, 241, 0.05);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid rgba(99, 102, 241, 0.1);
+  background: rgba(99, 102, 241, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.15);
 }
 
+/* Typography */
 .info-label {
-    display: block;
-    color: var(--ai-purple);
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+  display: block;
+  color: var(--ai-purple);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .info-value {
-    display: block;
-    color: var(--deep-navy);
-    font-size: 1.1rem;
-    font-weight: 600;
+  display: block;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
+/* Logout Button */
 .logout-button {
-    position: relative;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-    display: block;
-    padding: 1rem 2rem;
-    background: var(--gradient);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.3s ease;
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+  padding: 1rem 2rem;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .logout-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
 }
 
 .button-gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent);
-    transition: 0.5s;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
 }
 
 .logout-button:hover .button-gradient-overlay {
-    left: 100%;
+  left: 100%;
 }
 
+/* Responsive Tweaks */
 @media (max-width: 768px) {
-    .profile-card {
-        border-radius: 15px;
-    }
+  .profile-card {
+    border-radius: 15px;
+  }
 
-    .profile-info-grid {
-        grid-template-columns: 1fr;
-    }
+  .profile-info-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .profile-title {
-        font-size: 1.75rem;
-    }
+  .profile-title {
+    font-size: 1.75rem;
+  }
 
-    .logout-button {
-        max-width: 100%;
-    }
+  .logout-button {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
-    .profile-container {
-        padding: 1rem;
-    }
+  .profile-container {
+    padding: 1rem;
+  }
 
-    .profile-header {
-        padding: 1.5rem;
-    }
+  .profile-header {
+    padding: 1.5rem;
+  }
 
-    .profile-title {
-        font-size: 1.5rem;
-    }
+  .profile-title {
+    font-size: 1.5rem;
+  }
 
-    .info-value {
-        font-size: 1rem;
-    }
+  .info-value {
+    font-size: 1rem;
+  }
 }

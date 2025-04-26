@@ -79,11 +79,11 @@ function Aboutus() {
             competence for students navigating educational challenges.
           </motion.p>
 
-          <motion.p variants={itemVariants} className="about-closing-statement">
+          {/* <motion.p variants={itemVariants} className="about-closing-statement">
             Your engagement fuels our vision - empowering students to approach
             their future with clarity, confidence, and continuous growth
             potential.
-          </motion.p>
+          </motion.p> */}
         </motion.div>
       </div>
     </motion.section>

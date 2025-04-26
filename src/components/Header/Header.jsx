@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useAuth } from "../../pages/Login/AuthContext";
 import logo from "../../assets/default.png";
+import Logo from "/images/logoo.png";
 
 const Header = () => {
   const { student, admin } = useAuth(); // Access admin from AuthContext
@@ -80,10 +81,11 @@ const Header = () => {
         <NavLink to="/" className="logo">
           <div className="logo-icon">
             <img
-              src={logo}
+              // src={logo}
+              src={Logo}
               alt="Shrenit AI"
               classname="logo"
-              style={{ width: "200px", height: "200px" }}
+              style={{ width: "200px", maxHeight: "75px" }}
             />
           </div>
         </NavLink>
