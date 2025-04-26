@@ -43,7 +43,7 @@ function Aboutus() {
 
           <div className="about-meta-info">
             <h2 className="about-name">VIKASH SHARMA</h2>
-            <p className="about-position">Chief Executive Officer</p>
+            <p className="about-position">Founder</p>
             <div className="about-product-brand">
               <span className="product-name">Shrenit</span>
               <span className="product-ai">AI</span>
