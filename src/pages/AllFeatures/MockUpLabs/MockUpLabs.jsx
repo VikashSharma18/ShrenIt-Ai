@@ -30,7 +30,7 @@ const MockUpLabs = () => {
 
     const interval = setInterval(async () => {
       const response = await axios.get(
-        "http://localhost:5000/api/posture_data"
+        "https://shrenitai-backend.onrender.com/api/posture_data"
       );
       setPostureStatus(response.data);
 
