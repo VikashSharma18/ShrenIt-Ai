@@ -3,10 +3,10 @@ import "./MockUpLabs.css";
 
 const PostureStatus = ({ status }) => {
   return (
-    <div className="posture-status-container ">
-      <h2 className="posture-status-header ">Posture Status</h2>
+    <div className="posture-status-container">
+      <h2 className="posture-status-header">Posture Status</h2>
       <p
-        className={`posture-status-text  ${
+        className={`posture-status-text ${
           status.head === "green" ? "green" : "red"
         }`}
       >
