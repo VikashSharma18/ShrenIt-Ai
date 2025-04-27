@@ -21,8 +21,10 @@
   margin: 0 auto;
   background: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3),
-    0 12px 32px rgba(74, 144, 226, 0.5), 0 24px 64px rgba(74, 144, 226, 0.7);
+  background: linear-gradient(135deg, #8419b6, #383779);
+  box-shadow: 0 20px 60px rgba(132, 25, 182, 0.5),
+    0 10px 30px rgba(56, 55, 121, 0.4);
+
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
