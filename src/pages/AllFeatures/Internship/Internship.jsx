@@ -58,7 +58,7 @@ const InternshipApp = () => {
           </div>
         </div>
       ) : (
-        <div className="internship-detail">
+        <div className="internship-detail" style={{ display: "block" }}>
           <div className="detail-content">
             <button className="back-button" onClick={goBack}>
               <i className="fas fa-arrow-left"></i> Back to List
@@ -95,7 +95,8 @@ const InternshipApp = () => {
                   rel="noopener noreferrer"
                   className="apply-button"
                 >
-                  <i className="fas fa-external-link-alt"></i> Apply Now
+                  <i className="fas fa-external-link-alt apply-now"></i> Apply
+                  Now
                 </a>
               )}
             </div>
