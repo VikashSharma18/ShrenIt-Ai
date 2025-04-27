@@ -286,11 +286,11 @@ const Features = () => {
       path: "/roadmapai",
     },
     {
-      title: "Portfolio Builder",
+      title: "InternArena",
       description:
-        "AI-driven learning paths to build and track your portfolio.",
-      icon: "🗺️",
-      color: "#10b981",
+        "Empowering interns with AI-powered tools to enhance skills, build portfolios, and track career progress.",
+      icon: "💻",
+      color: "#ffffff",
       path: "/portfolio-builder",
     },
   ];
