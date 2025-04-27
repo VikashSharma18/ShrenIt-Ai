@@ -17,6 +17,7 @@ import FAQ from "./pages/FAQ/FAQ.jsx";
 import Aboutus from "./pages/About Us/Aboutus.jsx";
 import "./App.css"; // Add global styles for smooth scrolling
 import QuickNotesAi from "./pages/AllFeatures/QuickNotesAi/QuickNotesAi.jsx";
+import InternshipApp from "./pages/AllFeatures/Internship/Internship.jsx";
 
 function App() {
   return (
@@ -63,13 +64,17 @@ function App() {
               />
               <Route
                 path="/quick-notes-ai"
-                element={<QuickNotesAi id="aptitudesprint" />}
+                element={<QuickNotesAi id="quick-notes-ai" />}
               />
               <Route
                 path="/coursehive"
                 element={<CourseHive id="coursehive" />}
               />
               <Route path="/roadmapai" element={<RoadmapAI id="roadmapai" />} />
+              <Route
+                path="/portfolio-builder"
+                element={<InternshipApp id="portfolio-builder" />}
+              />
               <Route
                 path="/interview-decoded"
                 element={<InterviewDecoded id="interview-decoded" />}

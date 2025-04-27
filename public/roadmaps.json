@@ -4,134 +4,47 @@
       "id": "btech_cs",
       "name": "B.Tech (Computer Science)",
       "roles": [
-        {
-          "id": "software_engineer",
-          "name": "Software Engineer"
-        },
-        {
-          "id": "data_scientist",
-          "name": "Data Scientist"
-        },
-        {
-          "id": "ai_ml_engineer",
-          "name": "AI/ML Engineer"
-        },
-        {
-          "id": "cybersecurity_analyst",
-          "name": "Cybersecurity Analyst"
-        },
-        {
-          "id": "cloud_architect",
-          "name": "Cloud Architect"
-        },
-        {
-          "id": "devops_engineer",
-          "name": "DevOps Engineer"
-        },
-        {
-          "id": "fullstack_developer",
-          "name": "Full Stack Developer"
-        },
-        {
-          "id": "game_developer",
-          "name": "Game Developer"
-        },
-        {
-          "id": "blockchain_developer",
-          "name": "Blockchain Developer"
-        },
-        {
-          "id": "quantitative_analyst",
-          "name": "Quantitative Analyst"
-        }
+        { "id": "software_engineer", "name": "Software Engineer" },
+        { "id": "data_scientist", "name": "Data Scientist" },
+        { "id": "ai_ml_engineer", "name": "AI/ML Engineer" },
+        { "id": "cybersecurity_analyst", "name": "Cybersecurity Analyst" },
+        { "id": "cloud_architect", "name": "Cloud Architect" },
+        { "id": "devops_engineer", "name": "DevOps Engineer" },
+        { "id": "fullstack_developer", "name": "Full Stack Developer" },
+        { "id": "game_developer", "name": "Game Developer" },
+        { "id": "blockchain_developer", "name": "Blockchain Developer" },
+        { "id": "quantitative_analyst", "name": "Quantitative Analyst" }
       ]
     },
     {
       "id": "btech_civil",
       "name": "B.Tech (Civil Engineering)",
       "roles": [
-        {
-          "id": "structural_engineer",
-          "name": "Structural Engineer"
-        },
-        {
-          "id": "construction_manager",
-          "name": "Construction Manager"
-        },
-        {
-          "id": "transportation_engineer",
-          "name": "Transportation Engineer"
-        },
-        {
-          "id": "environmental_engineer",
-          "name": "Environmental Engineer"
-        },
-        {
-          "id": "geotechnical_engineer",
-          "name": "Geotechnical Engineer"
-        },
-        {
-          "id": "urban_planner",
-          "name": "Urban Planner"
-        },
-        {
-          "id": "water_resource_engineer",
-          "name": "Water Resource Engineer"
-        },
-        {
-          "id": "project_engineer",
-          "name": "Project Engineer"
-        },
-        {
-          "id": "building_surveyor",
-          "name": "Building Surveyor"
-        },
-        {
-          "id": "estimation_engineer",
-          "name": "Estimation Engineer"
-        }
+        { "id": "structural_engineer", "name": "Structural Engineer" },
+        { "id": "construction_manager", "name": "Construction Manager" },
+        { "id": "transportation_engineer", "name": "Transportation Engineer" },
+        { "id": "environmental_engineer", "name": "Environmental Engineer" },
+        { "id": "geotechnical_engineer", "name": "Geotechnical Engineer" },
+        { "id": "urban_planner", "name": "Urban Planner" },
+        { "id": "water_resource_engineer", "name": "Water Resource Engineer" },
+        { "id": "project_engineer", "name": "Project Engineer" },
+        { "id": "building_surveyor", "name": "Building Surveyor" },
+        { "id": "estimation_engineer", "name": "Estimation Engineer" }
       ]
     },
     {
       "id": "bca",
       "name": "BCA",
       "roles": [
-        {
-          "id": "web_developer",
-          "name": "Web Developer"
-        },
-        {
-          "id": "mobile_app_developer",
-          "name": "Mobile App Developer"
-        },
-        {
-          "id": "database_administrator",
-          "name": "Database Administrator"
-        },
-        {
-          "id": "system_analyst",
-          "name": "System Analyst"
-        },
-        {
-          "id": "software_tester",
-          "name": "Software Tester"
-        },
-        {
-          "id": "network_administrator",
-          "name": "Network Administrator"
-        },
-        {
-          "id": "ui_ux_designer",
-          "name": "UI/UX Designer"
-        },
-        {
-          "id": "it_consultant",
-          "name": "IT Consultant"
-        },
-        {
-          "id": "technical_writer",
-          "name": "Technical Writer"
-        },
+        { "id": "web_developer", "name": "Web Developer" },
+        { "id": "mobile_app_developer", "name": "Mobile App Developer" },
+        { "id": "database_administrator", "name": "Database Administrator" },
+        { "id": "system_analyst", "name": "System Analyst" },
+        { "id": "software_tester", "name": "Software Tester" },
+        { "id": "network_administrator", "name": "Network Administrator" },
+        { "id": "ui_ux_designer", "name": "UI/UX Designer" },
+        { "id": "it_consultant", "name": "IT Consultant" },
+        { "id": "technical_writer", "name": "Technical Writer" },
         {
           "id": "digital_marketing_specialist",
           "name": "Digital Marketing Specialist"
@@ -142,138 +55,63 @@
       "id": "bba",
       "name": "BBA",
       "roles": [
-        {
-          "id": "business_analyst",
-          "name": "Business Analyst"
-        },
-        {
-          "id": "marketing_manager",
-          "name": "Marketing Manager"
-        },
-        {
-          "id": "financial_analyst",
-          "name": "Financial Analyst"
-        },
-        {
-          "id": "human_resource_manager",
-          "name": "Human Resource Manager"
-        },
-        {
-          "id": "operations_manager",
-          "name": "Operations Manager"
-        },
-        {
-          "id": "sales_manager",
-          "name": "Sales Manager"
-        },
-        {
-          "id": "supply_chain_manager",
-          "name": "Supply Chain Manager"
-        },
-        {
-          "id": "entrepreneur",
-          "name": "Entrepreneur"
-        },
-        {
-          "id": "retail_manager",
-          "name": "Retail Manager"
-        },
-        {
-          "id": "banking_officer",
-          "name": "Banking Officer"
-        }
+        { "id": "business_analyst", "name": "Business Analyst" },
+        { "id": "marketing_manager", "name": "Marketing Manager" },
+        { "id": "financial_analyst", "name": "Financial Analyst" },
+        { "id": "human_resource_manager", "name": "Human Resource Manager" },
+        { "id": "operations_manager", "name": "Operations Manager" },
+        { "id": "sales_manager", "name": "Sales Manager" },
+        { "id": "supply_chain_manager", "name": "Supply Chain Manager" },
+        { "id": "entrepreneur", "name": "Entrepreneur" },
+        { "id": "retail_manager", "name": "Retail Manager" },
+        { "id": "banking_officer", "name": "Banking Officer" }
       ]
     },
     {
       "id": "mba",
       "name": "MBA",
       "roles": [
-        {
-          "id": "product_manager",
-          "name": "Product Manager"
-        },
-        {
-          "id": "investment_banker",
-          "name": "Investment Banker"
-        },
-        {
-          "id": "management_consultant",
-          "name": "Management Consultant"
-        },
-        {
-          "id": "brand_manager",
-          "name": "Brand Manager"
-        },
+        { "id": "product_manager", "name": "Product Manager" },
+        { "id": "investment_banker", "name": "Investment Banker" },
+        { "id": "management_consultant", "name": "Management Consultant" },
+        { "id": "brand_manager", "name": "Brand Manager" },
         {
           "id": "business_development_manager",
           "name": "Business Development Manager"
         },
-        {
-          "id": "chief_financial_officer",
-          "name": "Chief Financial Officer"
-        },
+        { "id": "chief_financial_officer", "name": "Chief Financial Officer" },
         {
           "id": "digital_marketing_manager",
           "name": "Digital Marketing Manager"
         },
-        {
-          "id": "supply_chain_analyst",
-          "name": "Supply Chain Analyst"
-        },
+        { "id": "supply_chain_analyst", "name": "Supply Chain Analyst" },
         {
           "id": "corporate_strategy_manager",
           "name": "Corporate Strategy Manager"
         },
-        {
-          "id": "venture_capitalist",
-          "name": "Venture Capitalist"
-        }
+        { "id": "venture_capitalist", "name": "Venture Capitalist" }
       ]
     },
     {
       "id": "mca",
       "name": "MCA",
       "roles": [
-        {
-          "id": "software_architect",
-          "name": "Software Architect"
-        },
-        {
-          "id": "data_engineer",
-          "name": "Data Engineer"
-        },
+        { "id": "software_architect", "name": "Software Architect" },
+        { "id": "data_engineer", "name": "Data Engineer" },
         {
           "id": "cloud_solutions_architect",
           "name": "Cloud Solutions Architect"
         },
-        {
-          "id": "it_project_manager",
-          "name": "IT Project Manager"
-        },
+        { "id": "it_project_manager", "name": "IT Project Manager" },
         {
           "id": "machine_learning_engineer",
           "name": "Machine Learning Engineer"
         },
-        {
-          "id": "big_data_analyst",
-          "name": "Big Data Analyst"
-        },
-        {
-          "id": "cybersecurity_manager",
-          "name": "Cybersecurity Manager"
-        },
-        {
-          "id": "erp_consultant",
-          "name": "ERP Consultant"
-        },
-        {
-          "id": "research_scientist",
-          "name": "Research Scientist"
-        },
-        {
-          "id": "chief_technology_officer",
-          "name": "Chief Technology Officer"
-        }
+        { "id": "big_data_analyst", "name": "Big Data Analyst" },
+        { "id": "cybersecurity_manager", "name": "Cybersecurity Manager" },
+        { "id": "erp_consultant", "name": "ERP Consultant" },
+        { "id": "research_scientist", "name": "Research Scientist" },
+        { "id": "chief_technology_officer", "name": "Chief Technology Officer" }
       ]
     }
   ],
@@ -407,11 +245,7 @@
         "title": "Career Preparation",
         "content": "Prepare for job interviews and build professional profile",
         "resources": [
-          {
-            "type": "course",
-            "title": "Coding Interview Prep",
-            "link": "#"
-          },
+          { "type": "course", "title": "Coding Interview Prep", "link": "#" },
           {
             "type": "template",
             "title": "Technical Resume Template",
@@ -455,11 +289,7 @@
             "title": "Mathematics for Data Science",
             "link": "#"
           },
-          {
-            "type": "book",
-            "title": "Python for Data Analysis",
-            "link": "#"
-          }
+          { "type": "book", "title": "Python for Data Analysis", "link": "#" }
         ],
         "innerRoadmap": [
           {
@@ -532,11 +362,7 @@
         "title": "Machine Learning",
         "content": "Learn and implement ML algorithms",
         "resources": [
-          {
-            "type": "course",
-            "title": "Machine Learning A-Z",
-            "link": "#"
-          },
+          { "type": "course", "title": "Machine Learning A-Z", "link": "#" },
           {
             "type": "book",
             "title": "Hands-On ML with Scikit-Learn",
@@ -578,11 +404,7 @@
             "title": "Deep Learning Specialization",
             "link": "#"
           },
-          {
-            "type": "project",
-            "title": "Capstone Project",
-            "link": "#"
-          }
+          { "type": "project", "title": "Capstone Project", "link": "#" }
         ],
         "innerRoadmap": [
           {
@@ -621,11 +443,7 @@
             "title": "HTML/CSS/JavaScript Bootcamp",
             "link": "#"
           },
-          {
-            "type": "book",
-            "title": "Eloquent JavaScript",
-            "link": "#"
-          }
+          { "type": "book", "title": "Eloquent JavaScript", "link": "#" }
         ],
         "innerRoadmap": [
           {
@@ -662,11 +480,7 @@
             "title": "React/Next.js Masterclass",
             "link": "#"
           },
-          {
-            "type": "project",
-            "title": "Build a React Portfolio",
-            "link": "#"
-          }
+          { "type": "project", "title": "Build a React Portfolio", "link": "#" }
         ],
         "innerRoadmap": [
           {
@@ -703,11 +517,7 @@
             "title": "Node.js/Express Bootcamp",
             "link": "#"
           },
-          {
-            "type": "book",
-            "title": "Designing Web APIs",
-            "link": "#"
-          }
+          { "type": "book", "title": "Designing Web APIs", "link": "#" }
         ],
         "innerRoadmap": [
           {
@@ -866,11 +676,7 @@
         "title": "Product Fundamentals",
         "content": "Learn core product management concepts",
         "resources": [
-          {
-            "type": "course",
-            "title": "Product Management 101",
-            "link": "#"
-          },
+          { "type": "course", "title": "Product Management 101", "link": "#" },
           {
             "type": "book",
             "title": "Inspired: How to Create Products",
@@ -955,11 +761,7 @@
             "title": "Design Patterns Masterclass",
             "link": "#"
           },
-          {
-            "type": "book",
-            "title": "Clean Architecture",
-            "link": "#"
-          }
+          { "type": "book", "title": "Clean Architecture", "link": "#" }
         ],
         "innerRoadmap": [
           {
@@ -991,16 +793,8 @@
         "title": "Cloud and Scalability",
         "content": "Learn to design scalable cloud systems",
         "resources": [
-          {
-            "type": "course",
-            "title": "Cloud Architecture",
-            "link": "#"
-          },
-          {
-            "type": "project",
-            "title": "Design Cloud-Native App",
-            "link": "#"
-          }
+          { "type": "course", "title": "Cloud Architecture", "link": "#" },
+          { "type": "project", "title": "Design Cloud-Native App", "link": "#" }
         ],
         "innerRoadmap": [
           {
@@ -1023,6 +817,4928 @@
               "Understand caching strategies",
               "Master database scaling",
               "Design high-traffic system"
+            ]
+          }
+        ]
+      }
+    ],
+    "ai_ml_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Math & Programming Foundations",
+        "content": "Build core skills in Python, linear algebra, and statistics",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Mathematics for ML (Coursera)",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Python Data Science Handbook",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master Python basics",
+              "Learn linear algebra (vectors, matrices)",
+              "Complete 20+ coding exercises"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Study probability/statistics",
+              "Pandas/NumPy for data analysis",
+              "Build a data visualization project"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Core Machine Learning",
+        "content": "Implement ML algorithms and deep learning basics",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Machine Learning by Andrew Ng",
+            "link": "#"
+          },
+          { "type": "project", "title": "Kaggle Competition", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Implement regression/classification (Scikit-Learn)",
+              "Participate in Kaggle competitions",
+              "Learn model evaluation metrics"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Train neural networks (TensorFlow)",
+              "Build CNN for image classification",
+              "Deploy ML model as a Flask API"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced AI/ML",
+        "content": "Master NLP, computer vision, and MLOps",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Deep Learning by Ian Goodfellow",
+            "link": "#"
+          },
+          { "type": "course", "title": "NLP Specialization", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Work with transformers (BERT, GPT)",
+              "Implement sentiment analysis",
+              "Research paper review"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Master OpenCV for computer vision",
+              "Build object detection (YOLO)",
+              "Optimize models for edge devices"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Production & Research",
+        "content": "Deploy models and prepare for industry/research",
+        "resources": [
+          { "type": "course", "title": "MLOps Fundamentals", "link": "#" },
+          {
+            "type": "template",
+            "title": "Research Paper Template",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Containerize models (Docker)",
+              "Learn ML pipelines (Kubeflow)",
+              "Deploy on AWS SageMaker"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Publish research paper (optional)",
+              "Intern at AI startups/companies",
+              "Prepare for ML engineer interviews"
+            ]
+          }
+        ]
+      }
+    ],
+    "cybersecurity_analyst": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Networking & OS Security",
+        "content": "Learn protocols, Linux, and security fundamentals",
+        "resources": [
+          { "type": "course", "title": "CompTIA Security+", "link": "#" },
+          { "type": "book", "title": "The Linux Command Line", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master TCP/IP, DNS, HTTP/HTTPS",
+              "Set up virtual labs (VirtualBox)",
+              "Complete TryHackMe beginner rooms"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Learn Bash/Python scripting",
+              "Configure firewalls (iptables)",
+              "Obtain TryHackMe certificates"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Ethical Hacking",
+        "content": "Penetration testing and vulnerability assessment",
+        "resources": [
+          {
+            "type": "course",
+            "title": "CEH (Certified Ethical Hacker)",
+            "link": "#"
+          },
+          { "type": "project", "title": "OWASP Top 10 Exploits", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Learn Metasploit/Burp Suite",
+              "Exploit OWASP Top 10 vulnerabilities",
+              "Get CEH certification"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Reverse engineer malware",
+              "Participate in CTF competitions",
+              "Build a secure network architecture"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Security",
+        "content": "Cryptography, forensics, and cloud security",
+        "resources": [
+          { "type": "book", "title": "Applied Cryptography", "link": "#" },
+          { "type": "course", "title": "AWS Security Specialty", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Master cryptographic algorithms (AES, RSA)",
+              "Learn digital forensics (Wireshark)",
+              "Audit smart contracts (optional)"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Secure cloud environments (AWS/GCP)",
+              "Implement zero-trust architecture",
+              "Obtain OSCP (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Industry Readiness",
+        "content": "Threat intelligence and job preparation",
+        "resources": [
+          {
+            "type": "course",
+            "title": "CISSP Certification Prep",
+            "link": "#"
+          },
+          {
+            "type": "template",
+            "title": "Security Resume Template",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Study threat intelligence (MITRE ATT&CK)",
+              "Build a SIEM (Splunk/ELK)",
+              "Intern at cybersecurity firms"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Prepare for CISSP/CISM exams",
+              "Network with professionals",
+              "Apply for SOC analyst roles"
+            ]
+          }
+        ]
+      }
+    ],
+    "cloud_architect": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Cloud Fundamentals",
+        "content": "Learn AWS/GCP/Azure basics and virtualization",
+        "resources": [
+          { "type": "course", "title": "AWS Cloud Practitioner", "link": "#" },
+          { "type": "book", "title": "Cloud Computing Bible", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn IaaS/PaaS/SaaS models",
+              "Deploy VM instances",
+              "Pass AWS Cloud Practitioner"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Master storage (S3, EBS)",
+              "Automate with Terraform",
+              "Build serverless apps (Lambda)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "DevOps & Kubernetes",
+        "content": "Master containerization and orchestration",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Docker & Kubernetes Mastery",
+            "link": "#"
+          },
+          { "type": "project", "title": "Multi-Cloud Deployment", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Learn Docker/Kubernetes",
+              "Design multi-region architectures",
+              "Implement CI/CD pipelines"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Optimize cloud costs",
+              "Secure cloud environments (IAM, WAF)",
+              "Get AWS/Azure Architect cert"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Cloud",
+        "content": "Hybrid cloud, big data, and AI integration",
+        "resources": [
+          { "type": "book", "title": "Cloud Native Patterns", "link": "#" },
+          { "type": "course", "title": "Big Data on Cloud", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Set up hybrid cloud (AWS + On-Prem)",
+              "Work with big data (EMR, BigQuery)",
+              "Learn cloud-native AI services"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Implement disaster recovery",
+              "Master service meshes (Istio)",
+              "Design cloud migration strategies"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Enterprise Solutions",
+        "content": "Lead cloud strategy and prepare for interviews",
+        "resources": [
+          { "type": "course", "title": "Cloud Leadership", "link": "#" },
+          {
+            "type": "template",
+            "title": "Cloud Architecture Portfolio",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Design enterprise-scale architectures",
+              "Optimize for compliance (GDPR, HIPAA)",
+              "Intern at cloud consulting firms"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Prepare for interviews (case studies)",
+              "Network with cloud professionals",
+              "Apply for cloud architect roles"
+            ]
+          }
+        ]
+      }
+    ],
+    "devops_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Linux & Scripting",
+        "content": "Master Bash, Python, and infrastructure basics",
+        "resources": [
+          { "type": "book", "title": "The Linux Command Line", "link": "#" },
+          { "type": "course", "title": "Python for DevOps", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master Bash scripting",
+              "Learn Git/GitHub workflows",
+              "Configure Apache/Nginx"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Automate tasks with Python",
+              "Deploy apps with Ansible",
+              "Pass RHCSA (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "CI/CD & Monitoring",
+        "content": "Jenkins, Docker, and observability tools",
+        "resources": [
+          { "type": "course", "title": "Docker Mastery", "link": "#" },
+          { "type": "project", "title": "CI/CD Pipeline Project", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Build Jenkins pipelines",
+              "Containerize apps with Docker",
+              "Monitor systems (Grafana/Prometheus)"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Master Kubernetes orchestration",
+              "Implement blue-green deployments",
+              "Get CKA certification"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Infrastructure as Code",
+        "content": "Terraform, cloud automation, and security",
+        "resources": [
+          { "type": "book", "title": "Terraform Up & Running", "link": "#" },
+          { "type": "course", "title": "DevSecOps Fundamentals", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Automate cloud infra (Terraform)",
+              "Learn Pulumi (optional)",
+              "Secure pipelines (SAST/DAST)"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Implement GitOps (ArgoCD)",
+              "Master serverless architectures",
+              "Optimize costs (AWS Cost Explorer)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "SRE & Leadership",
+        "content": "Site reliability engineering and team collaboration",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Google SRE Certification",
+            "link": "#"
+          },
+          { "type": "template", "title": "DevOps Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Learn SLOs/SLIs (SRE)",
+              "Implement chaos engineering",
+              "Intern at tech companies"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Lead a DevOps team (capstone)",
+              "Prepare for interviews (system design)",
+              "Apply for DevOps/SRE roles"
+            ]
+          }
+        ]
+      }
+    ],
+    "fullstack_developer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Frontend Fundamentals",
+        "content": "HTML/CSS, JavaScript, and responsive design",
+        "resources": [
+          { "type": "course", "title": "The Odin Project", "link": "#" },
+          { "type": "book", "title": "Eloquent JavaScript", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master HTML5/CSS3",
+              "Build responsive layouts (Flexbox/Grid)",
+              "Create 3 static websites"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Learn JavaScript (ES6+)",
+              "Understand DOM manipulation",
+              "Complete 10+ JS projects"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Frontend Frameworks",
+        "content": "React, state management, and performance",
+        "resources": [
+          { "type": "course", "title": "React Masterclass", "link": "#" },
+          { "type": "project", "title": "React Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Learn React fundamentals",
+              "Master component architecture",
+              "Build 3 React apps"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Learn TypeScript",
+              "Understand testing (Jest/RTL)",
+              "Optimize performance (Lighthouse)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Backend & Databases",
+        "content": "Node.js, APIs, and SQL/NoSQL",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Designing Data-Intensive Applications",
+            "link": "#"
+          },
+          { "type": "course", "title": "Node.js Bootcamp", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Build REST APIs (Express.js)",
+              "Work with MongoDB/PostgreSQL",
+              "Implement JWT authentication"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Learn GraphQL (Apollo)",
+              "Deploy fullstack apps (Vercel/AWS)",
+              "Contribute to open source"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Advanced Fullstack",
+        "content": "Microservices, WebSockets, and interviews",
+        "resources": [
+          {
+            "type": "course",
+            "title": "System Design for Fullstack",
+            "link": "#"
+          },
+          { "type": "template", "title": "Fullstack Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Build microservices (Docker/K8s)",
+              "Implement real-time apps (WebSockets)",
+              "Intern at tech startups"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Master caching (Redis)",
+              "Prepare for interviews (DSA)",
+              "Apply for fullstack roles"
+            ]
+          }
+        ]
+      }
+    ],
+    "game_developer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Game Design Basics",
+        "content": "Unity/Unreal Engine, C#/C++, and 2D games",
+        "resources": [
+          { "type": "course", "title": "Unity Beginner’s Guide", "link": "#" },
+          { "type": "book", "title": "Game Programming Patterns", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn Unity interface",
+              "Script game mechanics (C#)",
+              "Build 2D prototypes"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Study 3D modeling (Blender)",
+              "Implement physics (Rigidbody)",
+              "Publish game on itch.io"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Advanced Game Dev",
+        "content": "Multiplayer, VR, and optimization",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Unreal Engine Masterclass",
+            "link": "#"
+          },
+          {
+            "type": "project",
+            "title": "Multiplayer Game Project",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Learn Photon for multiplayer",
+              "Develop VR games (Oculus SDK)",
+              "Optimize for mobile"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Study shaders (Shader Graph)",
+              "Port to consoles (optional)",
+              "Release commercial game"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Game Engines & AI",
+        "content": "Custom engines, procedural generation, and AI",
+        "resources": [
+          { "type": "book", "title": "Game Engine Architecture", "link": "#" },
+          { "type": "course", "title": "AI for Games", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Build a mini game engine",
+              "Implement procedural generation",
+              "Study NPC behavior trees"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Master Unity DOTS (ECS)",
+              "Work with ARKit/ARCore",
+              "Enter game jams"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Industry Readiness",
+        "content": "Portfolio, networking, and job search",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Game Industry Networking",
+            "link": "#"
+          },
+          { "type": "template", "title": "Game Dev Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Build a polished game demo",
+              "Intern at game studios",
+              "Network at GDC (optional)"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Prepare for technical interviews",
+              "Apply for indie/AAA studios",
+              "Publish on Steam/PlayStore"
+            ]
+          }
+        ]
+      }
+    ],
+    "blockchain_developer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Blockchain Fundamentals",
+        "content": "Solidity, Ethereum, and smart contracts",
+        "resources": [
+          { "type": "course", "title": "Ethereum and Solidity", "link": "#" },
+          { "type": "book", "title": "Mastering Blockchain", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn cryptographic hashing",
+              "Write basic smart contracts",
+              "Deploy on testnets (Ropsten)"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Build DApps (Web3.js)",
+              "Study consensus algorithms",
+              "Audit smart contracts"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "DeFi & NFTs",
+        "content": "Decentralized finance and tokenization",
+        "resources": [
+          { "type": "course", "title": "DeFi Deep Dive", "link": "#" },
+          { "type": "project", "title": "NFT Marketplace Project", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Develop DeFi protocols (Uniswap clone)",
+              "Create NFT collections (ERC-721)",
+              "Learn Layer 2 solutions (Polygon)"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Optimize gas fees",
+              "Contribute to DAOs",
+              "Launch mainnet project"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Blockchain",
+        "content": "Zero-knowledge proofs and enterprise chains",
+        "resources": [
+          { "type": "book", "title": "ZK-SNARKs Explained", "link": "#" },
+          { "type": "course", "title": "Hyperledger Fabric", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Implement zk-rollups",
+              "Study Polkadot/Cosmos",
+              "Build private blockchains"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Work with Oracles (Chainlink)",
+              "Audit enterprise blockchain solutions",
+              "Get Blockchain Council certifications"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Industry Preparation",
+        "content": "Networking and job search",
+        "resources": [
+          { "type": "course", "title": "Blockchain Career Guide", "link": "#" },
+          { "type": "template", "title": "Blockchain Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Intern at Web3 startups",
+              "Attend ETHGlobal hackathons",
+              "Publish technical blogs"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Prepare for technical interviews",
+              "Apply for blockchain roles",
+              "Launch a crypto startup (optional)"
+            ]
+          }
+        ]
+      }
+    ],
+    "quantitative_analyst": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Math & Finance",
+        "content": "Stochastic calculus, Python, and financial basics",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Quantitative Finance (Coursera)",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Options, Futures, and Derivatives",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master pandas for financial data",
+              "Study Black-Scholes model",
+              "Backtest trading strategies"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Learn Monte Carlo simulations",
+              "Implement time series analysis",
+              "Pass CFA Level 1 (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Algorithmic Trading",
+        "content": "HFT, risk management, and ML in finance",
+        "resources": [
+          { "type": "book", "title": "Algorithmic Trading", "link": "#" },
+          { "type": "project", "title": "Backtesting Engine", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Connect to brokerage APIs",
+              "Build trading bots (Backtrader)",
+              "Optimize execution latency"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Deploy strategies on cloud",
+              "Study market microstructure",
+              "Intern at hedge funds"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Quant Research",
+        "content": "Advanced statistical arbitrage and AI",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Quantitative Risk Management",
+            "link": "#"
+          },
+          { "type": "book", "title": "Advances in Financial ML", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Implement pairs trading",
+              "Master reinforcement learning for trading",
+              "Research crypto arbitrage"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Work with alternative data (satellite, NLP)",
+              "Publish quant research paper",
+              "Get FRM certification (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Career Preparation",
+        "content": "Networking and interviews",
+        "resources": [
+          { "type": "course", "title": "Quant Interview Prep", "link": "#" },
+          { "type": "template", "title": "Quant Resume Template", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Practice brainteasers/puzzles",
+              "Network at quant conferences",
+              "Intern at prop trading firms"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Prepare for quant interviews",
+              "Apply for roles at hedge funds/HFTs",
+              "Negotiate job offers"
+            ]
+          }
+        ]
+      }
+    ],
+    "structural_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Core Civil Fundamentals",
+        "content": "Mathematics, physics, and introduction to civil engineering",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Civil Engineering Materials",
+            "link": "#"
+          },
+          { "type": "course", "title": "Statics and Mechanics", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master engineering mathematics",
+              "Learn basics of mechanics",
+              "Study construction materials (concrete, steel)"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Understand structural analysis basics",
+              "Complete CAD drafting (AutoCAD)",
+              "Participate in bridge-building competitions"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Structural Analysis & Design",
+        "content": "Load calculations, RCC, and steel structures",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Design of Concrete Structures",
+            "link": "#"
+          },
+          { "type": "software", "title": "STAAD.Pro Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Learn RCC design (IS 456)",
+              "Analyze beams/columns manually",
+              "Model simple structures in STAAD.Pro"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Study steel design (IS 800)",
+              "Design a G+1 residential building",
+              "Intern at a construction firm"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Structures",
+        "content": "Earthquake engineering, prestressed concrete, and tall buildings",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Earthquake-Resistant Design",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Prestressed Concrete Handbook",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Learn IS 1893 (seismic codes)",
+              "Design shear walls/braces",
+              "Model high-rises in ETABS"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Study prestressed concrete",
+              "Design a footbridge",
+              "Obtain OSHA safety certification"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Professional Preparation",
+        "content": "Internships, software mastery, and licensure",
+        "resources": [
+          { "type": "course", "title": "PE Civil Exam Prep", "link": "#" },
+          { "type": "software", "title": "Revit Structures", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Master BIM (Revit Structures)",
+              "Intern at design consultancies",
+              "Prepare for GATE/PE exams"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Publish technical paper",
+              "Network at IStructE events",
+              "Apply for structural engineer roles"
+            ]
+          }
+        ]
+      }
+    ],
+    "construction_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Construction Basics",
+        "content": "Materials, surveying, and project lifecycle",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Construction Project Management",
+            "link": "#"
+          },
+          { "type": "course", "title": "Surveying Fundamentals", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn construction materials",
+              "Master leveling/theodolite use",
+              "Visit live construction sites"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Study contract management",
+              "Create a project timeline (MS Project)",
+              "Obtain OSHA 10 certification"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Planning & Estimation",
+        "content": "Cost control, scheduling, and BIM",
+        "resources": [
+          {
+            "type": "software",
+            "title": "Primavera P6 Tutorials",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Construction Cost Estimating",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Learn CPM/PERT techniques",
+              "Estimate costs for a small project",
+              "Use Primavera P6 for scheduling"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Study tendering processes",
+              "Prepare a BOQ (Bill of Quantities)",
+              "Intern with contractors"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Execution & Safety",
+        "content": "Quality control, machinery, and regulations",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Construction Safety Management",
+            "link": "#"
+          },
+          {
+            "type": "book",
+            "title": "Construction Equipment Guide",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Learn IS codes for quality (IS 456/800)",
+              "Operate AutoCAD for site plans",
+              "Study heavy equipment (cranes, excavators)"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Implement safety protocols",
+              "Manage a mock project (capstone)",
+              "Obtain PMP certification (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Leadership & Contracts",
+        "content": "Stakeholder management and career prep",
+        "resources": [
+          { "type": "course", "title": "FIDIC Contracts", "link": "#" },
+          {
+            "type": "template",
+            "title": "Construction Resume Template",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Lead a student construction team",
+              "Intern with PMC firms",
+              "Learn dispute resolution"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Network at ACCE events",
+              "Apply for graduate trainee programs",
+              "Prepare for interviews (case studies)"
+            ]
+          }
+        ]
+      }
+    ],
+    "transportation_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Basics of Transportation",
+        "content": "Surveying, materials, and traffic flow",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Principles of Transportation Engineering",
+            "link": "#"
+          },
+          {
+            "type": "software",
+            "title": "AutoCAD Civil 3D Basics",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study traffic engineering basics",
+              "Learn geometric design of roads",
+              "Use AutoCAD for road drafting"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Conduct traffic surveys",
+              "Analyze pavement materials",
+              "Visit highway construction sites"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Highway & Railway Design",
+        "content": "IRC codes, rail systems, and software",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Highway Engineering (NPTEL)",
+            "link": "#"
+          },
+          { "type": "software", "title": "MX Road Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design flexible/rigid pavements",
+              "Learn IRC 37/SP 73 standards",
+              "Model roads in MX Road"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Study railway track design",
+              "Intern with NHAI/railway departments",
+              "Analyze traffic flow (VISSIM)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Smart Transportation",
+        "content": "ITS, sustainable mobility, and urban planning",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Intelligent Transport Systems",
+            "link": "#"
+          },
+          {
+            "type": "course",
+            "title": "Urban Transportation Planning",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Learn about metro systems",
+              "Design a smart traffic signal system",
+              "Study pedestrian-friendly infrastructure"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Work on EV charging infrastructure",
+              "Participate in MoRTH competitions",
+              "Obtain GIS certification (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Industry Readiness",
+        "content": "Internships and advanced projects",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Transportation Economics",
+            "link": "#"
+          },
+          {
+            "type": "template",
+            "title": "Transportation Portfolio",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Intern with transport consultancies",
+              "Publish a paper on sustainable transport",
+              "Master BIM for infrastructure"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Prepare for GATE/IES exams",
+              "Apply for roles at L&T/AECOM",
+              "Network at ITE conferences"
+            ]
+          }
+        ]
+      }
+    ],
+    "environmental_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Environmental Science",
+        "content": "Ecology, chemistry, and sustainability",
+        "resources": [
+          { "type": "book", "title": "Environmental Engineering", "link": "#" },
+          { "type": "course", "title": "Sustainability Basics", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study air/water pollution",
+              "Learn environmental laws (EPA, CPCB)",
+              "Conduct lab tests (BOD, COD)"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Design a waste management plan",
+              "Visit water treatment plants",
+              "Obtain LEED Green Associate (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Water & Wastewater",
+        "content": "Treatment plants, hydrology, and GIS",
+        "resources": [
+          { "type": "software", "title": "EPANET Tutorials", "link": "#" },
+          {
+            "type": "course",
+            "title": "Wastewater Treatment (NPTEL)",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design a water supply network",
+              "Model pipelines in EPANET",
+              "Study IS 10500 (water standards)"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Visit STP/ETP plants",
+              "Learn GIS for watershed mapping",
+              "Intern with NGOs/CPCB"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Climate & Remediation",
+        "content": "Climate resilience, EIA, and green tech",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Environmental Impact Assessment",
+            "link": "#"
+          },
+          {
+            "type": "course",
+            "title": "Climate Change Mitigation",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Conduct an EIA for a mock project",
+              "Study carbon footprint analysis",
+              "Work with solar/waste-to-energy projects"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Design a green building",
+              "Participate in Swachh Bharat initiatives",
+              "Obtain ISO 14001 certification"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Policy & Career Prep",
+        "content": "Regulations, internships, and job search",
+        "resources": [
+          { "type": "course", "title": "Environmental Law", "link": "#" },
+          { "type": "template", "title": "Environmental Resume", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Intern with UNEP/TERI",
+              "Publish research on sustainability",
+              "Prepare for UPSC (IFoS optional)"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Network at COP summits",
+              "Apply for roles at AECOM/Jacobs",
+              "Master environmental modeling tools"
+            ]
+          }
+        ]
+      }
+    ],
+    "geotechnical_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Soil Mechanics Basics",
+        "content": "Soil properties, geology, and lab testing",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Principles of Geotechnical Engineering",
+            "link": "#"
+          },
+          { "type": "course", "title": "Soil Mechanics Lab", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn soil classification (IS 1498)",
+              "Conduct sieve analysis tests",
+              "Study rock formations"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Perform compaction tests (Proctor)",
+              "Learn about groundwater flow",
+              "Visit quarry sites"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Foundation Engineering",
+        "content": "Shallow/deep foundations and slope stability",
+        "resources": [
+          { "type": "software", "title": "PLAXIS Tutorials", "link": "#" },
+          { "type": "book", "title": "Foundation Design Handbook", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design shallow foundations (IS 1904)",
+              "Analyze bearing capacity",
+              "Model slopes in PLAXIS"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Study pile foundations",
+              "Learn about retaining walls",
+              "Intern with geotech firms"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Geotech",
+        "content": "Earthquake geotechnics and soil improvement",
+        "resources": [
+          { "type": "course", "title": "Earthquake Geotechnics", "link": "#" },
+          {
+            "type": "book",
+            "title": "Ground Improvement Techniques",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Study liquefaction analysis",
+              "Design soil nailing projects",
+              "Work with geosynthetics"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Learn about grouting techniques",
+              "Conduct field SPT tests",
+              "Obtain OSHA trench safety cert"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Site Investigations & Career",
+        "content": "Fieldwork, software, and job prep",
+        "resources": [
+          { "type": "software", "title": "GeoStudio (SLOPE/W)", "link": "#" },
+          { "type": "template", "title": "Geotech Resume", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Lead a site investigation team",
+              "Prepare geotechnical reports",
+              "Intern with infrastructure companies"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Network at ISSMGE events",
+              "Apply for roles at L&T/Arup",
+              "Prepare for GATE/IES exams"
+            ]
+          }
+        ]
+      }
+    ],
+    "urban_planner": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Planning Fundamentals",
+        "content": "Urbanization, GIS basics, and land use",
+        "resources": [
+          { "type": "book", "title": "Urban Planning 101", "link": "#" },
+          { "type": "software", "title": "QGIS Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study urban growth patterns",
+              "Learn zoning regulations",
+              "Create land-use maps in QGIS"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Analyze census data",
+              "Visit smart city projects",
+              "Participate in town planning competitions"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Transport & Infrastructure",
+        "content": "Master plans, mobility, and utilities",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Urban Transportation Planning",
+            "link": "#"
+          },
+          { "type": "book", "title": "Smart City Blueprint", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design a neighborhood layout",
+              "Study transit-oriented development",
+              "Model pedestrian flows"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Intern with municipal corporations",
+              "Learn about water supply planning",
+              "Work on slum rehabilitation projects"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Sustainable Planning",
+        "content": "Green cities, climate resilience, and BIM",
+        "resources": [
+          { "type": "book", "title": "Resilient Cities", "link": "#" },
+          { "type": "software", "title": "CityEngine Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Design a carbon-neutral township",
+              "Study flood mitigation strategies",
+              "Create 3D city models"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Participate in UN-Habitat programs",
+              "Obtain LEED ND certification",
+              "Intern with urban design firms"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Policy & Implementation",
+        "content": "Urban governance, internships, and thesis",
+        "resources": [
+          { "type": "course", "title": "Urban Governance", "link": "#" },
+          { "type": "template", "title": "Planning Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Work on a city's master plan",
+              "Publish research on urban issues",
+              "Prepare for UPSC (town planning)"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Network at WUF events",
+              "Apply for roles at TCPO/ITPI",
+              "Defend urban planning thesis"
+            ]
+          }
+        ]
+      }
+    ],
+    "water_resource_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Hydrology Basics",
+        "content": "Water cycle, fluid mechanics, and GIS",
+        "resources": [
+          { "type": "book", "title": "Engineering Hydrology", "link": "#" },
+          { "type": "software", "title": "HEC-HMS Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study rainfall-runoff models",
+              "Learn about watershed delineation",
+              "Use GIS for hydrologic mapping"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Design a small irrigation system",
+              "Visit dams/reservoirs",
+              "Obtain AutoCAD Civil 3D basics"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Hydraulic Structures",
+        "content": "Dams, canals, and flood control",
+        "resources": [
+          { "type": "course", "title": "Dam Engineering (NPTEL)", "link": "#" },
+          { "type": "software", "title": "HEC-RAS Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design a check dam",
+              "Model floodplains in HEC-RAS",
+              "Study IS 6966 (hydraulic design)"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Intern with irrigation departments",
+              "Learn about hydropower systems",
+              "Participate in water conservation drives"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Water Management",
+        "content": "GIS applications, drought, and sustainability",
+        "resources": [
+          { "type": "book", "title": "Water Resource Systems", "link": "#" },
+          { "type": "course", "title": "Remote Sensing for Water", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Study inter-basin water transfer",
+              "Analyze groundwater recharge",
+              "Work with NDVI data for drought"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Design a rainwater harvesting system",
+              "Participate in Jal Shakti Abhiyan",
+              "Obtain GIS certification"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Policy & Career Prep",
+        "content": "Water governance, internships, and research",
+        "resources": [
+          { "type": "course", "title": "Water Policy Analysis", "link": "#" },
+          { "type": "template", "title": "Water Engineer Resume", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Intern with CWPRS/NWDA",
+              "Publish research on water scarcity",
+              "Prepare for GATE/IES exams"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Network at World Water Week",
+              "Apply for roles at WAPCOS/NGT",
+              "Master SWMM modeling"
+            ]
+          }
+        ]
+      }
+    ],
+    "project_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Engineering Basics",
+        "content": "Construction materials, surveying, and CAD",
+        "resources": [
+          { "type": "book", "title": "Construction Technology", "link": "#" },
+          { "type": "software", "title": "Primavera P6 Basics", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn concrete mix design",
+              "Master total station surveying",
+              "Draft plans in AutoCAD"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Study project lifecycle",
+              "Create a Gantt chart",
+              "Obtain OSHA 10 certification"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Planning & Costing",
+        "content": "BOQ, tendering, and resource management",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Construction Cost Management",
+            "link": "#"
+          },
+          { "type": "software", "title": "MS Project Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Prepare a BOQ for a building",
+              "Learn Earned Value Management",
+              "Estimate material requirements"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Study FIDIC contracts",
+              "Intern with contractors",
+              "Simulate project delays"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Execution & Quality",
+        "content": "Safety, QA/QC, and stakeholder management",
+        "resources": [
+          { "type": "book", "title": "Total Quality Management", "link": "#" },
+          {
+            "type": "course",
+            "title": "Six Sigma for Construction",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Implement safety protocols",
+              "Concrete cube testing (IS 456)",
+              "Handle client meetings"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Lead a mock project team",
+              "Resolve construction disputes",
+              "Obtain PMP certification"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Leadership & Career",
+        "content": "Mega projects, internships, and job search",
+        "resources": [
+          { "type": "course", "title": "Mega Project Management", "link": "#" },
+          {
+            "type": "template",
+            "title": "Project Engineer Resume",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Intern with L&T/Shapoorji Pallonji",
+              "Study metro rail project case studies",
+              "Prepare for GATE/IES"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Network at PMI events",
+              "Apply for graduate engineer trainee",
+              "Master claims management"
+            ]
+          }
+        ]
+      }
+    ],
+    "building_surveyor": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Construction Fundamentals",
+        "content": "Materials, building codes, and drafting",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Building Construction Handbook",
+            "link": "#"
+          },
+          { "type": "software", "title": "AutoCAD Architecture", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn NBC (National Building Code)",
+              "Draft floor plans in AutoCAD",
+              "Study brick/mortar types"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Conduct site measurements",
+              "Identify construction defects",
+              "Obtain drone pilot license (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Inspection & Compliance",
+        "content": "Structural audits, safety, and BIM",
+        "resources": [
+          { "type": "course", "title": "Building Pathology", "link": "#" },
+          { "type": "software", "title": "Revit for Surveyors", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Inspect a residential building",
+              "Learn about fire safety norms",
+              "Model existing buildings in Revit"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Study heritage conservation",
+              "Intern with municipal survey teams",
+              "Prepare condition reports"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Surveying",
+        "content": "Thermography, LiDAR, and legal aspects",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Legal Aspects of Surveying",
+            "link": "#"
+          },
+          { "type": "course", "title": "LiDAR for Buildings", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Conduct thermal imaging surveys",
+              "Process LiDAR point clouds",
+              "Study property boundary laws"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Work on dilapidation surveys",
+              "Test concrete strength (Rebound hammer)",
+              "Obtain RICS certification (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Professional Practice",
+        "content": "Consultancy, entrepreneurship, and licensing",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Surveying Business Management",
+            "link": "#"
+          },
+          { "type": "template", "title": "Surveyor Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Start a mock surveying firm",
+              "Intern with valuation companies",
+              "Prepare for licensing exams"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Network at FIG congress",
+              "Apply for roles at CBRE/JLL",
+              "Master drone-based surveys"
+            ]
+          }
+        ]
+      }
+    ],
+    "estimation_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Quantity Surveying Basics",
+        "content": "Measurement techniques and cost basics",
+        "resources": [
+          { "type": "book", "title": "Estimating and Costing", "link": "#" },
+          { "type": "software", "title": "AutoCAD for QS", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn IS 1200 (measurement standards)",
+              "Take off quantities from drawings",
+              "Study market rates for materials"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Prepare abstract estimates",
+              "Compare vendor quotations",
+              "Visit construction material markets"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Cost Control",
+        "content": "Tendering, contracts, and software",
+        "resources": [
+          { "type": "course", "title": "Construction Economics", "link": "#" },
+          { "type": "software", "title": "CostX Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Prepare a detailed estimate",
+              "Study FIDIC contracts",
+              "Automate takeoffs in CostX"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Analyze project cash flows",
+              "Intern with QS firms",
+              "Learn about escalation clauses"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Value Engineering",
+        "content": "Cost optimization and BIM integration",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Value Engineering Handbook",
+            "link": "#"
+          },
+          { "type": "course", "title": "BIM for Cost Management", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Identify cost-saving alternatives",
+              "Extract quantities from BIM models",
+              "Study life-cycle costing"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Prepare a value engineering report",
+              "Obtain RICS certification (optional)",
+              "Intern with PMC firms"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 7-8",
+        "title": "Career Preparation",
+        "content": "Claims, disputes, and job search",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Construction Claims Management",
+            "link": "#"
+          },
+          { "type": "template", "title": "QS Resume Template", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 7",
+            "milestones": [
+              "Study arbitration procedures",
+              "Prepare variation orders",
+              "Intern with dispute resolution firms"
+            ]
+          },
+          {
+            "title": "Semester 8",
+            "milestones": [
+              "Network at ICEC conferences",
+              "Apply for roles at Turner & Townsend",
+              "Master predictive cost modeling"
+            ]
+          }
+        ]
+      }
+    ],
+    "mobile_app_developer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Programming & OOP Basics",
+        "content": "Learn core programming concepts and object-oriented design",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Java/Kotlin Fundamentals",
+            "link": "#"
+          },
+          { "type": "book", "title": "Head First Java", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master Java/Kotlin syntax",
+              "Learn data structures (arrays, lists)",
+              "Build console-based apps"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Understand OOP principles",
+              "Develop GUI applications",
+              "Complete 10+ coding exercises"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Mobile Development",
+        "content": "Build native/hybrid apps and integrate APIs",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Android Development (Udacity)",
+            "link": "#"
+          },
+          { "type": "project", "title": "Build a Weather App", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Learn Android Studio",
+              "Design app UIs (XML)",
+              "Work with Firebase"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Master Flutter/Dart",
+              "Integrate REST APIs",
+              "Publish an app on Play Store"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Apps & Deployment",
+        "content": "Optimize performance and prepare for jobs",
+        "resources": [
+          { "type": "book", "title": "Clean Code for Mobile", "link": "#" },
+          { "type": "course", "title": "iOS Development (Swift)", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Learn Swift for iOS (optional)",
+              "Implement app monetization",
+              "Optimize battery/network usage"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Build a cross-platform app",
+              "Prepare a portfolio",
+              "Apply for internships/jobs"
+            ]
+          }
+        ]
+      }
+    ],
+    "database_administrator": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Database Fundamentals",
+        "content": "Learn SQL, normalization, and RDBMS concepts",
+        "resources": [
+          {
+            "type": "course",
+            "title": "SQL for Beginners (Coursera)",
+            "link": "#"
+          },
+          { "type": "book", "title": "Database System Concepts", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master SQL queries (SELECT, JOIN)",
+              "Design ER diagrams",
+              "Install MySQL/PostgreSQL"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Normalize databases (1NF-3NF)",
+              "Learn stored procedures",
+              "Complete 5+ database projects"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Advanced DBMS",
+        "content": "Performance tuning, NoSQL, and cloud databases",
+        "resources": [
+          {
+            "type": "course",
+            "title": "NoSQL Databases (MongoDB)",
+            "link": "#"
+          },
+          { "type": "software", "title": "Oracle DBA Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Optimize queries (indexing)",
+              "Work with MongoDB",
+              "Backup/restore databases"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Learn AWS RDS/Azure SQL",
+              "Implement database security",
+              "Obtain Oracle DBA cert (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Enterprise DBA",
+        "content": "High availability, DevOps, and career prep",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Database Reliability Engineering",
+            "link": "#"
+          },
+          { "type": "course", "title": "Database DevOps", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Set up replication",
+              "Learn Kubernetes for DBs",
+              "Monitor DB performance"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Intern as a junior DBA",
+              "Prepare for interviews",
+              "Apply for certification (e.g., AWS Certified DBA)"
+            ]
+          }
+        ]
+      }
+    ],
+    "system_analyst": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Systems & Requirements",
+        "content": "Learn SDLC, UML, and business analysis",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Systems Analysis and Design",
+            "link": "#"
+          },
+          { "type": "course", "title": "UML Diagramming", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study SDLC phases",
+              "Draw flowcharts",
+              "Analyze a mock business case"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Master UML diagrams",
+              "Write SRS documents",
+              "Use CASE tools (Lucidchart)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Technical Analysis",
+        "content": "Data modeling, APIs, and Agile",
+        "resources": [
+          { "type": "course", "title": "Agile Business Analysis", "link": "#" },
+          { "type": "book", "title": "Data Modeling Essentials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design relational schemas",
+              "Document API specs (Swagger)",
+              "Work with JIRA/Confluence"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Lead a Scrum sprint",
+              "Analyze legacy systems",
+              "Intern as a BA"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Enterprise Solutions",
+        "content": "ERP, cloud systems, and career prep",
+        "resources": [
+          {
+            "type": "course",
+            "title": "ERP Fundamentals (SAP/Oracle)",
+            "link": "#"
+          },
+          { "type": "template", "title": "Systems Analyst Resume", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Study SAP modules",
+              "Map business processes",
+              "Prepare cost-benefit analyses"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Network with IT professionals",
+              "Apply for analyst roles",
+              "Get CBAP certification (optional)"
+            ]
+          }
+        ]
+      }
+    ],
+    "software_tester": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Testing Fundamentals",
+        "content": "Manual testing, test cases, and bug tracking",
+        "resources": [
+          { "type": "book", "title": "Software Testing Basics", "link": "#" },
+          { "type": "tool", "title": "JIRA for Testers", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn SDLC/STLC",
+              "Write test cases",
+              "Report bugs in JIRA"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Perform regression testing",
+              "Study black-box techniques",
+              "Test a live website/app"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Automation & Tools",
+        "content": "Selenium, performance testing, and CI/CD",
+        "resources": [
+          { "type": "course", "title": "Selenium with Python", "link": "#" },
+          { "type": "tool", "title": "Postman for API Testing", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Automate UI tests (Selenium)",
+              "Test REST APIs (Postman)",
+              "Learn JMeter basics"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Integrate tests with Jenkins",
+              "Perform security testing (OWASP ZAP)",
+              "Obtain ISTQB Foundation Level"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Specialization & Career",
+        "content": "QA lead skills and job preparation",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Advanced Test Automation",
+            "link": "#"
+          },
+          { "type": "template", "title": "QA Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Master BDD (Cucumber)",
+              "Lead a testing team (capstone)",
+              "Intern at QA firms"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Prepare for ISTQB Advanced",
+              "Apply for QA engineer roles",
+              "Build a GitHub portfolio"
+            ]
+          }
+        ]
+      }
+    ],
+    "network_administrator": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Networking Basics",
+        "content": "OSI model, TCP/IP, and subnetting",
+        "resources": [
+          { "type": "book", "title": "Network+ Guide", "link": "#" },
+          { "type": "course", "title": "Cisco CCNA Basics", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn IP addressing",
+              "Configure routers/switches (Packet Tracer)",
+              "Study OSI layers"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Troubleshoot network issues",
+              "Set up a LAN lab",
+              "Obtain CompTIA Network+ (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Enterprise Networks",
+        "content": "Security, virtualization, and cloud networking",
+        "resources": [
+          { "type": "course", "title": "CCNA Security", "link": "#" },
+          { "type": "tool", "title": "Wireshark Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Configure VLANs/ACLs",
+              "Monitor traffic (Wireshark)",
+              "Implement VPNs"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Work with AWS VPC",
+              "Harden network security",
+              "Intern at ISPs/data centers"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Advanced Infrastructure",
+        "content": "SDN, automation, and certifications",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Network Automation with Python",
+            "link": "#"
+          },
+          { "type": "course", "title": "Cisco CCNP Prep", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Learn Ansible for networks",
+              "Study software-defined networking",
+              "Automate configs with Python"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Prepare for CCNP/CCIE",
+              "Apply for NOC roles",
+              "Build a homelab"
+            ]
+          }
+        ]
+      }
+    ],
+    "ui_ux_designer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Design Fundamentals",
+        "content": "Color theory, typography, and wireframing",
+        "resources": [
+          { "type": "book", "title": "Don’t Make Me Think", "link": "#" },
+          { "type": "tool", "title": "Figma Basics", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study Gestalt principles",
+              "Create wireframes",
+              "Design a style guide"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Master Figma/Sketch",
+              "Build a portfolio website",
+              "Complete 5+ UI challenges"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Interaction Design",
+        "content": "Prototyping, usability testing, and accessibility",
+        "resources": [
+          { "type": "course", "title": "UX Research Methods", "link": "#" },
+          { "type": "tool", "title": "Adobe XD Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Conduct user interviews",
+              "Create interactive prototypes",
+              "Test designs with users"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Learn WCAG accessibility",
+              "Design a mobile app flow",
+              "Intern at design studios"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Specialization & Career",
+        "content": "Motion design, portfolios, and freelancing",
+        "resources": [
+          {
+            "type": "course",
+            "title": "UI Animation (After Effects)",
+            "link": "#"
+          },
+          { "type": "template", "title": "UX Case Study Template", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Master micro-interactions",
+              "Build a Behance/Dribbble profile",
+              "Freelance on Upwork"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Prepare a case study",
+              "Apply for design roles",
+              "Network at design meetups"
+            ]
+          }
+        ]
+      }
+    ],
+    "it_consultant": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "IT & Business Basics",
+        "content": "Systems, processes, and communication",
+        "resources": [
+          { "type": "book", "title": "IT Consulting for Dummies", "link": "#" },
+          { "type": "course", "title": "Business Communication", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study IT infrastructure",
+              "Analyze business workflows",
+              "Present a tech solution"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Learn ERP/CRM basics",
+              "Shadow a consultant",
+              "Write a mock proposal"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Solution Design",
+        "content": "Requirements gathering and architecture",
+        "resources": [
+          { "type": "course", "title": "Enterprise Architecture", "link": "#" },
+          { "type": "tool", "title": "Visio for Diagrams", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Conduct stakeholder interviews",
+              "Map AS-IS/TO-BE processes",
+              "Design a cloud migration plan"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Prepare cost estimates",
+              "Intern at IT consultancies",
+              "Get TOGAF certified (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Implementation & Strategy",
+        "content": "Change management and career prep",
+        "resources": [
+          { "type": "book", "title": "The Trusted Advisor", "link": "#" },
+          { "type": "template", "title": "Consulting Resume", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Lead a mock digital transformation",
+              "Study ITIL framework",
+              "Network at tech summits"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Apply for grad programs (Accenture, Deloitte)",
+              "Prepare case interviews",
+              "Build a LinkedIn presence"
+            ]
+          }
+        ]
+      }
+    ],
+    "technical_writer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Writing & Tech Basics",
+        "content": "Documentation standards and tools",
+        "resources": [
+          { "type": "book", "title": "Technical Writing 101", "link": "#" },
+          { "type": "tool", "title": "Markdown/GitHub", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn Markdown/XML",
+              "Write API docs (OpenAPI)",
+              "Study style guides (Microsoft)"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Document a software project",
+              "Use Git for version control",
+              "Complete 5+ writing samples"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Specialized Documentation",
+        "content": "User manuals, DevOps docs, and localization",
+        "resources": [
+          { "type": "course", "title": "DevOps Documentation", "link": "#" },
+          { "type": "tool", "title": "ReadTheDocs", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Write step-by-step tutorials",
+              "Document CI/CD pipelines",
+              "Contribute to open-source docs"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Localize content (i18n)",
+              "Intern at tech companies",
+              "Obtain technical certifications (e.g., AWS)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Career & Portfolio",
+        "content": "Freelancing, networking, and job search",
+        "resources": [
+          { "type": "course", "title": "Freelance Writing", "link": "#" },
+          { "type": "template", "title": "Writing Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Start a tech blog",
+              "Freelance on Upwork",
+              "Network at Write the Docs"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Apply for docs engineer roles",
+              "Prepare writing samples",
+              "Master DITA/structured authoring"
+            ]
+          }
+        ]
+      }
+    ],
+    "digital_marketing_specialist": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Marketing Fundamentals",
+        "content": "SEO, content, and social media",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Digital Marketing Basics (Google)",
+            "link": "#"
+          },
+          { "type": "tool", "title": "Google Analytics", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn SEO best practices",
+              "Run a blog (WordPress)",
+              "Study buyer personas"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Manage social media accounts",
+              "Analyze web traffic (GA4)",
+              "Complete Google Ads cert"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Advanced Channels",
+        "content": "PPC, automation, and data-driven marketing",
+        "resources": [
+          { "type": "course", "title": "Facebook Ads Mastery", "link": "#" },
+          { "type": "tool", "title": "HubSpot CRM", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Run paid ad campaigns",
+              "Master email marketing (Mailchimp)",
+              "A/B test landing pages"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Implement marketing automation",
+              "Intern at agencies",
+              "Get HubSpot certified"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Strategy & Analytics",
+        "content": "ROI optimization and career prep",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Contagious: Why Things Catch On",
+            "link": "#"
+          },
+          { "type": "template", "title": "Marketing Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Lead a viral campaign",
+              "Analyze customer journeys",
+              "Study growth hacking"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Apply for roles at agencies",
+              "Build a personal brand",
+              "Prepare case studies"
+            ]
+          }
+        ]
+      }
+    ],
+    "marketing_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Marketing Fundamentals",
+        "content": "Learn core concepts, consumer behavior, and digital basics",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Principles of Marketing by Kotler",
+            "link": "#"
+          },
+          {
+            "type": "course",
+            "title": "Digital Marketing 101 (Google)",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study 4Ps of marketing",
+              "Analyze consumer behavior",
+              "Create a brand persona"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Run a social media campaign",
+              "Learn Google Analytics",
+              "Complete SWOT analysis for a brand"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Strategic Marketing",
+        "content": "Market research, branding, and campaign management",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Brand Management (Coursera)",
+            "link": "#"
+          },
+          { "type": "tool", "title": "HubSpot Marketing Hub", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Conduct primary market research",
+              "Develop a brand positioning strategy",
+              "Design a multi-channel campaign"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Master SEO/content marketing",
+              "Intern at a marketing agency",
+              "Get Google Ads certified"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Leadership & Analytics",
+        "content": "Marketing ROI, team management, and career prep",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Contagious: Why Things Catch On",
+            "link": "#"
+          },
+          {
+            "type": "course",
+            "title": "Marketing Analytics (Udemy)",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Optimize marketing budgets",
+              "Lead a student marketing team",
+              "Present a marketing plan to faculty"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Build a marketing portfolio",
+              "Network at industry events",
+              "Apply for marketing executive roles"
+            ]
+          }
+        ]
+      }
+    ],
+    "financial_analyst": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Financial Basics",
+        "content": "Accounting, economics, and financial statements",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Financial Accounting by Weygandt",
+            "link": "#"
+          },
+          { "type": "course", "title": "Excel for Finance", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master balance sheets/income statements",
+              "Learn time value of money",
+              "Build financial models in Excel"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Analyze company annual reports",
+              "Study macroeconomic indicators",
+              "Complete 5+ case studies"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Investment Analysis",
+        "content": "Valuation, stock markets, and risk management",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Investment Banking Prep (Wall Street Prep)",
+            "link": "#"
+          },
+          {
+            "type": "tool",
+            "title": "Bloomberg Terminal Tutorials",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Value companies using DCF",
+              "Analyze stock trends (NSE/BSE)",
+              "Pass NISM Series-VIII exam"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Intern at brokerage firms",
+              "Study derivatives/portfolio theory",
+              "Get Bloomberg Market Concepts cert"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Corporate Finance & Career",
+        "content": "M&A, financial strategy, and job preparation",
+        "resources": [
+          { "type": "book", "title": "Corporate Finance by Ross", "link": "#" },
+          {
+            "type": "template",
+            "title": "Finance Resume Template",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Model M&A scenarios",
+              "Prepare pitch books",
+              "Network with CFA charterholders"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Apply for CFA Level 1",
+              "Interview with banks/PE firms",
+              "Master advanced Excel (VBA)"
+            ]
+          }
+        ]
+      }
+    ],
+    "human_resource_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "HR Fundamentals",
+        "content": "Recruitment, labor laws, and organizational behavior",
+        "resources": [
+          { "type": "book", "title": "HRM by Gary Dessler", "link": "#" },
+          { "type": "course", "title": "Labor Laws in India", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study recruitment lifecycle",
+              "Learn about PF/ESI compliance",
+              "Conduct mock interviews"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Design a training program",
+              "Analyze employee engagement surveys",
+              "Shadow HR professionals"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Strategic HR",
+        "content": "Performance management, compensation, and HR tech",
+        "resources": [
+          { "type": "course", "title": "HR Analytics (Coursera)", "link": "#" },
+          { "type": "tool", "title": "Workday/SAP HR Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design KPI frameworks",
+              "Benchmark salary structures",
+              "Use HRMS software"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Implement OKRs for teams",
+              "Intern at corporate HR departments",
+              "Get SHRM certification (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Leadership & Culture",
+        "content": "Diversity, employer branding, and career prep",
+        "resources": [
+          { "type": "book", "title": "The Culture Code", "link": "#" },
+          { "type": "template", "title": "HR Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Develop a DEI policy",
+              "Lead campus recruitment drives",
+              "Publish articles on LinkedIn"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Network at NHRD events",
+              "Apply for HR generalist roles",
+              "Prepare for MBA (optional)"
+            ]
+          }
+        ]
+      }
+    ],
+    "operations_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Operations Basics",
+        "content": "Supply chain, process design, and quality control",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Operations Management by Slack",
+            "link": "#"
+          },
+          {
+            "type": "course",
+            "title": "Lean Six Sigma White Belt",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Map business processes",
+              "Study inventory models (EOQ)",
+              "Visit manufacturing plants"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Optimize a mock supply chain",
+              "Learn 5S methodology",
+              "Complete Kaizen project"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Advanced Operations",
+        "content": "Logistics, ERP, and data-driven decision making",
+        "resources": [
+          { "type": "course", "title": "SAP MM Tutorials", "link": "#" },
+          { "type": "tool", "title": "Tableau for Operations", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Model logistics networks",
+              "Master ERP navigation",
+              "Analyze operational KPIs"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Intern at FMCG/automotive firms",
+              "Get Six Sigma Yellow Belt",
+              "Simulate production scheduling"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Strategic Leadership",
+        "content": "Global operations, risk management, and career prep",
+        "resources": [
+          {
+            "type": "book",
+            "title": "The Goal by Eliyahu Goldratt",
+            "link": "#"
+          },
+          { "type": "template", "title": "Ops Manager Resume", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Study global supply chain risks",
+              "Lead a process improvement team",
+              "Network at APICS events"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Apply for management trainee programs",
+              "Prepare for CPIM certification",
+              "Master TQM frameworks"
+            ]
+          }
+        ]
+      }
+    ],
+    "sales_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Sales Fundamentals",
+        "content": "Consumer psychology, CRM, and negotiation",
+        "resources": [
+          {
+            "type": "book",
+            "title": "SPIN Selling by Neil Rackham",
+            "link": "#"
+          },
+          { "type": "tool", "title": "Salesforce Basics", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Learn sales funnel stages",
+              "Role-play objection handling",
+              "Study pricing strategies"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Manage mock CRM data",
+              "Achieve sales targets in campus events",
+              "Shadow field sales teams"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Strategic Selling",
+        "content": "Key account management, digital sales, and analytics",
+        "resources": [
+          { "type": "course", "title": "B2B Sales Mastery", "link": "#" },
+          { "type": "tool", "title": "HubSpot Sales Hub", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Develop account plans",
+              "Lead a campus sales drive",
+              "Analyze sales conversion metrics"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Intern at SaaS/retail companies",
+              "Get Salesforce certified",
+              "Master LinkedIn Sales Navigator"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Leadership & Growth",
+        "content": "Team building, revenue strategy, and career prep",
+        "resources": [
+          { "type": "book", "title": "Predictable Revenue", "link": "#" },
+          {
+            "type": "template",
+            "title": "Sales Achievement Portfolio",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Design incentive programs",
+              "Pitch to mock investors",
+              "Network at SalesHacker events"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Apply for sales leadership programs",
+              "Prepare for MBA (optional)",
+              "Master MEDDIC sales methodology"
+            ]
+          }
+        ]
+      }
+    ],
+    "supply_chain_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "SCM Fundamentals",
+        "content": "Logistics, procurement, and inventory control",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Supply Chain Management by Sunil Chopra",
+            "link": "#"
+          },
+          { "type": "course", "title": "Procurement Basics", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Map a supply chain network",
+              "Study vendor selection criteria",
+              "Visit warehouses/ports"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Optimize inventory costs",
+              "Simulate demand forecasting",
+              "Complete SAP MM basics"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Advanced Logistics",
+        "content": "Global SCM, risk management, and analytics",
+        "resources": [
+          { "type": "course", "title": "Global Logistics (edX)", "link": "#" },
+          { "type": "tool", "title": "AnyLogistix Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Model cross-border trade scenarios",
+              "Mitigate supply chain risks",
+              "Analyze freight costs"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Intern at 3PL companies",
+              "Get CSCP certification (optional)",
+              "Work with IoT in logistics"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Digital Transformation",
+        "content": "Blockchain, automation, and career prep",
+        "resources": [
+          {
+            "type": "book",
+            "title": "The Supply Chain Revolution",
+            "link": "#"
+          },
+          { "type": "template", "title": "SCM Resume", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Implement digital twins in SCM",
+              "Study blockchain for traceability",
+              "Lead a capstone project"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Network at CII Logistics Summits",
+              "Apply for roles at Flipkart/Amazon",
+              "Prepare for MBA (optional)"
+            ]
+          }
+        ]
+      }
+    ],
+    "entrepreneur": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Ideation & Validation",
+        "content": "Business models, lean startup, and market research",
+        "resources": [
+          {
+            "type": "book",
+            "title": "The Lean Startup by Eric Ries",
+            "link": "#"
+          },
+          { "type": "course", "title": "Design Thinking (Udemy)", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Develop 3 business ideas",
+              "Conduct customer interviews",
+              "Create a value proposition canvas"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Build an MVP prototype",
+              "Pitch to college incubator",
+              "Validate problem-solution fit"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Execution & Funding",
+        "content": "Financial planning, legal compliance, and pitching",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Startup Funding (Khan Academy)",
+            "link": "#"
+          },
+          { "type": "tool", "title": "Pitch Deck Templates", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Register a company (mock)",
+              "Prepare financial projections",
+              "Develop a go-to-market strategy"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Win campus startup competitions",
+              "Network with angel investors",
+              "Get DPIIT recognition (optional)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Scaling & Leadership",
+        "content": "Team building, growth hacking, and investor relations",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Zero to One by Peter Thiel",
+            "link": "#"
+          },
+          { "type": "template", "title": "Startup Portfolio", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Hire a mock core team",
+              "Implement growth strategies",
+              "Negotiate term sheets"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Participate in demo days",
+              "Apply for accelerators (YC, Antler)",
+              "Launch a real venture (optional)"
+            ]
+          }
+        ]
+      }
+    ],
+    "retail_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Retail Fundamentals",
+        "content": "Merchandising, store operations, and consumer behavior",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Retail Management by Levy & Weitz",
+            "link": "#"
+          },
+          { "type": "course", "title": "Visual Merchandising", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Analyze footfall patterns",
+              "Design a store layout",
+              "Study pricing psychology"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Manage mock inventory",
+              "Run a pop-up store event",
+              "Intern at local retailers"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Omnichannel Retail",
+        "content": "E-commerce integration, CRM, and analytics",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Shopify Store Management",
+            "link": "#"
+          },
+          { "type": "tool", "title": "Zoho Inventory", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Launch an online store",
+              "Implement loyalty programs",
+              "Analyze sales per square foot"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Optimize last-mile delivery",
+              "Intern at D2C brands",
+              "Get Google Analytics certified"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Strategic Leadership",
+        "content": "Retail expansion, franchising, and career prep",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Delivering Happiness by Tony Hsieh",
+            "link": "#"
+          },
+          { "type": "template", "title": "Retail Manager Resume", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Develop a franchise model",
+              "Lead a merchandising team",
+              "Network at Retail Association events"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Apply for roles at Reliance/D-Mart",
+              "Prepare for MBA (retail focus)",
+              "Master RFID inventory systems"
+            ]
+          }
+        ]
+      }
+    ],
+    "banking_officer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Banking Basics",
+        "content": "Financial systems, regulations, and customer service",
+        "resources": [
+          { "type": "book", "title": "Banking Fundamentals", "link": "#" },
+          { "type": "course", "title": "KYC/AML Compliance", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Study banking products (loans, deposits)",
+              "Learn RBI monetary policies",
+              "Role-play customer interactions"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Analyze bank balance sheets",
+              "Shadow bank tellers",
+              "Complete NISM Series-VIIA"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Risk & Operations",
+        "content": "Credit analysis, fraud detection, and digital banking",
+        "resources": [
+          { "type": "course", "title": "Credit Risk Modeling", "link": "#" },
+          { "type": "tool", "title": "Finacle Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Approve mock loan applications",
+              "Detect fraudulent transactions",
+              "Study Basel III norms"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Intern at retail banks",
+              "Get certified in digital banking",
+              "Implement UPI payment solutions"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 5-6",
+        "title": "Leadership & Career",
+        "content": "Wealth management, branch operations, and certifications",
+        "resources": [
+          { "type": "book", "title": "The Intelligent Investor", "link": "#" },
+          { "type": "template", "title": "Banking Resume", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 5",
+            "milestones": [
+              "Lead a mock branch",
+              "Study mutual funds/insurance",
+              "Network at IBA events"
+            ]
+          },
+          {
+            "title": "Semester 6",
+            "milestones": [
+              "Apply for PO programs (SBI, IBPS)",
+              "Prepare for JAIIB/CAIIB",
+              "Master CRM for banking"
+            ]
+          }
+        ]
+      }
+    ],
+    "investment_banker": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Core Finance & Valuation",
+        "content": "Master financial modeling, corporate finance, and capital markets",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Investment Banking by Rosenbaum",
+            "link": "#"
+          },
+          { "type": "course", "title": "Wall Street Prep Premium", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Build DCF/LBO models",
+              "Study M&A deal structures",
+              "Analyze 10-K reports"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Master pitchbook creation",
+              "Network with alumni in IBD",
+              "Secure summer internship"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Deal Execution & Career",
+        "content": "Specialize in sector coverage and prepare for full-time roles",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Advanced Financial Modeling",
+            "link": "#"
+          },
+          { "type": "template", "title": "IB Resume Template", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Lead a live deal simulation",
+              "Study ECM/DCM processes",
+              "Prepare for Series 7/63 exams"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Convert internship to full-time offer",
+              "Network at Super Return conferences",
+              "Master Bloomberg Terminal shortcuts"
+            ]
+          }
+        ]
+      }
+    ],
+    "management_consultant": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Problem-Solving Frameworks",
+        "content": "Learn case interviews, hypothesis-driven thinking, and slidecraft",
+        "resources": [
+          { "type": "book", "title": "Case Interview Secrets", "link": "#" },
+          { "type": "course", "title": "McKinsey Problem Solving", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Master profitability frameworks",
+              "Practice 50+ cases",
+              "Build a consulting toolkit"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Win case competitions",
+              "Secure MBB summer internship",
+              "Develop industry expertise (e.g., healthcare)"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Engagement Leadership",
+        "content": "Client management and implementation",
+        "resources": [
+          { "type": "book", "title": "The McKinsey Way", "link": "#" },
+          { "type": "tool", "title": "Tableau for Consultants", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Lead a pro-bono consulting project",
+              "Master stakeholder interviews",
+              "Prepare for engagement manager role"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Convert internship to full-time offer",
+              "Network at Consulting Summit",
+              "Specialize in digital transformation"
+            ]
+          }
+        ]
+      }
+    ],
+    "brand_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Marketing Mastery",
+        "content": "Positioning, consumer insights, and campaign analytics",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Building Strong Brands by Aaker",
+            "link": "#"
+          },
+          {
+            "type": "tool",
+            "title": "Nielsen Consumer Panel Data",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Conduct conjoint analysis",
+              "Develop brand architecture",
+              "Pitch to mock CMOs"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Intern at FMCG (Unilever/P&G)",
+              "Optimize marketing mix models",
+              "Get Google Analytics certified"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Portfolio Strategy",
+        "content": "Innovation pipeline and global branding",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Brand Portfolio Strategy (Kellogg)",
+            "link": "#"
+          },
+          { "type": "template", "title": "Brand Plan Template", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Launch a new product variant",
+              "Lead cross-functional teams",
+              "Present to executive committee"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Convert internship to full-time role",
+              "Network at Cannes Lions",
+              "Prepare for CMO career path"
+            ]
+          }
+        ]
+      }
+    ],
+    "business_development_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Market Expansion",
+        "content": "Partnerships, pricing strategies, and competitive intelligence",
+        "resources": [
+          { "type": "book", "title": "The Challenger Sale", "link": "#" },
+          { "type": "tool", "title": "Crunchbase Pro", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Develop TAM/SAM/SOM models",
+              "Negotiate mock partnership deals",
+              "Analyze competitor 10-Ks"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Intern at high-growth startups",
+              "Structure revenue-sharing agreements",
+              "Master Salesforce CRM"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Strategic Partnerships",
+        "content": "Global expansion and M&A integration",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Strategic Alliances (INSEAD)",
+            "link": "#"
+          },
+          { "type": "template", "title": "BD Deal Tracker", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Lead cross-border market entry",
+              "Develop channel partner programs",
+              "Present to board of directors"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Close $1M+ mock deal",
+              "Network at Global BizDev Summit",
+              "Transition to corporate development"
+            ]
+          }
+        ]
+      }
+    ],
+    "chief_financial_officer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Financial Leadership",
+        "content": "FP&A, treasury, and investor relations",
+        "resources": [
+          { "type": "book", "title": "CFO Techniques", "link": "#" },
+          { "type": "tool", "title": "SAP FICO Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Prepare board-level financial reports",
+              "Optimize working capital",
+              "Model cap table scenarios"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Intern at Fortune 500 finance teams",
+              "Lead budgeting process simulation",
+              "Get CMA certification"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Corporate Governance",
+        "content": "Risk management and capital allocation",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Strategic Financial Leadership",
+            "link": "#"
+          },
+          { "type": "template", "title": "Investor Deck Template", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design dividend policy",
+              "Implement ESG reporting",
+              "Present earnings call script"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Network at CFO Circle events",
+              "Prepare for IPO readiness",
+              "Transition from Big 4 to corporate"
+            ]
+          }
+        ]
+      }
+    ],
+    "digital_marketing_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Performance Marketing",
+        "content": "Paid media, attribution modeling, and martech",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Digital Marketing for Dummies",
+            "link": "#"
+          },
+          { "type": "tool", "title": "Google Ads Editor", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Achieve Google Ads certification",
+              "Optimize Facebook ad sets",
+              "Reduce CAC by 20% in simulations"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Intern at performance agencies",
+              "Implement multi-touch attribution",
+              "Master HubSpot workflows"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Customer-Centric Strategy",
+        "content": "Personalization and lifecycle marketing",
+        "resources": [
+          { "type": "course", "title": "CDP Masterclass", "link": "#" },
+          { "type": "template", "title": "Marketing OKR Template", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design omnichannel journeys",
+              "Implement AI-driven recommendations",
+              "Present to C-suite"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Convert internship to full-time role",
+              "Network at DMEXCO",
+              "Prepare for CMO track"
+            ]
+          }
+        ]
+      }
+    ],
+    "supply_chain_analyst": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Data-Driven SCM",
+        "content": "Inventory optimization and predictive analytics",
+        "resources": [
+          { "type": "book", "title": "Supply Chain Analytics", "link": "#" },
+          { "type": "tool", "title": "Tableau for SCM", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Build inventory simulation models",
+              "Reduce mock stockouts by 30%",
+              "Master SQL for logistics data"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Intern at 3PL analytics teams",
+              "Implement digital twin for SCM",
+              "Get CSCP certification"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Strategic Cost Reduction",
+        "content": "Network design and AI applications",
+        "resources": [
+          {
+            "type": "course",
+            "title": "AI in Supply Chain (MIT)",
+            "link": "#"
+          },
+          { "type": "template", "title": "SCM Dashboard", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Optimize global distribution network",
+              "Implement predictive maintenance",
+              "Present $1M+ cost savings plan"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Convert internship to full-time role",
+              "Network at Gartner Symposium",
+              "Transition to Director of SCM"
+            ]
+          }
+        ]
+      }
+    ],
+    "corporate_strategy_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Strategic Frameworks",
+        "content": "Porter's Five Forces, BCG Matrix, and scenario planning",
+        "resources": [
+          { "type": "book", "title": "Playing to Win by Lafley", "link": "#" },
+          {
+            "type": "tool",
+            "title": "Strategyzer Business Model Canvas",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Analyze industry disruption risks",
+              "Develop market entry strategies",
+              "Lead PESTEL workshops"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Intern at corporate strategy teams",
+              "Present to mock board of directors",
+              "Master M&A valuation"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Execution & Transformation",
+        "content": "Change management and OKR implementation",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Leading Organizational Change",
+            "link": "#"
+          },
+          {
+            "type": "template",
+            "title": "Strategic Initiative Tracker",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design 3-year corporate strategy",
+              "Align cross-functional OKRs",
+              "Lead post-merger integration simulation"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Convert internship to full-time role",
+              "Network at World Strategy Summit",
+              "Prepare for Chief Strategy Officer path"
+            ]
+          }
+        ]
+      }
+    ],
+    "venture_capitalist": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Deal Sourcing & Evaluation",
+        "content": "Term sheets, cap tables, and due diligence",
+        "resources": [
+          { "type": "book", "title": "Venture Deals by Feld", "link": "#" },
+          { "type": "tool", "title": "Carta for Cap Tables", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Analyze 100+ pitch decks",
+              "Model VC returns (IRR, MOIC)",
+              "Lead mock due diligence"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Intern at VC firms",
+              "Source 3 qualified deals",
+              "Get 409A valuation certified"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Portfolio Management",
+        "content": "Board participation and exit strategies",
+        "resources": [
+          {
+            "type": "course",
+            "title": "VC Portfolio Strategy (Stanford)",
+            "link": "#"
+          },
+          {
+            "type": "template",
+            "title": "Investment Memo Template",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Lead term sheet negotiations",
+              "Design LP pitch decks",
+              "Simulate board meetings"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Convert internship to full-time role",
+              "Network at SuperReturn",
+              "Prepare for Partner track"
+            ]
+          }
+        ]
+      }
+    ],
+    "data_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Data Foundations",
+        "content": "Master SQL, Python, and ETL pipelines",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Designing Data-Intensive Applications",
+            "link": "#"
+          },
+          {
+            "type": "course",
+            "title": "Apache Spark Fundamentals",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Optimize complex SQL queries",
+              "Build Python data pipelines",
+              "Design star/snowflake schemas"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Implement CDC with Debezium",
+              "Master Airflow workflow orchestration",
+              "Intern at data-driven companies"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Scalable Systems",
+        "content": "Distributed computing and cloud data platforms",
+        "resources": [
+          { "type": "course", "title": "AWS Data Engineering", "link": "#" },
+          { "type": "tool", "title": "Databricks Tutorials", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Process TB-scale datasets",
+              "Implement data lakes on S3/ADLS",
+              "Pass AWS Certified Data Analytics"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Build real-time streaming (Kafka/Flink)",
+              "Network at Data Council events",
+              "Transition to senior data engineer roles"
+            ]
+          }
+        ]
+      }
+    ],
+    "cloud_solutions_architect": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Cloud Foundations",
+        "content": "IaaS/PaaS, networking, and security",
+        "resources": [
+          { "type": "book", "title": "Cloud Native Patterns", "link": "#" },
+          {
+            "type": "course",
+            "title": "AWS Solutions Architect Associate",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Deploy HA architectures",
+              "Master VPC peering/routing",
+              "Secure workloads with IAM"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Migrate on-prem apps to cloud",
+              "Automate with Terraform/CDK",
+              "Intern at cloud consulting firms"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Enterprise Cloud",
+        "content": "Multi-cloud strategy and optimization",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Azure/GCP Professional Architect",
+            "link": "#"
+          },
+          { "type": "template", "title": "Cloud Migration Plan", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design hybrid cloud solutions",
+              "Optimize cloud spend (FinOps)",
+              "Lead cloud center of excellence"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Pass multi-cloud certifications",
+              "Network at AWS re:Invent",
+              "Transition to cloud leadership roles"
+            ]
+          }
+        ]
+      }
+    ],
+    "it_project_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Technical Leadership",
+        "content": "Agile methodologies and stakeholder management",
+        "resources": [
+          { "type": "book", "title": "The Phoenix Project", "link": "#" },
+          { "type": "course", "title": "PMP Certification Prep", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Lead Scrum ceremonies",
+              "Master Jira/Confluence",
+              "Create project charters"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Manage $1M+ budget simulations",
+              "Mitigate critical path risks",
+              "Intern at tech consultancies"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Strategic Execution",
+        "content": "DevOps integration and portfolio management",
+        "resources": [
+          { "type": "course", "title": "DevOps for Managers", "link": "#" },
+          {
+            "type": "tool",
+            "title": "Microsoft Project Tutorials",
+            "link": "#"
+          }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Align projects with OKRs",
+              "Implement CI/CD governance",
+              "Present to C-level executives"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Obtain PMP/SAFe certifications",
+              "Network at PMI conferences",
+              "Transition to Program Manager"
+            ]
+          }
+        ]
+      }
+    ],
+    "machine_learning_engineer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "ML Foundations",
+        "content": "Algorithms, model deployment, and MLOps",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Hands-On ML with Scikit-Learn",
+            "link": "#"
+          },
+          { "type": "course", "title": "ML Engineering (Udacity)", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Productionize Scikit-Learn models",
+              "Containerize with Docker",
+              "Monitor model drift"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Build feature stores",
+              "Implement A/B testing frameworks",
+              "Intern at AI startups"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Scalable AI Systems",
+        "content": "Distributed training and edge deployment",
+        "resources": [
+          { "type": "course", "title": "Advanced MLOps", "link": "#" },
+          { "type": "tool", "title": "Kubeflow Pipelines", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Optimize TensorFlow Serving",
+              "Deploy on IoT devices",
+              "Pass AWS ML Specialty"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Publish research papers",
+              "Network at NeurIPS/ICML",
+              "Transition to AI leadership"
+            ]
+          }
+        ]
+      }
+    ],
+    "big_data_analyst": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Data at Scale",
+        "content": "Hadoop ecosystem and analytical modeling",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Big Data: Principles and Practices",
+            "link": "#"
+          },
+          { "type": "course", "title": "Apache Spark SQL", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Process data with Spark RDDs",
+              "Optimize Hive queries",
+              "Build dashboards with Superset"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Implement slowly changing dimensions",
+              "Master graph algorithms",
+              "Intern at data-heavy enterprises"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Decision Intelligence",
+        "content": "Prescriptive analytics and business impact",
+        "resources": [
+          { "type": "course", "title": "Decision Science (MIT)", "link": "#" },
+          { "type": "template", "title": "Analytics Storyboard", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Build what-if simulation models",
+              "Present insights to executives",
+              "Lead data democratization"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Obtain Cloudera certifications",
+              "Network at Strata Conference",
+              "Transition to Chief Data Officer"
+            ]
+          }
+        ]
+      }
+    ],
+    "cybersecurity_manager": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Security Leadership",
+        "content": "GRC frameworks and team management",
+        "resources": [
+          { "type": "book", "title": "CISO Desk Reference Guide", "link": "#" },
+          { "type": "course", "title": "CISSP Certification", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Implement NIST CSF",
+              "Conduct risk assessments",
+              "Design security awareness programs"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Manage SOC teams",
+              "Respond to breach simulations",
+              "Intern at cybersecurity firms"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Strategic Defense",
+        "content": "Zero trust architecture and threat intelligence",
+        "resources": [
+          {
+            "type": "course",
+            "title": "SANS Security Leadership",
+            "link": "#"
+          },
+          { "type": "tool", "title": "MITRE ATT&CK Navigator", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design IAM roadmaps",
+              "Lead red team exercises",
+              "Present to board on cyber risks"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Obtain CISM certification",
+              "Network at Black Hat",
+              "Transition to CISO roles"
+            ]
+          }
+        ]
+      }
+    ],
+    "erp_consultant": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "ERP Core Systems",
+        "content": "Configuration, customization, and integration",
+        "resources": [
+          { "type": "book", "title": "SAP S/4HANA Architecture", "link": "#" },
+          { "type": "course", "title": "Oracle Cloud ERP", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Map business processes to modules",
+              "Configure FI/CO workflows",
+              "Develop ABAP scripts"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Integrate with MuleSoft",
+              "Optimize MRP runs",
+              "Intern at implementation partners"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Digital Transformation",
+        "content": "AI/ML in ERP and change management",
+        "resources": [
+          { "type": "course", "title": "ERP AI Applications", "link": "#" },
+          { "type": "template", "title": "Business Blueprint", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Implement predictive maintenance",
+              "Lead user training programs",
+              "Present ROI analysis"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Obtain SAP/Oracle certifications",
+              "Network at SAPPHIRE NOW",
+              "Transition to ERP practice lead"
+            ]
+          }
+        ]
+      }
+    ],
+    "research_scientist": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Advanced Computing",
+        "content": "Theoretical foundations and experimental design",
+        "resources": [
+          {
+            "type": "book",
+            "title": "Introduction to Algorithms (CLRS)",
+            "link": "#"
+          },
+          { "type": "course", "title": "Quantum Computing Basics", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Publish in arXiv",
+              "Develop novel algorithms",
+              "Master LaTeX typesetting"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Win research grants",
+              "Collaborate with professors",
+              "Intern at research labs"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Specialized Innovation",
+        "content": "PhD preparation and patent development",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Advanced Research Methodologies",
+            "link": "#"
+          },
+          { "type": "template", "title": "Research Proposal", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "File provisional patents",
+              "Present at IEEE/ACM conferences",
+              "Lead interdisciplinary teams"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Apply to top PhD programs",
+              "Network at Gordon Research Conferences",
+              "Transition to principal scientist"
+            ]
+          }
+        ]
+      }
+    ],
+    "chief_technology_officer": [
+      {
+        "semester": "Semesters 1-2",
+        "title": "Technology Vision",
+        "content": "Emerging tech radar and architecture governance",
+        "resources": [
+          {
+            "type": "book",
+            "title": "The Hard Thing About Hard Things",
+            "link": "#"
+          },
+          { "type": "course", "title": "CTO Leadership Program", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 1",
+            "milestones": [
+              "Develop 3-year tech roadmap",
+              "Evaluate build-vs-buy decisions",
+              "Master board communication"
+            ]
+          },
+          {
+            "title": "Semester 2",
+            "milestones": [
+              "Lead technical due diligence",
+              "Structure engineering org charts",
+              "Intern at high-growth startups"
+            ]
+          }
+        ]
+      },
+      {
+        "semester": "Semesters 3-4",
+        "title": "Executive Leadership",
+        "content": "Innovation culture and IPO preparation",
+        "resources": [
+          {
+            "type": "course",
+            "title": "Scaling Technology Organizations",
+            "link": "#"
+          },
+          { "type": "template", "title": "Investor Pitch Deck", "link": "#" }
+        ],
+        "innerRoadmap": [
+          {
+            "title": "Semester 3",
+            "milestones": [
+              "Design engineering career ladders",
+              "Prepare SOC 2 compliance",
+              "Present at TechCrunch Disrupt"
+            ]
+          },
+          {
+            "title": "Semester 4",
+            "milestones": [
+              "Network at Y Combinator events",
+              "Transition to startup CTO",
+              "Mentor junior technologists"
             ]
           }
         ]

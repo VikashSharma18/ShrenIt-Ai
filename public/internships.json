@@ -1,0 +1,94 @@
+[
+  {
+    "id": 2,
+    "title": "Marketing Intern",
+    "company": "Growth Hackers",
+    "date": "2023-11-05",
+    "description": "Help create and execute digital marketing campaigns for our clients.",
+    "applyLink": "https://www.shrenitai.com/",
+
+    "details": {
+      "Overview": "Exciting opportunity for marketing students to gain hands-on experience in digital marketing.",
+      "Responsibilities": [
+        "Assist in social media campaign creation",
+        "Conduct market research",
+        "Help create marketing content",
+        "Analyze campaign performance"
+      ],
+      "Requirements": [
+        "Strong communication skills",
+        "Familiarity with social media platforms",
+        "Basic understanding of marketing principles",
+        "Creative thinking"
+      ],
+      "Benefits": [
+        "Learn from experienced marketers",
+        "Work with diverse clients",
+        "Flexible schedule",
+        "Stipend: $1501/month"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Data Science Intern",
+    "company": "Analytics Pro",
+    "date": "2023-11-10",
+    "description": "Work with large datasets to derive meaningful insights for our clients.",
+    "details": {
+      "Overview": "Join our data science team to work on real-world problems with large datasets.",
+      "Responsibilities": [
+        "Clean and preprocess data",
+        "Develop machine learning models",
+        "Create data visualizatio",
+        "Present findings to stakeholders"
+      ],
+      "Requirements": [
+        "Knowledge of Python and data science libraries (Pandas, NumPy, Scikit-learn)",
+        "Understanding of statistical concepts",
+        "Familiarity with SQL",
+        "Currently in final year of Bachelor's or pursuing Master's"
+      ],
+      "Benefits": [
+        "Access to high-performance computing resources",
+        "Work on projects with real business impact",
+        "Stipend: $2500/month",
+        "Networking opportunities"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Frontend Developer Intern",
+    "company": "Tech Innovations Inc.",
+    "date": "2023-11-15",
+    "description": "Join our frontend team to work on cutting-edge web applications.",
+    "details": {
+      "Overview": "We're looking for a passionate Frontend Developer Intern to join our team for 3-6 months.",
+      "Responsibilities": [
+        "Develop responsive web interfaces using React.js",
+        "Collaborate with UX designers to implement designs",
+        "Write clean, maintainable code",
+        "Participate in code reviews"
+      ],
+      "Requirements": [
+        "Basic knowledge of HTML, CSS, and Java",
+        "Familiarity with React or similar frameworks",
+        "Understanding of responsive design principles",
+        "Currently pursuing a degree in Computer Science or related field"
+      ],
+      "Benefits": [
+        "Mentorship from senior developers",
+        "Flexible work hours",
+        "Potential for full-time offer",
+        "Stipend: $2000/month"
+      ],
+      "Bens": [
+        "Mentorship from senior developers",
+        "Flexible work hours",
+        "Potential for full-time offer",
+        "Stipend: $2000/month"
+      ]
+    }
+  }
+]
