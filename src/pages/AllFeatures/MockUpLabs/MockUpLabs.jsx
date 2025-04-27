@@ -20,6 +20,7 @@ const MockUpLabs = () => {
   const [isFinished, setIsFinished] = useState(false);
   const [review, setReview] = useState(null);
   const [showNextButton, setShowNextButton] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
   const mediaRecorderRef = useRef(null);
   const webcamRef = useRef(null);
 
@@ -30,7 +31,7 @@ const MockUpLabs = () => {
         const response = await axios.get("/questions.json");
         setQuestions(response.data);
       } catch (error) {
-        console.error("Failed to fetch questions", error);
+        console.error("Failed to fetch questions:", error);
       }
     };
 
@@ -48,39 +49,32 @@ const MockUpLabs = () => {
 
   // Poll posture status until all are green
   useEffect(() => {
-    if (interviewStarted) return;
+    if (interviewStarted || canStartInterview) return;
 
     const interval = setInterval(async () => {
       try {
-        if (webcamRef.current) {
-          const imageSrc = webcamRef.current.getScreenshot();
-          if (imageSrc) {
-            const response = await axios.post(
-              "https://shrenitai-backend.onrender.com/api/posture_data",
-              { image: imageSrc },
-              { headers: { "Content-Type": "application/json" } }
-            );
-            const data = response.data;
-            setPostureStatus(data);
+        const response = await axios.get(
+          "https://shrenitai-backend.onrender.com/api/posture_data"
+        );
+        const data = response.data;
+        setPostureStatus(data);
 
-            const allGreen =
-              data.head === "green" &&
-              data.shoulders === "green" &&
-              data.eyes === "green";
+        const allGreen =
+          data.head === "green" &&
+          data.shoulders === "green" &&
+          data.eyes === "green";
 
-            if (allGreen) {
-              clearInterval(interval);
-              setCanStartInterview(true);
-            }
-          }
+        if (allGreen) {
+          setCanStartInterview(true);
+          clearInterval(interval); // Stop polling
         }
       } catch (error) {
-        console.error("Failed to fetch posture data", error);
+        console.error("Failed to fetch posture data:", error);
       }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [interviewStarted]);
+  }, [interviewStarted, canStartInterview]);
 
   // Start recording speech
   const startRecording = () => {
@@ -92,16 +86,30 @@ const MockUpLabs = () => {
           const chunks = [];
 
           mediaRecorderRef.current.ondataavailable = (event) => {
-            chunks.push(event.data);
+            if (event.data.size > 0) {
+              chunks.push(event.data);
+            }
           };
 
           mediaRecorderRef.current.onstop = () => {
-            const audioBlob = new Blob(chunks, { type: "audio/wav" });
-            setAudioBlob(audioBlob);
+            if (chunks.length > 0) {
+              const audioBlob = new Blob(chunks, { type: "audio/wav" });
+              console.log("Audio Blob created:", {
+                size: audioBlob.size,
+                type: audioBlob.type,
+              });
+              setAudioBlob(audioBlob);
+            } else {
+              console.error("No audio data recorded");
+              setErrorMessage(
+                "No audio recorded. Please speak clearly and try again."
+              );
+            }
           };
 
           mediaRecorderRef.current.start();
           setRecording(true);
+          setErrorMessage(null);
         })
         .catch((err) => {
           console.error("Error accessing media devices:", err);
@@ -112,33 +120,80 @@ const MockUpLabs = () => {
 
   // Stop recording and send audio to backend
   const stopRecording = async () => {
-    if (mediaRecorderRef.current) {
+    if (mediaRecorderRef.current && recording) {
       mediaRecorderRef.current.stop();
       setRecording(false);
 
-      setTimeout(async () => {
-        if (audioBlob) {
-          try {
-            const formData = new FormData();
-            formData.append("audio", audioBlob, "recording.wav");
+      // Wait for audioBlob to be set
+      const waitForAudioBlob = () =>
+        new Promise((resolve) => {
+          const checkBlob = setInterval(() => {
+            if (audioBlob) {
+              clearInterval(checkBlob);
+              resolve(audioBlob);
+            }
+          }, 50);
+          setTimeout(() => {
+            clearInterval(checkBlob);
+            resolve(null);
+          }, 2000); // Timeout after 2 seconds
+        });
 
-            const response = await axios.post(
-              "https://shrenitai-backend.onrender.com/api/speech",
-              formData,
-              {
-                headers: { "Content-Type": "multipart/form-data" },
-              }
-            );
+      const blob = await waitForAudioBlob();
+      if (!blob) {
+        console.error("No audio blob available after recording");
+        setErrorMessage("Recording failed. Please try again.");
+        return;
+      }
 
-            const newAnswer = response.data.transcript;
-            setAnswers((prevAnswers) => [...prevAnswers, newAnswer]);
-            setShowNextButton(true);
-          } catch (error) {
-            console.error("Error processing audio:", error);
-            alert("Failed to process your answer. Please try again.");
+      if (blob.size < 1000) {
+        console.error("Audio blob too small:", blob.size);
+        setErrorMessage(
+          "Audio too short or empty. Please speak clearly and try again."
+        );
+        return;
+      }
+
+      try {
+        const formData = new FormData();
+        formData.append("audio", blob, "recording.wav");
+
+        const response = await axios.post(
+          "https://shrenitai-backend.onrender.com/api/speech",
+          formData,
+          {
+            headers: { "Content-Type": "multipart/form-data" },
           }
+        );
+
+        console.log("Speech API response:", response.data);
+
+        const transcript = response.data.transcript;
+        if (
+          !transcript ||
+          typeof transcript !== "string" ||
+          transcript.trim() === ""
+        ) {
+          console.error("Invalid or empty transcript:", transcript);
+          setErrorMessage(
+            "No speech detected. Please speak clearly and try again."
+          );
+          return;
         }
-      }, 100);
+
+        setAnswers((prevAnswers) => [...prevAnswers, transcript]);
+        setShowNextButton(true);
+        setErrorMessage(null);
+      } catch (error) {
+        console.error("Error processing audio:", {
+          message: error.message,
+          status: error.response?.status,
+          data: error.response?.data,
+        });
+        setErrorMessage(
+          `Failed to transcribe audio: ${error.message}. Please try again.`
+        );
+      }
     }
   };
 
@@ -147,6 +202,8 @@ const MockUpLabs = () => {
     if (currentQuestionIndex < questions[selectedCategory]?.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setShowNextButton(false);
+      setAudioBlob(null);
+      setErrorMessage(null);
     } else {
       setIsFinished(true);
       setShowNextButton(false);
@@ -179,44 +236,66 @@ const MockUpLabs = () => {
     setInterviewStarted(false);
     setCanStartInterview(false);
     setShowNextButton(false);
+    setAudioBlob(null);
+    setErrorMessage(null);
   };
 
   // Start interview manually after posture check
   const startInterview = () => {
     setInterviewStarted(true);
+    setErrorMessage(null);
   };
 
   return (
-    <div className="container">
-      <h1 className="title">MockUpLabs AI Interview</h1>
-      <div className="main-contenttt">
+    <div className="mul-container">
+      <h1 className="mul-title">MockUpLabs AI Interview</h1>
+      <div className="mul-main-content">
         {/* Left Section: Video Feed and Speech Recorder */}
-        <div className="left-section">
-          <div className="video-feed-container">
+        <div className="mul-left-section">
+          <div className="mul-video-feed-container">
             <Webcam
               audio={false}
               ref={webcamRef}
               screenshotFormat="image/jpeg"
               width="100%"
               height={400}
-              className="video"
+              className="mul-video"
               videoConstraints={{ facingMode: "user" }}
             />
             {interviewStarted && (
-              <div className="speech-recorder">
+              <div className="mul-speech-recorder">
                 <button
                   onClick={startRecording}
                   disabled={recording || !interviewStarted}
-                  className={`record-button ${recording ? "disabled" : ""}`}
+                  className={`mul-record-button ${
+                    recording ? "mul-disabled" : ""
+                  }`}
                 >
                   {recording ? "Recording..." : "Start Recording"}
                 </button>
                 <button
                   onClick={stopRecording}
                   disabled={!recording}
-                  className={`stop-button ${!recording ? "disabled" : ""}`}
+                  className={`mul-stop-button ${
+                    !recording ? "mul-disabled" : ""
+                  }`}
                 >
                   Stop Recording
+                </button>
+              </div>
+            )}
+            {errorMessage && (
+              <div className="mul-error-message">
+                <p>{errorMessage}</p>
+                <button
+                  onClick={() => {
+                    setErrorMessage(null);
+                    setAudioBlob(null);
+                    startRecording();
+                  }}
+                  className="mul-retry-button"
+                >
+                  Retry
                 </button>
               </div>
             )}
@@ -224,14 +303,14 @@ const MockUpLabs = () => {
         </div>
 
         {/* Right Section: Category, Posture, Questions, Review */}
-        <div className="right-section">
+        <div className="mul-right-section">
           {/* Category Selection */}
-          <div className="category-selection-container">
-            <label className="category-label">Select Category:</label>
+          <div className="mul-category-selection-container">
+            <label className="mul-category-label">Select Category:</label>
             <select
               value={selectedCategory}
               onChange={handleCategoryChange}
-              className="category-select"
+              className="mul-category-select"
             >
               <option value="data_scientist">Data Scientist</option>
               <option value="software_engineer">Software Engineer</option>
@@ -240,14 +319,14 @@ const MockUpLabs = () => {
 
           {/* Posture Status */}
           {!canStartInterview && (
-            <div className="posture-status">
-              <h3 className="posture-title">Posture Check</h3>
+            <div className="mul-posture-status">
+              <h3 className="mul-posture-title">Posture Check</h3>
               <p className={postureStatus.head}>Head: {postureStatus.head}</p>
               <p className={postureStatus.shoulders}>
                 Shoulders: {postureStatus.shoulders}
               </p>
               <p className={postureStatus.eyes}>Eyes: {postureStatus.eyes}</p>
-              <p className="waiting-text">
+              <p className="mul-waiting-text">
                 Please adjust your posture to start the interview.
               </p>
             </div>
@@ -255,22 +334,22 @@ const MockUpLabs = () => {
 
           {/* Interview Section */}
           {canStartInterview && !interviewStarted && (
-            <div className="interview-section">
-              <h2 className="section-title">Ready to Start</h2>
-              <button onClick={startInterview} className="start-button">
+            <div className="mul-interview-section">
+              <h2 className="mul-section-title">Ready to Start</h2>
+              <button onClick={startInterview} className="mul-start-button">
                 Begin Interview
               </button>
             </div>
           )}
 
           {interviewStarted && !isFinished && (
-            <div className="interview-section">
-              <h2 className="question-title">
+            <div className="mul-interview-section">
+              <h2 className="mul-question-title">
                 Question {currentQuestionIndex + 1}:{" "}
                 {questions[selectedCategory]?.[currentQuestionIndex]}
               </h2>
               {showNextButton && (
-                <button onClick={handleNext} className="next-button">
+                <button onClick={handleNext} className="mul-next-button">
                   Next
                 </button>
               )}
@@ -279,9 +358,9 @@ const MockUpLabs = () => {
 
           {/* Submit Button */}
           {isFinished && !review && (
-            <div className="interview-section">
-              <h2 className="section-title">Interview Completed</h2>
-              <button onClick={handleSubmit} className="submit-button">
+            <div className="mul-interview-section">
+              <h2 className="mul-section-title">Interview Completed</h2>
+              <button onClick={handleSubmit} className="mul-submit-button">
                 Submit for Review
               </button>
             </div>
@@ -289,16 +368,18 @@ const MockUpLabs = () => {
 
           {/* Review Section */}
           {review && (
-            <div className="review-section">
-              <h3 className="section-title">Review & Scores</h3>
-              <p className="score">Overall Score: {review.overallScore}/10</p>
-              <p className="feedback">{review.overallFeedback}</p>
+            <div className="mul-review-section">
+              <h3 className="mul-section-title">Review & Scores</h3>
+              <p className="mul-score">
+                Overall Score: {review.overallScore}/10
+              </p>
+              <p className="mul-feedback">{review.overallFeedback}</p>
               {review.scores.map((item, index) => (
-                <div key={index} className="review-item">
-                  <p className="review-question">
+                <div key={index} className="mul-review-item">
+                  <p className="mul-review-question">
                     Question {item.question}: {item.score}/10
                   </p>
-                  <p className="review-feedback">{item.feedback}</p>
+                  <p className="mul-review-feedback">{item.feedback}</p>
                 </div>
               ))}
             </div>

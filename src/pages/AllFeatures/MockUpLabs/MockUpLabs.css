@@ -1,7 +1,6 @@
-
 /* Container */
-.container {
-  max-width: 100%;
+.mul-container {
+  max-width: 1400px;
   margin: 20px auto;
   padding: 80px;
   /* background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); */
@@ -11,7 +10,7 @@
 }
 
 /* Title */
-.title {
+.mul-title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -21,19 +20,19 @@
 }
 
 /* Main Content (Two Sections) */
-.main-contenttt {
+.mul-main-content {
   display: flex;
   gap: 20px;
 }
 
 /* Left Section */
-.left-section {
+.mul-left-section {
   flex: 1;
   min-width: 0;
 }
 
 /* Right Section */
-.right-section {
+.mul-right-section {
   flex: 1;
   min-width: 0;
   display: flex;
@@ -42,7 +41,7 @@
 }
 
 /* Video Feed Container */
-.video-feed-container {
+.mul-video-feed-container {
   width: 100%;
   padding: 20px;
   background: #ffffff;
@@ -53,7 +52,7 @@
   align-items: center;
 }
 
-.video {
+.mul-video {
   width: 100%;
   height: 400px;
   border-radius: 10px;
@@ -63,16 +62,48 @@
 }
 
 /* Speech Recorder Buttons */
-.speech-recorder {
+.mul-speech-recorder {
   display: flex;
   gap: 15px;
 }
 
-.record-button,
-.stop-button,
-.start-button,
-.submit-button,
-.next-button {
+/* Error Message */
+.mul-error-message {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(244, 67, 54, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.mul-error-message p {
+  color: #f44336;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.mul-retry-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #f44336;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mul-retry-button:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+.mul-record-button,
+.mul-stop-button,
+.mul-start-button,
+.mul-submit-button,
+.mul-next-button {
   padding: 12px 24px;
   font-size: 1rem;
   font-weight: 600;
@@ -82,70 +113,70 @@
   transition: all 0.3s ease;
 }
 
-.record-button {
+.mul-record-button {
   background: #2196f3;
   color: #ffffff;
 }
 
-.record-button:hover:not(.disabled) {
+.mul-record-button:hover:not(.mul-disabled) {
   background: #1976d2;
   transform: translateY(-2px);
 }
 
-.stop-button {
+.mul-stop-button {
   background: #f44336;
   color: #ffffff;
 }
 
-.stop-button:hover:not(.disabled) {
+.mul-stop-button:hover:not(.mul-disabled) {
   background: #d32f2f;
   transform: translateY(-2px);
 }
 
-.start-button {
+.mul-start-button {
   background: #4caf50;
   color: #ffffff;
   width: 100%;
   max-width: 200px;
 }
 
-.start-button:hover {
+.mul-start-button:hover {
   background: #388e3c;
   transform: translateY(-2px);
 }
 
-.submit-button {
+.mul-submit-button {
   background: #ff9800;
   color: #ffffff;
   width: 100%;
   max-width: 200px;
 }
 
-.submit-button:hover {
+.mul-submit-button:hover {
   background: #f57c00;
   transform: translateY(-2px);
 }
 
-.next-button {
+.mul-next-button {
   background: #673ab7;
   color: #ffffff;
   width: 100%;
   max-width: 200px;
 }
 
-.next-button:hover {
+.mul-next-button:hover {
   background: #5e35b1;
   transform: translateY(-2px);
 }
 
-button.disabled {
+.mul-disabled {
   background: #666;
   cursor: not-allowed;
   transform: none;
 }
 
 /* Interview Section */
-.interview-section {
+.mul-interview-section {
   width: 100%;
   padding: 25px;
   background: #242424;
@@ -154,14 +185,14 @@ button.disabled {
   text-align: center;
 }
 
-.section-title {
+.mul-section-title {
   font-size: 1.8rem;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
-.question-title {
+.mul-question-title {
   font-size: 1.5rem;
   font-weight: 500;
   color: #e0e0e0;
@@ -169,7 +200,7 @@ button.disabled {
 }
 
 /* Review Section */
-.review-section {
+.mul-review-section {
   width: 100%;
   padding: 25px;
   background: #2c2c2c;
@@ -177,35 +208,35 @@ button.disabled {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.review-item {
+.mul-review-item {
   margin-bottom: 20px;
 }
 
-.review-question {
+.mul-review-question {
   font-size: 1.2rem;
   font-weight: 600;
   color: #4caf50;
 }
 
-.review-feedback {
+.mul-review-feedback {
   font-size: 1rem;
   color: #e0e0e0;
 }
 
-.score {
+.mul-score {
   font-size: 1.3rem;
   font-weight: 600;
   color: #4caf50;
   margin-bottom: 10px;
 }
 
-.feedback {
+.mul-feedback {
   font-size: 1.1rem;
   color: #e0e0e0;
 }
 
 /* Posture Status */
-.posture-status {
+.mul-posture-status {
   width: 100%;
   padding: 25px;
   background: #2c2c2c;
@@ -214,27 +245,27 @@ button.disabled {
   text-align: center;
 }
 
-.posture-title {
+.mul-posture-title {
   font-size: 1.8rem;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 15px;
 }
 
-.posture-status p {
+.mul-posture-status p {
   font-size: 1.1rem;
   margin: 5px 0;
 }
 
-.posture-status .green {
+.mul-posture-status .green {
   color: #4caf50;
 }
 
-.posture-status .red {
+.mul-posture-status .red {
   color: #f44336;
 }
 
-.waiting-text {
+.mul-waiting-text {
   font-size: 1.2rem;
   font-weight: 600;
   color: #f44336;
@@ -245,7 +276,7 @@ button.disabled {
 }
 
 /* Category Selection */
-.category-selection-container {
+.mul-category-selection-container {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -253,13 +284,13 @@ button.disabled {
   justify-content: center;
 }
 
-.category-label {
+.mul-category-label {
   font-size: 1.2rem;
   font-weight: 600;
   color: #ffffff;
 }
 
-.category-select {
+.mul-category-select {
   padding: 10px 15px;
   font-size: 1rem;
   background: #333;
@@ -270,50 +301,51 @@ button.disabled {
   transition: all 0.3s ease;
 }
 
-.category-select:hover {
+.mul-category-select:hover {
   background: #444;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .container {
+  .mul-container {
     padding: 20px;
     margin: 10px;
   }
 
-  .main-content {
+  .mul-main-content {
     flex-direction: column;
   }
 
-  .left-section,
-  .right-section {
+  .mul-left-section,
+  .mul-right-section {
     width: 100%;
   }
 
-  .title {
+  .mul-title {
     font-size: 2rem;
   }
 
-  .video {
+  .mul-video {
     height: 250px;
   }
 
-  .interview-section,
-  .review-section,
-  .posture-status {
+  .mul-interview-section,
+  .mul-review-section,
+  .mul-posture-status {
     padding: 20px;
   }
 
-  .section-title,
-  .question-title {
+  .mul-section-title,
+  .mul-question-title {
     font-size: 1.5rem;
   }
 
-  .record-button,
-  .stop-button,
-  .start-button,
-  .submit-button,
-  .next-button {
+  .mul-record-button,
+  .mul-stop-button,
+  .mul-start-button,
+  .mul-submit-button,
+  .mul-next-button,
+  .mul-retry-button {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
