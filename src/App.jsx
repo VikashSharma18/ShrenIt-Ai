@@ -18,6 +18,7 @@ import Aboutus from "./pages/About Us/Aboutus.jsx";
 import "./App.css"; // Add global styles for smooth scrolling
 import QuickNotesAi from "./pages/AllFeatures/QuickNotesAi/QuickNotesAi.jsx";
 import InternshipApp from "./pages/AllFeatures/Internship/Internship.jsx";
+import MockUpLabs from "./pages/AllFeatures/MockUpLabs/MockUpLabs.jsx";
 
 function App() {
   return (
@@ -82,6 +83,10 @@ function App() {
               <Route
                 path="/campus-connect"
                 element={<CampusConnect id="campus-connect" />}
+              />
+              <Route
+                path="/mockup-labs"
+                element={<MockUpLabs id="mockup-labs" />}
               />
             </Route>
           </Route>

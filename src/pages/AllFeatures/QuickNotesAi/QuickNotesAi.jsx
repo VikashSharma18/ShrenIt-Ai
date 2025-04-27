@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import "./QuickNotesAi.css"; 
+import "./QuickNotesAi.css";
 
 const QuickNotesAi = () => {
   const [semesters, setSemesters] = useState([]);
@@ -23,7 +23,7 @@ const QuickNotesAi = () => {
     const fetchContent = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/v1/contents"
+          "https://shrenitai-backend.onrender.com/api/v1/contents"
         );
         const contentData = response.data;
         setAllContent(contentData);

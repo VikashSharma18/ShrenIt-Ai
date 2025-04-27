@@ -1,0 +1,16 @@
+{
+  "software_engineer": [
+    "Explain your experience with object-oriented programming",
+    "How would you optimize a slow database query?",
+    "Describe your approach to debugging complex systems",
+    "What CI/CD tools have you worked with?",
+    "Explain a challenging technical problem you solved"
+  ],
+  "data_scientist": [
+    "How do you handle missing data in a dataset?",
+    "Explain the bias-variance tradeoff",
+    "Describe a machine learning project you're proud of",
+    "How would you explain a complex model to non-technical stakeholders?",
+    "What evaluation metrics would you use for an imbalanced classification problem?"
+  ]
+}
