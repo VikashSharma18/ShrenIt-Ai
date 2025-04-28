@@ -348,7 +348,6 @@
   border-radius: 8px;
   margin-top: 1rem;
   border-left: 4px solid var(--tech-cyan);
-
 }
 
 /* Retry Button */
@@ -409,4 +408,20 @@
   .nav-button {
     width: 100%;
   }
+}
+
+/* ---------------- background Network------------- */
+.particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.aptitude-container {
+  position: relative;
+  z-index: 1;
 }

@@ -1,3 +1,4 @@
+// frontend/src/components/PostureStatus.js
 import React from "react";
 import "./MockUpLabs.css";
 

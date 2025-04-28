@@ -1,6 +1,16 @@
-import React, { useEffect, useState, useRef } from "react";
+// frontend/src/components/MockUpLabs.js
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+  useMemo,
+} from "react";
 import axios from "axios";
 import Webcam from "react-webcam";
+import * as faceMesh from "@mediapipe/face_mesh";
+import * as cameraUtils from "@mediapipe/camera_utils";
+import PostureStatus from "./PostureStatus";
 import "./MockUpLabs.css";
 
 const MockUpLabs = () => {
@@ -10,6 +20,7 @@ const MockUpLabs = () => {
     eyes: "red",
   });
   const [questions, setQuestions] = useState({});
+  const [isLoadingQuestions, setIsLoadingQuestions] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("data_scientist");
   const [canStartInterview, setCanStartInterview] = useState(false);
   const [interviewStarted, setInterviewStarted] = useState(false);
@@ -23,18 +34,24 @@ const MockUpLabs = () => {
   const [errorMessage, setErrorMessage] = useState(null);
   const mediaRecorderRef = useRef(null);
   const webcamRef = useRef(null);
+  const canvasRef = useRef(null);
+  const faceMeshInstanceRef = useRef(null);
+  const cameraRef = useRef(null);
 
-  // Fetch questions once when the component mounts
+  // Fetch questions
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
+        setIsLoadingQuestions(true);
         const response = await axios.get("/questions.json");
         setQuestions(response.data);
       } catch (error) {
         console.error("Failed to fetch questions:", error);
+        setErrorMessage("Failed to load questions. Please try again.");
+      } finally {
+        setIsLoadingQuestions(false);
       }
     };
-
     fetchQuestions();
   }, []);
 
@@ -47,37 +64,122 @@ const MockUpLabs = () => {
     });
   }, []);
 
-  // Poll posture status until all are green
+  // Memoized posture processing
+  const processPosture = useCallback((landmarks) => {
+    const head = landmarks[10];
+    const leftShoulder = landmarks[234];
+    const rightShoulder = landmarks[454];
+    const leftEye = landmarks[33];
+    const rightEye = landmarks[263];
+
+    // Head tilt detection
+    const noseTip = landmarks[1];
+    const headTilt = Math.abs(noseTip.z) < 0.1 ? "green" : "red";
+
+    // Shoulder alignment detection
+    const shoulderDiff = Math.abs(leftShoulder.y - rightShoulder.y);
+    const shouldersAligned = shoulderDiff < 0.05 ? "green" : "red";
+
+    // Eye contact detection
+    const eyeMidpointX = (leftEye.x + rightEye.x) / 2;
+    const eyeContact =
+      eyeMidpointX > 0.4 && eyeMidpointX < 0.6 ? "green" : "red";
+
+    return { head: headTilt, shoulders: shouldersAligned, eyes: eyeContact };
+  }, []);
+
+  // MediaPipe FaceMesh setup
   useEffect(() => {
-    if (interviewStarted || canStartInterview) return;
+    if (interviewStarted) return;
 
-    const interval = setInterval(async () => {
-      try {
-        const response = await axios.get(
-          "https://shrenitai-backend.onrender.com/api/posture_data"
+    faceMeshInstanceRef.current = new faceMesh.FaceMesh({
+      locateFile: (file) =>
+        `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@0.4/${file}`,
+    });
+
+    faceMeshInstanceRef.current.setOptions({
+      maxNumFaces: 1,
+      refineLandmarks: true,
+      minDetectionConfidence: 0.5,
+      minTrackingConfidence: 0.5,
+    });
+
+    faceMeshInstanceRef.current.onResults((results) => {
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (results.multiFaceLandmarks && results.multiFaceLandmarks.length > 0) {
+        const landmarks = results.multiFaceLandmarks[0];
+        const newPostureStatus = processPosture(landmarks);
+        setPostureStatus(newPostureStatus);
+
+        const allGreen = Object.values(newPostureStatus).every(
+          (status) => status === "green"
         );
-        const data = response.data;
-        setPostureStatus(data);
+        setCanStartInterview(allGreen);
 
-        const allGreen =
-          data.head === "green" &&
-          data.shoulders === "green" &&
-          data.eyes === "green";
-
-        if (allGreen) {
-          setCanStartInterview(true);
-          clearInterval(interval); // Stop polling
-        }
-      } catch (error) {
-        console.error("Failed to fetch posture data:", error);
+        // Draw landmarks
+        ctx.fillStyle = "rgba(255, 0, 0, 0.8)";
+        [
+          landmarks[10],
+          landmarks[234],
+          landmarks[454],
+          landmarks[33],
+          landmarks[263],
+        ].forEach((point) => {
+          ctx.beginPath();
+          ctx.arc(
+            point.x * canvas.width,
+            point.y * canvas.height,
+            5,
+            0,
+            2 * Math.PI
+          );
+          ctx.fill();
+        });
+      } else {
+        setPostureStatus({ head: "red", shoulders: "red", eyes: "red" });
+        setCanStartInterview(false);
       }
-    }, 1000);
+    });
 
-    return () => clearInterval(interval);
-  }, [interviewStarted, canStartInterview]);
+    if (webcamRef.current && webcamRef.current.video) {
+      cameraRef.current = new cameraUtils.Camera(webcamRef.current.video, {
+        onFrame: async () => {
+          if (
+            faceMeshInstanceRef.current &&
+            webcamRef.current &&
+            webcamRef.current.video
+          ) {
+            await faceMeshInstanceRef.current.send({
+              image: webcamRef.current.video,
+            });
+          }
+        },
+        width: 640,
+        height: 400,
+      });
+      cameraRef.current.start().catch((err) => {
+        console.error("Failed to start camera:", err);
+        setErrorMessage("Failed to access camera. Please check permissions.");
+      });
+    }
+
+    return () => {
+      if (cameraRef.current) {
+        cameraRef.current.stop();
+        cameraRef.current = null;
+      }
+      if (faceMeshInstanceRef.current) {
+        faceMeshInstanceRef.current.close();
+        faceMeshInstanceRef.current = null;
+      }
+    };
+  }, [interviewStarted, processPosture]);
 
   // Start recording speech
-  const startRecording = () => {
+  const startRecording = useCallback(() => {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices
         .getUserMedia({ audio: true })
@@ -94,13 +196,8 @@ const MockUpLabs = () => {
           mediaRecorderRef.current.onstop = () => {
             if (chunks.length > 0) {
               const audioBlob = new Blob(chunks, { type: "audio/wav" });
-              console.log("Audio Blob created:", {
-                size: audioBlob.size,
-                type: audioBlob.type,
-              });
               setAudioBlob(audioBlob);
             } else {
-              console.error("No audio data recorded");
               setErrorMessage(
                 "No audio recorded. Please speak clearly and try again."
               );
@@ -112,19 +209,17 @@ const MockUpLabs = () => {
           setErrorMessage(null);
         })
         .catch((err) => {
-          console.error("Error accessing media devices:", err);
           alert("Unable to access microphone. Please check permissions.");
         });
     }
-  };
+  }, []);
 
-  // Stop recording and send audio to backend
-  const stopRecording = async () => {
+  // Stop recording and send audio
+  const stopRecording = useCallback(async () => {
     if (mediaRecorderRef.current && recording) {
       mediaRecorderRef.current.stop();
       setRecording(false);
 
-      // Wait for audioBlob to be set
       const waitForAudioBlob = () =>
         new Promise((resolve) => {
           const checkBlob = setInterval(() => {
@@ -136,18 +231,16 @@ const MockUpLabs = () => {
           setTimeout(() => {
             clearInterval(checkBlob);
             resolve(null);
-          }, 2000); // Timeout after 2 seconds
+          }, 2000);
         });
 
       const blob = await waitForAudioBlob();
       if (!blob) {
-        console.error("No audio blob available after recording");
         setErrorMessage("Recording failed. Please try again.");
         return;
       }
 
       if (blob.size < 1000) {
-        console.error("Audio blob too small:", blob.size);
         setErrorMessage(
           "Audio too short or empty. Please speak clearly and try again."
         );
@@ -161,12 +254,8 @@ const MockUpLabs = () => {
         const response = await axios.post(
           "https://shrenitai-backend.onrender.com/api/speech",
           formData,
-          {
-            headers: { "Content-Type": "multipart/form-data" },
-          }
+          { headers: { "Content-Type": "multipart/form-data" } }
         );
-
-        console.log("Speech API response:", response.data);
 
         const transcript = response.data.transcript;
         if (
@@ -174,7 +263,6 @@ const MockUpLabs = () => {
           typeof transcript !== "string" ||
           transcript.trim() === ""
         ) {
-          console.error("Invalid or empty transcript:", transcript);
           setErrorMessage(
             "No speech detected. Please speak clearly and try again."
           );
@@ -185,20 +273,15 @@ const MockUpLabs = () => {
         setShowNextButton(true);
         setErrorMessage(null);
       } catch (error) {
-        console.error("Error processing audio:", {
-          message: error.message,
-          status: error.response?.status,
-          data: error.response?.data,
-        });
         setErrorMessage(
           `Failed to transcribe audio: ${error.message}. Please try again.`
         );
       }
     }
-  };
+  }, [audioBlob, recording]);
 
-  // Handle Next button click
-  const handleNext = () => {
+  // Handle Next button
+  const handleNext = useCallback(() => {
     if (currentQuestionIndex < questions[selectedCategory]?.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setShowNextButton(false);
@@ -208,26 +291,23 @@ const MockUpLabs = () => {
       setIsFinished(true);
       setShowNextButton(false);
     }
-  };
+  }, [currentQuestionIndex, questions, selectedCategory]);
 
-  // Handle submit to get Gemini review
-  const handleSubmit = async () => {
+  // Handle submit for review
+  const handleSubmit = useCallback(async () => {
     try {
       const response = await axios.post(
         "https://shrenitai-backend.onrender.com/api/review",
-        {
-          answers,
-        }
+        { answers }
       );
       setReview(response.data);
     } catch (error) {
-      console.error("Error submitting answers:", error);
-      alert("Failed to submit answers for review. Please try again.");
+      setErrorMessage("Failed to submit answers for review. Please try again.");
     }
-  };
+  }, [answers]);
 
   // Handle category change
-  const handleCategoryChange = (e) => {
+  const handleCategoryChange = useCallback((e) => {
     setSelectedCategory(e.target.value);
     setCurrentQuestionIndex(0);
     setAnswers([]);
@@ -238,19 +318,23 @@ const MockUpLabs = () => {
     setShowNextButton(false);
     setAudioBlob(null);
     setErrorMessage(null);
-  };
+  }, []);
 
-  // Start interview manually after posture check
-  const startInterview = () => {
+  // Start interview
+  const startInterview = useCallback(() => {
     setInterviewStarted(true);
     setErrorMessage(null);
-  };
+  }, []);
+
+  // Memoized current question
+  const currentQuestion = useMemo(() => {
+    return questions[selectedCategory]?.[currentQuestionIndex] || "Loading...";
+  }, [questions, selectedCategory, currentQuestionIndex]);
 
   return (
     <div className="mul-container">
       <h1 className="mul-title">MockUpLabs AI Interview</h1>
       <div className="mul-main-content">
-        {/* Left Section: Video Feed and Speech Recorder */}
         <div className="mul-left-section">
           <div className="mul-video-feed-container">
             <Webcam
@@ -261,6 +345,12 @@ const MockUpLabs = () => {
               height={400}
               className="mul-video"
               videoConstraints={{ facingMode: "user" }}
+            />
+            <canvas
+              ref={canvasRef}
+              className="mul-canvas"
+              width="640"
+              height="400"
             />
             {interviewStarted && (
               <div className="mul-speech-recorder">
@@ -300,11 +390,9 @@ const MockUpLabs = () => {
               </div>
             )}
           </div>
+          {!interviewStarted && <PostureStatus status={postureStatus} />}
         </div>
-
-        {/* Right Section: Category, Posture, Questions, Review */}
         <div className="mul-right-section">
-          {/* Category Selection */}
           <div className="mul-category-selection-container">
             <label className="mul-category-label">Select Category:</label>
             <select
@@ -316,73 +404,56 @@ const MockUpLabs = () => {
               <option value="software_engineer">Software Engineer</option>
             </select>
           </div>
-
-          {/* Posture Status */}
-          {!canStartInterview && (
-            <div className="mul-posture-status">
-              <h3 className="mul-posture-title">Posture Check</h3>
-              <p className={postureStatus.head}>Head: {postureStatus.head}</p>
-              <p className={postureStatus.shoulders}>
-                Shoulders: {postureStatus.shoulders}
-              </p>
-              <p className={postureStatus.eyes}>Eyes: {postureStatus.eyes}</p>
-              <p className="mul-waiting-text">
-                Please adjust your posture to start the interview.
-              </p>
-            </div>
-          )}
-
-          {/* Interview Section */}
-          {canStartInterview && !interviewStarted && (
-            <div className="mul-interview-section">
-              <h2 className="mul-section-title">Ready to Start</h2>
-              <button onClick={startInterview} className="mul-start-button">
-                Begin Interview
-              </button>
-            </div>
-          )}
-
-          {interviewStarted && !isFinished && (
-            <div className="mul-interview-section">
-              <h2 className="mul-question-title">
-                Question {currentQuestionIndex + 1}:{" "}
-                {questions[selectedCategory]?.[currentQuestionIndex]}
-              </h2>
-              {showNextButton && (
-                <button onClick={handleNext} className="mul-next-button">
-                  Next
-                </button>
-              )}
-            </div>
-          )}
-
-          {/* Submit Button */}
-          {isFinished && !review && (
-            <div className="mul-interview-section">
-              <h2 className="mul-section-title">Interview Completed</h2>
-              <button onClick={handleSubmit} className="mul-submit-button">
-                Submit for Review
-              </button>
-            </div>
-          )}
-
-          {/* Review Section */}
-          {review && (
-            <div className="mul-review-section">
-              <h3 className="mul-section-title">Review & Scores</h3>
-              <p className="mul-score">
-                Overall Score: {review.overallScore}/10
-              </p>
-              <p className="mul-feedback">{review.overallFeedback}</p>
-              {review.scores.map((item, index) => (
-                <div key={index} className="mul-review-item">
-                  <p className="mul-review-question">
-                    Question {item.question}: {item.score}/10
-                  </p>
-                  <p className="mul-review-feedback">{item.feedback}</p>
+          {isLoadingQuestions ? (
+            <div className="mul-loading">Loading questions...</div>
+          ) : (
+            <>
+              {canStartInterview && !interviewStarted && (
+                <div className="mul-interview-section">
+                  <h2 className="mul-section-title">Ready to Start</h2>
+                  <button onClick={startInterview} className="mul-start-button">
+                    Begin Interview
+                  </button>
                 </div>
-              ))}
-            </div>
+              )}
+              {interviewStarted && !isFinished && (
+                <div className="mul-interview-section">
+                  <h2 className="mul-question-title">
+                    Question {currentQuestionIndex + 1}: {currentQuestion}
+                  </h2>
+                  {showNextButton && (
+                    <button onClick={handleNext} className="mul-next-button">
+                      Next
+                    </button>
+                  )}
+                </div>
+              )}
+              {isFinished && !review && (
+                <div className="mul-interview-section">
+                  <h2 className="mul-section-title">Interview Completed</h2>
+                  <button onClick={handleSubmit} className="mul-submit-button">
+                    Submit for Review
+                  </button>
+                </div>
+              )}
+              {review && (
+                <div className="mul-review-section">
+                  <h3 className="mul-section-title">Review & Scores</h3>
+                  <p className="mul-score">
+                    Overall Score: {review.overallScore}/10
+                  </p>
+                  <p className="mul-feedback">{review.overallFeedback}</p>
+                  {review.scores.map((item, index) => (
+                    <div key={index} className="mul-review-item">
+                      <p className="mul-review-question">
+                        Question {item.question}: {item.score}/10
+                      </p>
+                      <p className="mul-review-feedback">{item.feedback}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

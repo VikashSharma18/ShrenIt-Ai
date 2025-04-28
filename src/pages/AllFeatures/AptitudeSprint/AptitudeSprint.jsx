@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useAuth } from "../../Login/AuthContext";
 import "./AptitudeSprint.css";
 import questions from "./aptitude_question.json";
@@ -12,6 +12,7 @@ const AptitudeSprint = () => {
   const [timeLeft, setTimeLeft] = useState(1500);
   const [showResults, setShowResults] = useState(false);
   const [score, setScore] = useState(0);
+  const canvasRef = useRef(null);
 
   const testTitles = {
     quantitative: "Quantitative Aptitude",
@@ -19,6 +20,97 @@ const AptitudeSprint = () => {
     logical: "Logical Reasoning",
     mixed: "Mixed Aptitude",
   };
+
+  //---------------Particle Animation-----------------//
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return; // Guard against null canvas
+    const ctx = canvas.getContext("2d");
+    let animationFrameId;
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    class Particle {
+      constructor() {
+        this.reset();
+        this.color = `rgba(${Math.random() * 100 + 155}, ${
+          Math.random() * 100 + 155
+        }, 255, 0.1)`;
+      }
+
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 3 + 1;
+        this.speed = Math.random() * 0.5 + 0.2;
+        this.angle = Math.random() * Math.PI * 2;
+      }
+
+      update() {
+        this.x += Math.cos(this.angle) * this.speed;
+        this.y += Math.sin(this.angle) * this.speed;
+
+        if (
+          this.x < 0 ||
+          this.x > canvas.width ||
+          this.y < 0 ||
+          this.y > canvas.height
+        ) {
+          this.reset();
+        }
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    const particles = Array.from({ length: 150 }, () => new Particle());
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach((particle) => {
+        particle.update();
+        particle.draw();
+      });
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(99, 102, 241, ${1 - distance / 100})`;
+            ctx.lineWidth = 0.3;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
 
   useEffect(() => {
     let interval;
@@ -123,6 +215,7 @@ const AptitudeSprint = () => {
   if (showResults) {
     return (
       <div className="aptitude-container">
+        <canvas ref={canvasRef} className="particle-canvas" />
         <div className="results-glass-card">
           <div className="results-header">
             <h2 className="results-title">Test Results</h2>
@@ -184,6 +277,7 @@ const AptitudeSprint = () => {
 
     return (
       <div className="aptitude-container">
+        <canvas ref={canvasRef} className="particle-canvas" />
         <div className="test-interface">
           <div className="test-header">
             <div className="test-meta">
@@ -254,6 +348,7 @@ const AptitudeSprint = () => {
 
   return (
     <div className="aptitude-container">
+      <canvas ref={canvasRef} className="particle-canvas" />
       <div className="test-selection">
         <h1 className="main-heading">Aptitude Sprint</h1>
         <p className="sub-heading">Select your test category</p>
