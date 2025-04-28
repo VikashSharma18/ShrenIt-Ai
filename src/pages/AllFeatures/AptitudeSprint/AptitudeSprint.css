@@ -327,7 +327,7 @@
 
 .user-answer p,
 .correct-answer p {
-  background: rgba(255, 255, 255, 0.9);
+  /* background: rgba(255, 255, 255, 0.9); */
   padding: 1rem;
   border-radius: 8px;
   margin-top: 0.5rem;
@@ -343,11 +343,12 @@
 
 /* Solution Section */
 .solution-section {
-  background: rgba(255, 255, 255, 0.9);
+  /* background: rgba(255, 255, 255, 0.9); */
   padding: 1rem;
   border-radius: 8px;
   margin-top: 1rem;
   border-left: 4px solid var(--tech-cyan);
+
 }
 
 /* Retry Button */
