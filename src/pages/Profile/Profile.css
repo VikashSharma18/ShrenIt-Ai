@@ -172,3 +172,16 @@
     font-size: 1rem;
   }
 }
+/* College Logo  */
+.college-logo {
+  width: 120px;
+  height: auto;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
