@@ -25,13 +25,16 @@ const MockUpLabs = () => {
   const [canStartInterview, setCanStartInterview] = useState(false);
   const [interviewStarted, setInterviewStarted] = useState(false);
   const [recording, setRecording] = useState(false);
-  const [audioBlob, setAudioBlob] = useState(null);
+  const [audioChunks, setAudioChunks] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [isFinished, setIsFinished] = useState(false);
   const [review, setReview] = useState(null);
   const [showNextButton, setShowNextButton] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [audioStream, setAudioStream] = useState(null);
+
   const mediaRecorderRef = useRef(null);
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -57,12 +60,58 @@ const MockUpLabs = () => {
 
   // Check camera permissions
   useEffect(() => {
-    navigator.permissions.query({ name: "camera" }).then((result) => {
-      if (result.state === "denied") {
-        alert("Camera access denied. Please enable it in browser settings.");
+    const checkPermissions = async () => {
+      try {
+        const cameraResult = await navigator.permissions.query({
+          name: "camera",
+        });
+        if (cameraResult.state === "denied") {
+          setErrorMessage(
+            "Camera access denied. Please enable it in browser settings."
+          );
+        }
+
+        // Also check microphone permissions
+        const micResult = await navigator.permissions.query({
+          name: "microphone",
+        });
+        if (micResult.state === "denied") {
+          setErrorMessage(
+            "Microphone access denied. Please enable it in browser settings."
+          );
+        }
+      } catch (error) {
+        console.error("Error checking permissions:", error);
       }
-    });
+    };
+
+    checkPermissions();
   }, []);
+
+  // Cleanup function for audio resources
+  const cleanupAudioResources = useCallback(() => {
+    if (audioStream) {
+      audioStream.getTracks().forEach((track) => track.stop());
+      setAudioStream(null);
+    }
+  }, [audioStream]);
+
+  // Cleanup on component unmount
+  useEffect(() => {
+    return () => {
+      cleanupAudioResources();
+
+      if (cameraRef.current) {
+        cameraRef.current.stop();
+        cameraRef.current = null;
+      }
+
+      if (faceMeshInstanceRef.current) {
+        faceMeshInstanceRef.current.close();
+        faceMeshInstanceRef.current = null;
+      }
+    };
+  }, [cleanupAudioResources]);
 
   // Memoized posture processing
   const processPosture = useCallback((landmarks) => {
@@ -106,6 +155,8 @@ const MockUpLabs = () => {
 
     faceMeshInstanceRef.current.onResults((results) => {
       const canvas = canvasRef.current;
+      if (!canvas) return;
+
       const ctx = canvas.getContext("2d");
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -160,6 +211,7 @@ const MockUpLabs = () => {
         width: 640,
         height: 400,
       });
+
       cameraRef.current.start().catch((err) => {
         console.error("Failed to start camera:", err);
         setErrorMessage("Failed to access camera. Please check permissions.");
@@ -178,114 +230,180 @@ const MockUpLabs = () => {
     };
   }, [interviewStarted, processPosture]);
 
-  // Start recording speech
+  // Start recording speech - improved version
   const startRecording = useCallback(() => {
+    setErrorMessage(null);
+    setAudioChunks([]);
+
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices
-        .getUserMedia({ audio: true })
+        .getUserMedia({
+          audio: {
+            echoCancellation: true,
+            noiseSuppression: true,
+            autoGainControl: true,
+          },
+        })
         .then((stream) => {
-          mediaRecorderRef.current = new MediaRecorder(stream);
+          setAudioStream(stream);
+
+          const mediaRecorder = new MediaRecorder(stream, {
+            mimeType: "audio/webm;codecs=opus",
+            audioBitsPerSecond: 128000, // Higher quality audio
+          });
+
+          mediaRecorderRef.current = mediaRecorder;
           const chunks = [];
 
-          mediaRecorderRef.current.ondataavailable = (event) => {
+          mediaRecorder.ondataavailable = (event) => {
             if (event.data.size > 0) {
               chunks.push(event.data);
+              setAudioChunks((currentChunks) => [...currentChunks, event.data]);
             }
           };
 
-          mediaRecorderRef.current.onstop = () => {
-            if (chunks.length > 0) {
-              const audioBlob = new Blob(chunks, { type: "audio/wav" });
-              setAudioBlob(audioBlob);
-            } else {
-              setErrorMessage(
-                "No audio recorded. Please speak clearly and try again."
-              );
-            }
-          };
-
-          mediaRecorderRef.current.start();
+          // Request data every 250ms to improve robustness
+          mediaRecorder.start(250);
           setRecording(true);
-          setErrorMessage(null);
+
+          // Display visual feedback for recording
+          console.log("Recording started...");
         })
         .catch((err) => {
-          alert("Unable to access microphone. Please check permissions.");
+          console.error("Microphone error:", err);
+          setErrorMessage(
+            `Unable to access microphone: ${err.message}. Please check permissions.`
+          );
         });
+    } else {
+      setErrorMessage(
+        "Your browser doesn't support audio recording. Please try a different browser."
+      );
     }
   }, []);
 
-  // Stop recording and send audio
+  // Stop recording and send audio - improved version
   const stopRecording = useCallback(async () => {
-    if (mediaRecorderRef.current && recording) {
+    if (!mediaRecorderRef.current || !recording) {
+      setErrorMessage("No active recording to stop.");
+      return;
+    }
+
+    setIsProcessing(true);
+
+    try {
+      // Stop the media recorder
       mediaRecorderRef.current.stop();
       setRecording(false);
 
-      const waitForAudioBlob = () =>
-        new Promise((resolve) => {
-          const checkBlob = setInterval(() => {
-            if (audioBlob) {
-              clearInterval(checkBlob);
-              resolve(audioBlob);
-            }
-          }, 50);
-          setTimeout(() => {
-            clearInterval(checkBlob);
-            resolve(null);
-          }, 2000);
-        });
+      // Wait for last ondataavailable event
+      await new Promise((resolve) => setTimeout(resolve, 200));
 
-      const blob = await waitForAudioBlob();
-      if (!blob) {
-        setErrorMessage("Recording failed. Please try again.");
-        return;
-      }
-
-      if (blob.size < 1000) {
+      // Check if we have audio data
+      if (audioChunks.length === 0) {
         setErrorMessage(
-          "Audio too short or empty. Please speak clearly and try again."
+          "No audio recorded. Please speak clearly and try again."
         );
+        setIsProcessing(false);
+        cleanupAudioResources();
         return;
       }
+
+      // Create blob from all chunks
+      const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+
+      // Check blob size (minimum 1KB)
+      if (audioBlob.size < 1000) {
+        setErrorMessage(
+          "Audio recording too short. Please speak clearly and try again."
+        );
+        setIsProcessing(false);
+        cleanupAudioResources();
+        return;
+      }
+
+      // Create form data for API
+      const formData = new FormData();
+      formData.append("audio", audioBlob, "recording.webm");
+
+      // Send to backend with timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30-second timeout
 
       try {
-        const formData = new FormData();
-        formData.append("audio", blob, "recording.wav");
-
         const response = await axios.post(
           "https://shrenitai-backend.onrender.com/api/speech",
           formData,
-          { headers: { "Content-Type": "multipart/form-data" } }
+          {
+            headers: { "Content-Type": "multipart/form-data" },
+            signal: controller.signal,
+            onUploadProgress: (progressEvent) => {
+              const percentCompleted = Math.round(
+                (progressEvent.loaded * 100) / progressEvent.total
+              );
+              console.log(`Upload progress: ${percentCompleted}%`);
+            },
+          }
         );
 
+        clearTimeout(timeoutId);
+
         const transcript = response.data.transcript;
+
         if (
           !transcript ||
           typeof transcript !== "string" ||
           transcript.trim() === ""
         ) {
           setErrorMessage(
-            "No speech detected. Please speak clearly and try again."
+            "No speech detected in the recording. Please speak clearly and try again."
           );
+          setIsProcessing(false);
+          cleanupAudioResources();
           return;
         }
 
+        // Success path
         setAnswers((prevAnswers) => [...prevAnswers, transcript]);
         setShowNextButton(true);
         setErrorMessage(null);
-      } catch (error) {
-        setErrorMessage(
-          `Failed to transcribe audio: ${error.message}. Please try again.`
+
+        // Play a success sound to indicate successful recording
+        const audio = new Audio(
+          "data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLHPM7OKwZiQVQZ/b+tiKUw8dYaf83JdQBwkxdaqyloJkSUdtdnNza2TCubKqp6mrtK+npaOhoJ+koqaorLO5v8DAwLSqoZyenJRxWldwlbDGxAHk3cvb5PP27qUAAAwcLDMxGwYA95OktczV5OLImnyKoG8qFDRMbYqVm5csBggjhOl9MAphpqyaMQsgeHl4UDwQNllpa1g/EwMUFBALCRQ0W4fN3H8oLC4bECQoODgXBjDJ5dO/egoNASHTVJTMoTkGDkZSVUUnKzRPSCAIIFyjtrvl5PbS1N0sAwlZhoR0TSMUUqK4sqKORBAuUF1YRSssPmuEbVRVcaSRmJ+YmZeVlpiamos9KS4uIg4cdtLq5cm3SQ4mV2tVzszFlGtEQU5pe3QoHDx1iYFSNkVQSkRIO0I9MgUIGRoXEQcFCAzC4PDcvDYCCQASy3kQ1pM/JzpSWVE5MjU9UllhUxgMJlSxqpmkbjo5P0VTUSYAGlFdY1QLN5E9FUt+ZEkXEjJGU1BOFwQtdaSuoo1LBwsYLDkyKycjJCgoJB8M1/4TgQcPhXYyHDhPYmhgGSQyOzs5MjU1MzExMTExMTExMTExL28bHP0o5yAnIhkMIy4uKyroY4FMZZlhBBBADzVqdl8GJE94e2gQB1GOFLRNfJGIqJwbO2BlZVsN9T1QXGMGpJ0AAAAAAAB3r7u5sncZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAA"
         );
+        audio.play();
+      } catch (error) {
+        clearTimeout(timeoutId);
+
+        if (error.name === "AbortError") {
+          setErrorMessage(
+            "Request timed out. Server may be temporarily unavailable. Please try again."
+          );
+        } else {
+          console.error("Transcription error:", error);
+          setErrorMessage(
+            `Failed to transcribe audio: ${
+              error.message || "Unknown error"
+            }. Please try again.`
+          );
+        }
       }
+    } catch (error) {
+      console.error("Recording error:", error);
+      setErrorMessage(`Recording error: ${error.message}. Please try again.`);
+    } finally {
+      setIsProcessing(false);
+      cleanupAudioResources();
     }
-  }, [audioBlob, recording]);
+  }, [audioChunks, recording, cleanupAudioResources]);
 
   // Handle Next button
   const handleNext = useCallback(() => {
     if (currentQuestionIndex < questions[selectedCategory]?.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setShowNextButton(false);
-      setAudioBlob(null);
+      setAudioChunks([]);
       setErrorMessage(null);
     } else {
       setIsFinished(true);
@@ -295,30 +413,53 @@ const MockUpLabs = () => {
 
   // Handle submit for review
   const handleSubmit = useCallback(async () => {
+    setIsProcessing(true);
+    setErrorMessage(null);
+
     try {
       const response = await axios.post(
         "https://shrenitai-backend.onrender.com/api/review",
-        { answers }
+        { answers },
+        { timeout: 30000 } // 30-second timeout
       );
+
       setReview(response.data);
     } catch (error) {
-      setErrorMessage("Failed to submit answers for review. Please try again.");
+      console.error("Review submission error:", error);
+
+      if (error.code === "ECONNABORTED") {
+        setErrorMessage(
+          "Request timed out. Server may be temporarily unavailable. Please try again."
+        );
+      } else {
+        setErrorMessage(
+          `Failed to submit answers for review: ${
+            error.message || "Unknown error"
+          }. Please try again.`
+        );
+      }
+    } finally {
+      setIsProcessing(false);
     }
   }, [answers]);
 
   // Handle category change
-  const handleCategoryChange = useCallback((e) => {
-    setSelectedCategory(e.target.value);
-    setCurrentQuestionIndex(0);
-    setAnswers([]);
-    setIsFinished(false);
-    setReview(null);
-    setInterviewStarted(false);
-    setCanStartInterview(false);
-    setShowNextButton(false);
-    setAudioBlob(null);
-    setErrorMessage(null);
-  }, []);
+  const handleCategoryChange = useCallback(
+    (e) => {
+      setSelectedCategory(e.target.value);
+      setCurrentQuestionIndex(0);
+      setAnswers([]);
+      setIsFinished(false);
+      setReview(null);
+      setInterviewStarted(false);
+      setCanStartInterview(false);
+      setShowNextButton(false);
+      setAudioChunks([]);
+      setErrorMessage(null);
+      cleanupAudioResources();
+    },
+    [cleanupAudioResources]
+  );
 
   // Start interview
   const startInterview = useCallback(() => {
@@ -356,22 +497,30 @@ const MockUpLabs = () => {
               <div className="mul-speech-recorder">
                 <button
                   onClick={startRecording}
-                  disabled={recording || !interviewStarted}
+                  disabled={recording || !interviewStarted || isProcessing}
                   className={`mul-record-button ${
-                    recording ? "mul-disabled" : ""
+                    recording || isProcessing ? "mul-disabled" : ""
                   }`}
                 >
-                  {recording ? "Recording..." : "Start Recording"}
+                  {recording ? "Recording... (speak now)" : "Start Recording"}
                 </button>
                 <button
                   onClick={stopRecording}
-                  disabled={!recording}
+                  disabled={!recording || isProcessing}
                   className={`mul-stop-button ${
-                    !recording ? "mul-disabled" : ""
+                    !recording || isProcessing ? "mul-disabled" : ""
                   }`}
                 >
-                  Stop Recording
+                  {isProcessing ? "Processing..." : "Stop Recording"}
                 </button>
+
+                {/* Audio indicator */}
+                {recording && (
+                  <div className="mul-audio-indicator">
+                    <div className="mul-audio-wave"></div>
+                    <span>Speak clearly into your microphone</span>
+                  </div>
+                )}
               </div>
             )}
             {errorMessage && (
@@ -380,10 +529,13 @@ const MockUpLabs = () => {
                 <button
                   onClick={() => {
                     setErrorMessage(null);
-                    setAudioBlob(null);
-                    startRecording();
+                    setAudioChunks([]);
+                    if (!isProcessing) {
+                      startRecording();
+                    }
                   }}
                   className="mul-retry-button"
+                  disabled={isProcessing}
                 >
                   Retry
                 </button>
@@ -399,6 +551,7 @@ const MockUpLabs = () => {
               value={selectedCategory}
               onChange={handleCategoryChange}
               className="mul-category-select"
+              disabled={interviewStarted || isProcessing}
             >
               <option value="data_scientist">Data Scientist</option>
               <option value="software_engineer">Software Engineer</option>
@@ -422,7 +575,11 @@ const MockUpLabs = () => {
                     Question {currentQuestionIndex + 1}: {currentQuestion}
                   </h2>
                   {showNextButton && (
-                    <button onClick={handleNext} className="mul-next-button">
+                    <button
+                      onClick={handleNext}
+                      className="mul-next-button"
+                      disabled={isProcessing}
+                    >
                       Next
                     </button>
                   )}
@@ -431,8 +588,12 @@ const MockUpLabs = () => {
               {isFinished && !review && (
                 <div className="mul-interview-section">
                   <h2 className="mul-section-title">Interview Completed</h2>
-                  <button onClick={handleSubmit} className="mul-submit-button">
-                    Submit for Review
+                  <button
+                    onClick={handleSubmit}
+                    className="mul-submit-button"
+                    disabled={isProcessing}
+                  >
+                    {isProcessing ? "Processing..." : "Submit for Review"}
                   </button>
                 </div>
               )}
