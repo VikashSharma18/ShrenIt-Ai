@@ -1,4 +1,4 @@
-// profile csss
+// profile css
 import React from 'react';
 import { useAuth } from '../Login/AuthContext';
 import { useNavigate } from 'react-router-dom';
