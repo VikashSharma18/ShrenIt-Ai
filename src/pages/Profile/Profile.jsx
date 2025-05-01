@@ -1,7 +1,7 @@
-import React from 'react';
-import { useAuth } from '../Login/AuthContext';
-import { useNavigate } from 'react-router-dom';
-import './Profile.css';
+import React from "react";
+import { useAuth } from "../Login/AuthContext";
+import { useNavigate } from "react-router-dom";
+import "./Profile.css";
 
 const Profile = () => {
   const { student, logout } = useAuth();
@@ -9,7 +9,7 @@ const Profile = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate("/login");
   };
 
   if (!student) {
@@ -21,6 +21,17 @@ const Profile = () => {
       <div className="profile-card">
         <div className="profile-header">
           <h1 className="profile-title">Student Profile</h1>
+
+          {/* College Logo added below the title */}
+
+          <div className="logo-container">
+            <img
+              src="/logo/logo/Logoo.png"
+              alt="College Logo"
+              className="college-logo"
+            />
+          </div>
+
           <div className="profile-gradient-bar"></div>
         </div>
 
@@ -44,10 +55,7 @@ const Profile = () => {
             </div>
           </div>
 
-          <button 
-            className="logout-button"
-            onClick={handleLogout}
-          >
+          <button className="logout-button" onClick={handleLogout}>
             Logout
             <div className="button-gradient-overlay"></div>
           </button>
