@@ -3,7 +3,6 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useAuth } from "../../pages/Login/AuthContext";
-import logo from "../../assets/default.png";
 import Logo from "/logo/logo/Logoo.png";
 
 const Header = () => {
@@ -38,13 +37,11 @@ const Header = () => {
     );
 
     sections.forEach((section) => observer.observe(section));
-
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
 
-  // Dynamic navigation items based on auth state
   const baseNavItems = [
     { name: "Home", path: "/" },
     { name: "Features", path: "/features" },
@@ -54,7 +51,7 @@ const Header = () => {
   ];
 
   const authNavItem = admin
-    ? { name: admin.name || "Admin", path: "/admin" } // Show admin's name
+    ? { name: admin.name || "Admin", path: "/admin" }
     : student
     ? { name: student.name || "Profile", path: "/profile" }
     : { name: "Login", path: "/login" };
@@ -63,14 +60,12 @@ const Header = () => {
 
   const handleScrollTo = (path) => {
     if (path.startsWith("/")) {
-      // If the path is a route, navigate to it
       navigate(path);
     } else {
-      // If the path is a section id, scroll to it
       const section = document.getElementById(path);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
-        setIsMobileOpen(false); // Close mobile menu after navigation
+        setIsMobileOpen(false);
       }
     }
   };
@@ -80,13 +75,7 @@ const Header = () => {
       <div className="header-container">
         <NavLink to="/" className="logo">
           <div className="logo-icon">
-            <img
-              // src={logo}
-              src={Logo}
-              alt="Shrenit AI"
-              classname="logo"
-              style={{ width: "200px", maxHeight: "100px" }}
-            />
+            <img src={Logo} alt="Shrenit AI" className="logo-img" />
           </div>
         </NavLink>
 

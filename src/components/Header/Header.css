@@ -20,14 +20,12 @@
   top: 0;
   left: 0;
   right: 0;
-  /* background: #211f35; */
-  /* background: #381e49; */
   background: #322247;
-
-  /* background: linear-gradient(60deg, #2e1a47 30%, #22142c 50%, #000000 100%); */
   backdrop-filter: blur(8px);
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.25rem 1rem; /* Small padding for the header */
+  min-height: 60px; /* Consistent small height */
 }
 
 .header.scrolled {
@@ -39,7 +37,7 @@
 .header-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.25rem 1rem; /* Small padding for the content */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +48,6 @@
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  position: relative;
   transition: transform 0.3s ease;
 }
 
@@ -59,62 +56,34 @@
 }
 
 .logo-icon {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  /* border-radius: 50%;
-  background: var(--gradient); */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  width: 100%;
 }
 
-.logo {
-  width: 40px;
+.logo-img {
+  width: 100%;
   height: auto;
-}
-
-.ai-particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  animation: float 3s infinite;
-}
-
-.ai-particle.delay-1 {
-  animation-delay: 0.5s;
-}
-
-.ai-particle.delay-2 {
-  animation-delay: 1s;
-}
-
-.logo-text {
-  font-size: 1.75rem;
-  font-weight: 700;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -0.5px;
+  max-height: 60px; /* Keep logo height small */
+  object-fit: contain;
 }
 
 .nav-menu {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: center;
 }
 
 .nav-item {
-  all: unset; /* Reset all default styles */
+  all: unset;
   position: relative;
-  text-decoration: none;
   color: white;
   font-weight: 500;
   transition: all 0.3s ease;
   padding: 0.5rem 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -143,26 +112,26 @@
   background: none;
   border: none;
   font-size: 1.75rem;
-  color: var(--deep-navy);
+  color: white;
   cursor: pointer;
   z-index: 1001;
   transition: transform 0.3s ease;
-  color: white;
 }
 
 .mobile-menu-btn:hover {
   transform: scale(1.1);
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    top: 72px;
+    top: 60px; /* Adjusted for the smaller header height */
     left: 0;
     right: 0;
     bottom: 0;
     background: linear-gradient(60deg, #2e1a47 30%, #22142c 50%, #000000 100%);
-    height: 100vh;
+    height: 100dvh;
     backdrop-filter: blur(16px);
     flex-direction: column;
     gap: 2rem;
@@ -176,13 +145,9 @@
   }
 
   .nav-item {
-    background-color: transparent;
     font-size: 1.25rem;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
-    transition: all 0.3s ease;
-    color: var(--deep-navy);
-    transition: color 0.3s ease;
     color: white;
   }
 
@@ -204,39 +169,70 @@
   .header-container {
     padding: 1rem;
   }
-}
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translate(0, 0);
-    opacity: 0.8;
+  .logo-icon {
+    max-width: 150px;
   }
 
-  25% {
-    transform: translate(2px, -4px);
-  }
-
-  50% {
-    transform: translate(-2px, 3px);
-    opacity: 1;
-  }
-
-  75% {
-    transform: translate(3px, 2px);
+  .logo-img {
+    max-height: 50px; /* Reduced height for mobile */
   }
 }
 
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
+/* Extra small screens */
+@media (max-width: 480px) {
+  .logo-icon {
+    max-width: 120px;
   }
 
-  50% {
-    background-position: 100% 50%;
+  .logo-img {
+    max-height: 40px;
   }
 
-  100% {
-    background-position: 0% 50%;
+  .nav-item {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-menu {
+    gap: 1.5rem;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  .header-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .logo-icon {
+    max-width: 180px;
+  }
+
+  .logo-img {
+    max-height: 55px;
+  }
+}
+
+/* Desktop & Larger Screens */
+@media (min-width: 1025px) {
+  .header-container {
+    padding: 0.25rem 2rem;
+  }
+
+  .logo-icon {
+    max-width: 150px;
+  }
+
+  .logo-img {
+    max-height: 60px; /* Maintain small logo height on larger screens */
+  }
+
+  .nav-item {
+    font-size: 1rem;
   }
 }
