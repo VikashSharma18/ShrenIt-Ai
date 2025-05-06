@@ -31,7 +31,9 @@ const AddNotes = () => {
 
   const fetchContents = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/v1/contents");
+      const response = await fetch(
+        "https://shrenitai-backend.onrender.com/api/v1/contents"
+      );
       if (!response.ok) throw new Error("Failed to fetch contents");
       const result = await response.json();
       setContents(result.data || result);
@@ -74,8 +76,8 @@ const AddNotes = () => {
 
     try {
       const url = isEditing
-        ? `http://localhost:8000/api/v1/contents/${formData.id}`
-        : "http://localhost:8000/api/v1/contents";
+        ? `https://shrenitai-backend.onrender.com/api/v1/contents/${formData.id}`
+        : "https://shrenitai-backend.onrender.com/api/v1/contents";
       const method = isEditing ? "PUT" : "POST";
 
       const response = await fetch(url, {
@@ -147,7 +149,7 @@ const AddNotes = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/v1/contents/${id}`,
+        `https://shrenitai-backend.onrender.com/api/v1/contents/${id}`,
         {
           method: "DELETE",
         }

@@ -26,7 +26,7 @@ const QuickNotesAi = () => {
     const fetchContent = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/v1/contents"
+          "https://shrenitai-backend.onrender.com/api/v1/contents"
         );
         const contentData = response.data;
         setAllContent(contentData);
