@@ -1,11 +1,21 @@
+body {
+  background: linear-gradient(60deg, #2e1a47 30%, #22142c 50%, #000000 100%);
+  color: #f3f4f6;
+  font-family: sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
 .form-container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(60deg, #302341 30%, #22142c 50%, #2e1a47 100%);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   margin-top: 100px;
+  color: #f3f4f6;
+  width: 90%;
 }
 
 .university-form {
@@ -24,30 +34,34 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 200px;
 }
 
 .form-group label {
   font-weight: 600;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  color: #1f2937;
+  color: #e0e7ff;
 }
 
 .form-group input,
 .form-group textarea {
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #302341;
   border-radius: 8px;
-  background-color: #f9fafb;
-  transition: border 0.3s;
+  background-color: #302341;
+  color: #f9fafb;
+  transition: border 0.3s, background-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #6366f1;
+  border-color: #818cf8;
   outline: none;
-  background-color: #fff;
+  background-color: #302341;
 }
 
 textarea {
@@ -57,6 +71,12 @@ textarea {
 
 .full-width {
   width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .submit-btn {
@@ -69,7 +89,6 @@ textarea {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  align-self: flex-start;
   transition: background-color 0.3s;
 }
 
@@ -77,9 +96,31 @@ textarea {
   background-color: #4f46e5;
 }
 
+.submit-btn:disabled {
+  background-color: #6b7280;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #302341;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+  background-color: #4b5563;
+}
+
 .loader {
-  border: 4px solid #f3f3f3; /* Light gray */
-  border-top: 4px solid #3498db; /* Blue */
+  border: 4px solid #302341;
+  border-top: 4px solid #60a5fa;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -92,5 +133,235 @@ textarea {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.table-container {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #302341;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #f3f4f6;
+  min-width: 600px;
+}
+
+.content-table th,
+.content-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #374151;
+}
+
+.content-table th {
+  background-color: #111827;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.content-table tr:hover {
+  background-color: #2c3344;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.edit-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #059669;
+}
+
+.delete-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #302341;
+  color: #f9fafb;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #4b5563;
+}
+
+.pagination button.active {
+  background-color: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}
+
+.pagination button:disabled {
+  background-color: #1f2937;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+    margin-top: 80px;
+    width: 95%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .content-table th,
+  .content-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .pagination button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 1rem;
+    margin-top: 60px;
+    width: 98%;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .content-table {
+    min-width: 100%;
+  }
+
+  .content-table th,
+  .content-table td {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .action-buttons {
+    gap: 0.3rem;
+  }
+
+  .pagination button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
   }
 }

@@ -5,32 +5,36 @@ import { motion } from "framer-motion";
 import "./QuickNotesAi.css";
 
 const QuickNotesAi = () => {
+  const [universities, setUniversities] = useState([]);
+  const [courses, setCourses] = useState([]);
   const [semesters, setSemesters] = useState([]);
   const [subjects, setSubjects] = useState([]);
   const [units, setUnits] = useState([]);
   const [topics, setTopics] = useState([]);
   const [contentTitles, setContentTitles] = useState([]);
   const [allContent, setAllContent] = useState([]);
+  const [filteredContent, setFilteredContent] = useState([]);
 
+  const [selectedUniversity, setSelectedUniversity] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState("");
   const [selectedSemester, setSelectedSemester] = useState("");
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedUnit, setSelectedUnit] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
 
-  const [filteredContent, setFilteredContent] = useState([]);
-
   useEffect(() => {
     const fetchContent = async () => {
       try {
         const response = await axios.get(
-          "https://shrenitai-backend.onrender.com/api/v1/contents"
+          "http://localhost:8000/api/v1/contents"
         );
         const contentData = response.data;
         setAllContent(contentData);
-        const uniqueSemesters = [
-          ...new Set(contentData.map((item) => item.semester)),
+
+        const uniqueUniversities = [
+          ...new Set(contentData.map((item) => item.university)),
         ].sort();
-        setSemesters(uniqueSemesters);
+        setUniversities(uniqueUniversities);
       } catch (error) {
         console.error("Error fetching content:", error);
       }
@@ -39,11 +43,57 @@ const QuickNotesAi = () => {
   }, []);
 
   useEffect(() => {
+    if (selectedUniversity) {
+      const filteredCourses = [
+        ...new Set(
+          allContent
+            .filter((item) => item.university === selectedUniversity)
+            .map((item) => item.course)
+        ),
+      ].sort();
+      setCourses(filteredCourses);
+      setSelectedCourse("");
+      setSemesters([]);
+      setSubjects([]);
+      setUnits([]);
+      setTopics([]);
+      setContentTitles([]);
+    }
+  }, [selectedUniversity]);
+
+  useEffect(() => {
+    if (selectedCourse) {
+      const filteredSemesters = [
+        ...new Set(
+          allContent
+            .filter(
+              (item) =>
+                item.university === selectedUniversity &&
+                item.course === selectedCourse
+            )
+            .map((item) => item.semester)
+        ),
+      ].sort();
+      setSemesters(filteredSemesters);
+      setSelectedSemester("");
+      setSubjects([]);
+      setUnits([]);
+      setTopics([]);
+      setContentTitles([]);
+    }
+  }, [selectedCourse]);
+
+  useEffect(() => {
     if (selectedSemester) {
       const filteredSubjects = [
         ...new Set(
           allContent
-            .filter((item) => item.semester === selectedSemester)
+            .filter(
+              (item) =>
+                item.university === selectedUniversity &&
+                item.course === selectedCourse &&
+                item.semester === selectedSemester
+            )
             .map((item) => item.subject)
         ),
       ].sort();
@@ -62,6 +112,8 @@ const QuickNotesAi = () => {
           allContent
             .filter(
               (item) =>
+                item.university === selectedUniversity &&
+                item.course === selectedCourse &&
                 item.semester === selectedSemester &&
                 item.subject === selectedSubject
             )
@@ -82,6 +134,8 @@ const QuickNotesAi = () => {
           allContent
             .filter(
               (item) =>
+                item.university === selectedUniversity &&
+                item.course === selectedCourse &&
                 item.semester === selectedSemester &&
                 item.subject === selectedSubject &&
                 item.unit === selectedUnit
@@ -97,11 +151,13 @@ const QuickNotesAi = () => {
 
   useEffect(() => {
     if (selectedTopic) {
-      const filteredContentTitles = [
+      const filteredTitles = [
         ...new Set(
           allContent
             .filter(
               (item) =>
+                item.university === selectedUniversity &&
+                item.course === selectedCourse &&
                 item.semester === selectedSemester &&
                 item.subject === selectedSubject &&
                 item.unit === selectedUnit &&
@@ -110,16 +166,18 @@ const QuickNotesAi = () => {
             .map((item) => item.contentTitle)
         ),
       ].sort();
-      setContentTitles(filteredContentTitles);
+      setContentTitles(filteredTitles);
 
-      const filteredContentData = allContent.filter(
+      const filteredData = allContent.filter(
         (item) =>
+          item.university === selectedUniversity &&
+          item.course === selectedCourse &&
           item.semester === selectedSemester &&
           item.subject === selectedSubject &&
           item.unit === selectedUnit &&
           item.topic === selectedTopic
       );
-      setFilteredContent(filteredContentData);
+      setFilteredContent(filteredData);
     }
   }, [selectedTopic]);
 
@@ -163,50 +221,54 @@ const QuickNotesAi = () => {
         </motion.h1>
 
         <Section
-          title="Semesters"
-          items={semesters}
-          selectedItem={selectedSemester}
-          onSelect={(item) => {
-            setSelectedSemester(item);
-            setSelectedSubject("");
-            setSelectedUnit("");
-            setSelectedTopic("");
-          }}
+          title="University"
+          items={universities}
+          selectedItem={selectedUniversity}
+          onSelect={(item) => setSelectedUniversity(item)}
         />
+
+        {selectedUniversity && (
+          <Section
+            title="Course"
+            items={courses}
+            selectedItem={selectedCourse}
+            onSelect={(item) => setSelectedCourse(item)}
+          />
+        )}
+
+        {selectedCourse && (
+          <Section
+            title="Semester"
+            items={semesters}
+            selectedItem={selectedSemester}
+            onSelect={(item) => setSelectedSemester(item)}
+          />
+        )}
 
         {selectedSemester && (
           <Section
-            title="Subjects"
+            title="Subject"
             items={subjects}
             selectedItem={selectedSubject}
-            onSelect={(item) => {
-              setSelectedSubject(item);
-              setSelectedUnit("");
-              setSelectedTopic("");
-            }}
+            onSelect={(item) => setSelectedSubject(item)}
           />
         )}
 
         {selectedSubject && (
           <Section
-            title="Units"
+            title="Unit"
             items={units}
             selectedItem={selectedUnit}
-            onSelect={(item) => {
-              setSelectedUnit(item);
-              setSelectedTopic("");
-            }}
+            onSelect={(item) => setSelectedUnit(item)}
           />
         )}
 
         {selectedUnit && (
           <Section
-            title="Topics"
+            title="Topic"
             items={topics}
             selectedItem={selectedTopic}
-            onSelect={(item) => {
-              setSelectedTopic(item);
-            }}
+            onSelect={(item) => setSelectedTopic(item)}
           />
         )}
 
@@ -219,37 +281,41 @@ const QuickNotesAi = () => {
           />
         )}
 
-        {filteredContent.length > 0 && (
-          <div className="content-list">
-            <h2 className="content-list-title">Content List</h2>
-            <table className="content-table">
-              <thead>
-                <tr>
-                  <th>University</th>
-                  <th>Course</th>
-                  <th>Semester</th>
-                  <th>Subject</th>
-                  <th>Unit</th>
-                  <th>Topic</th>
-                  <th>Content Title</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredContent.map((content) => (
-                  <tr key={content._id}>
-                    <td>{content.university}</td>
-                    <td>{content.course}</td>
-                    <td>{content.semester}</td>
-                    <td>{content.subject}</td>
-                    <td>{content.unit}</td>
-                    <td>{content.topic}</td>
-                    <td>{content.contentTitle}</td>
-                    <td>{content.status}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        {selectedTopic && filteredContent.length > 0 && (
+          <div className="final-content-section">
+            {filteredContent.map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="final-content-card"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <h3>{item.contentTitle}</h3>
+                <div className="description-box">
+                  <strong>Description:</strong>
+                  <p>{item.description}</p>
+                </div>
+                {item.fileUrl && (
+                  <p>
+                    <strong>File:</strong>{" "}
+                    <a
+                      href={item.fileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View File
+                    </a>
+                  </p>
+                )}
+                <p>
+                  <strong>Type:</strong> {item.contentType}
+                </p>
+                <p>
+                  <strong>Status:</strong> {item.status}
+                </p>
+              </motion.div>
+            ))}
           </div>
         )}
       </div>
