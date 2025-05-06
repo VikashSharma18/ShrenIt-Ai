@@ -10,7 +10,7 @@
 .content-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px;
+  padding: 10px;
 }
 
 /* Header */
@@ -18,7 +18,7 @@
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 /* Section */

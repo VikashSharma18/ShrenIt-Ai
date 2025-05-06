@@ -19,6 +19,7 @@ import "./App.css"; // Add global styles for smooth scrolling
 import QuickNotesAi from "./pages/AllFeatures/QuickNotesAi/QuickNotesAi.jsx";
 import InternshipApp from "./pages/AllFeatures/Internship/Internship.jsx";
 import MockUpLabs from "./pages/AllFeatures/MockUpLabs/MockUpLabs.jsx";
+import AddNotes from "./pages/Add-notes/AddNotes.jsx";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             {/* Standalone Routes */}
             <Route path="/login" element={<Login id="login" />} />
             <Route path="/admin" element={<Admin id="admin" />} />
+
             <Route path="/faq" element={<FAQ id="faq" />} />
             <Route path="/aboutus" element={<Aboutus id="aboutus" />} />
 
@@ -89,6 +91,7 @@ function App() {
                 element={<MockUpLabs id="mockup-labs" />}
               />
             </Route>
+            <Route path="/admin/add-notes" element={<AddNotes />} />
           </Route>
         </Routes>
       </BrowserRouter>
