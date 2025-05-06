@@ -16,6 +16,8 @@ const Admin = () => {
     email: "",
     course: "",
     sem: "",
+    University: "",
+    College: "",
   });
   const [editingStudent, setEditingStudent] = useState(null);
   const [notification, setNotification] = useState(null);
@@ -99,7 +101,14 @@ const Admin = () => {
       showNotification("Error adding student: " + error.message, "error");
       return;
     }
-    setNewStudent({ name: "", email: "", course: "", sem: "" });
+    setNewStudent({
+      name: "",
+      email: "",
+      course: "",
+      sem: "",
+      University: "",
+      College: "",
+    });
     showNotification("Student added successfully");
   };
 
@@ -128,8 +137,7 @@ const Admin = () => {
   };
 
   const handleAddUniversityDetails = () => {
-   
-    navigate("/admin/add-notes"); 
+    navigate("/admin/add-notes");
   };
 
   if (isLoggedIn) {
@@ -196,6 +204,30 @@ const Admin = () => {
                   }
                   required
                 />
+                <input
+                  type="text"
+                  placeholder="University"
+                  value={editingStudent.University}
+                  onChange={(e) =>
+                    setEditingStudent({
+                      ...editingStudent,
+                      University: e.target.value,
+                    })
+                  }
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="College"
+                  value={editingStudent.College}
+                  onChange={(e) =>
+                    setEditingStudent({
+                      ...editingStudent,
+                      College: e.target.value,
+                    })
+                  }
+                  required
+                />
                 <div className="adminPage_modal__actions">
                   <button type="button" onClick={() => setEditingStudent(null)}>
                     Cancel
@@ -211,7 +243,7 @@ const Admin = () => {
           <h1 className="adminPage_title">Admin Dashboard</h1>
           <button
             className="adminPage_logout-btn1"
-            onClick={handleAddUniversityDetails} // Add the onClick handler here
+            onClick={handleAddUniversityDetails}
           >
             Add University Details
           </button>
@@ -262,6 +294,24 @@ const Admin = () => {
                 }
                 required
               />
+              <input
+                type="text"
+                placeholder="University"
+                value={newStudent.University}
+                onChange={(e) =>
+                  setNewStudent({ ...newStudent, University: e.target.value })
+                }
+                required
+              />
+              <input
+                type="text"
+                placeholder="College"
+                value={newStudent.College}
+                onChange={(e) =>
+                  setNewStudent({ ...newStudent, College: e.target.value })
+                }
+                required
+              />
             </div>
             <button type="submit" className="adminPage_form__submit">
               Add Student
@@ -278,6 +328,8 @@ const Admin = () => {
                     <th>Email</th>
                     <th>Course</th>
                     <th>Semester</th>
+                    <th>University</th>
+                    <th>College</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
@@ -288,10 +340,9 @@ const Admin = () => {
                       <td data-label="Email">{student.email}</td>
                       <td data-label="Course">{student.course}</td>
                       <td data-label="Semester">{student.sem}</td>
-                      <td
-                        data-label="Actions"
-                        className="adminPage_table__actions"
-                      >
+                      <td data-label="University">{student.University}</td>
+                      <td data-label="College">{student.College}</td>
+                      <td className="adminPage_table__actions">
                         <button
                           onClick={() => handleDeleteStudent(student.id)}
                           className="adminPage_table__btn adminPage_table__btn--delete"
