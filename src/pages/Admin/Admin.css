@@ -130,7 +130,7 @@
 
 .adminPage_title {
   font-size: 2rem;
-  color: #2d3748;
+  color: #bfc8d8;
   font-weight: 700;
 }
 
@@ -146,6 +146,20 @@
 
 .adminPage_logout-btn:hover {
   background: #c53030;
+  transform: translateY(-1px);
+}
+.adminPage_logout-btn1 {
+  background: #056d36;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adminPage_logout-btn1:hover {
+  background: #3c905f;
   transform: translateY(-1px);
 }
 
