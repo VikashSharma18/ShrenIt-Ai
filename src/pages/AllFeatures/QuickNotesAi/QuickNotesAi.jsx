@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import "./QuickNotesAi.css";
 
 const QuickNotesAi = () => {
@@ -28,7 +30,7 @@ const QuickNotesAi = () => {
         const response = await axios.get(
           "https://shrenitai-backend.onrender.com/api/v1/contents"
         );
-        const contentData = response.data;
+        const contentData = response.data.data || response.data;
         setAllContent(contentData);
 
         const uniqueUniversities = [
@@ -59,7 +61,7 @@ const QuickNotesAi = () => {
       setTopics([]);
       setContentTitles([]);
     }
-  }, [selectedUniversity]);
+  }, [selectedUniversity, allContent]);
 
   useEffect(() => {
     if (selectedCourse) {
@@ -81,7 +83,7 @@ const QuickNotesAi = () => {
       setTopics([]);
       setContentTitles([]);
     }
-  }, [selectedCourse]);
+  }, [selectedCourse, selectedUniversity, allContent]);
 
   useEffect(() => {
     if (selectedSemester) {
@@ -103,7 +105,7 @@ const QuickNotesAi = () => {
       setTopics([]);
       setContentTitles([]);
     }
-  }, [selectedSemester]);
+  }, [selectedSemester, selectedCourse, selectedUniversity, allContent]);
 
   useEffect(() => {
     if (selectedSubject) {
@@ -125,7 +127,13 @@ const QuickNotesAi = () => {
       setTopics([]);
       setContentTitles([]);
     }
-  }, [selectedSubject]);
+  }, [
+    selectedSubject,
+    selectedSemester,
+    selectedCourse,
+    selectedUniversity,
+    allContent,
+  ]);
 
   useEffect(() => {
     if (selectedUnit) {
@@ -147,7 +155,14 @@ const QuickNotesAi = () => {
       setSelectedTopic("");
       setContentTitles([]);
     }
-  }, [selectedUnit]);
+  }, [
+    selectedUnit,
+    selectedSubject,
+    selectedSemester,
+    selectedCourse,
+    selectedUniversity,
+    allContent,
+  ]);
 
   useEffect(() => {
     if (selectedTopic) {
@@ -179,7 +194,15 @@ const QuickNotesAi = () => {
       );
       setFilteredContent(filteredData);
     }
-  }, [selectedTopic]);
+  }, [
+    selectedTopic,
+    selectedUnit,
+    selectedSubject,
+    selectedSemester,
+    selectedCourse,
+    selectedUniversity,
+    allContent,
+  ]);
 
   const Card = ({ text, onClick, isSelected }) => (
     <motion.div
@@ -294,7 +317,9 @@ const QuickNotesAi = () => {
                 <h3>{item.contentTitle}</h3>
                 <div className="description-box">
                   <strong>Description:</strong>
-                  <p>{item.description}</p>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {item.description}
+                  </ReactMarkdown>
                 </div>
                 {item.fileUrl && (
                   <p>
