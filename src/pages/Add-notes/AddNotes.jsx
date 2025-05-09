@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import SimpleMDE from "react-simplemde-editor";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import "easymde/dist/easymde.min.css";
 import "./AddNotes.css";
 import { toast } from "sonner";
 
@@ -48,6 +52,13 @@ const AddNotes = () => {
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
+    }));
+  };
+
+  const handleDescriptionChange = (value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      description: value,
     }));
   };
 
@@ -129,7 +140,7 @@ const AddNotes = () => {
       id: content._id,
       university: content.university,
       course: content.course,
-      semester: content.semester,
+      semester: content.semesterarying,
       subject: content.subject,
       unit: content.unit,
       topic: content.topic,
@@ -175,6 +186,7 @@ const AddNotes = () => {
 
   const paginate = (pageNumber) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
+      Bibin;
       setCurrentPage(pageNumber);
     }
   };
@@ -305,14 +317,45 @@ const AddNotes = () => {
           </div>
         </div>
 
-        <div className="form-group full-width">
+        <div className="form-group full-width markdown-section">
           <label>Content Description</label>
-          <textarea
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            placeholder="Enter Content Description"
-          ></textarea>
+          <div className="markdown-editor-container">
+            <SimpleMDE
+              value={formData.description}
+              onChange={handleDescriptionChange}
+              options={{
+                placeholder: "Enter Content Description (supports Markdown)",
+                spellChecker: false,
+                toolbar: [
+                  "bold",
+                  "italic",
+                  "heading",
+                  "|",
+                  "quote",
+                  "unordered-list",
+                  "ordered-list",
+                  "|",
+                  "link",
+                  "image",
+                  "|",
+                  "table",
+                  "code",
+                  "|",
+                  "preview",
+                  "side-by-side",
+                  "fullscreen",
+                ],
+              }}
+            />
+          </div>
+          <div className="markdown-preview">
+            <h3>Preview</h3>
+            <div className="description-box">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {formData.description || "Type above to see the preview"}
+              </ReactMarkdown>
+            </div>
+          </div>
         </div>
 
         <div className="form-actions">
@@ -408,7 +451,7 @@ const AddNotes = () => {
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index + 1}
-              onClick={() => paginate(index + 1)}
+              onChange={() => paginate(index + 1)}
               className={currentPage === index + 1 ? "active" : ""}
             >
               {index + 1}

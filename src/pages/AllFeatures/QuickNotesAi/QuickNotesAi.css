@@ -4,7 +4,7 @@
   background: linear-gradient(60deg, #2e1a47 30%, #22142c 50%, #000000 100%);
   color: white;
   padding: 40px 20px;
-  font-family: sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .content-wrapper {
@@ -19,6 +19,7 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Section */
@@ -30,12 +31,13 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #f0f0f0;
 }
 
 /* Cards */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -47,22 +49,26 @@
   cursor: pointer;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .card-selected {
   background-color: rgba(255, 255, 255, 0.2);
-  border-color: white;
+  border-color: #1e88e5;
+  box-shadow: 0 0 10px rgba(30, 136, 229, 0.5);
 }
 
 .card-text {
   font-weight: bold;
+  color: #e0e0e0;
 }
 
-/* Content Table */
+/* Content Table (Unused, but kept for compatibility) */
 .content-list {
   margin-top: 40px;
 }
@@ -92,18 +98,127 @@
   font-weight: bold;
 }
 
-/* Description Box */
-.description-box {
-  background-color: #22142c;
-  padding: 15px;
-  margin-top: 10px;
-  border-radius: 8px;
-  border: 1px solid #444444;
+/* Final Content Card */
+.final-content-card {
+  background-color: #1a1a2e;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
 }
 
+.final-content-card:hover {
+  transform: translateY(-3px);
+}
+
+.final-content-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Description Box */
+.description-box {
+  background-color: #2a1b3d;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #555555;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.description-box strong {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Markdown Styles */
 .description-box p {
-  margin: 0;
+  margin: 0 0 10px 0;
   color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.description-box ul,
+.description-box ol {
+  list-style-position: outside;
+  margin: 10px 0;
+  padding-left: 30px;
+  color: #e0e0e0;
+}
+
+.description-box ul {
+  list-style-type: disc;
+}
+
+.description-box ol {
+  list-style-type: decimal;
+}
+
+.description-box li {
+  margin-bottom: 8px;
+}
+
+.description-box table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px 0;
+  background-color: #22142c;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.description-box th,
+.description-box td {
+  border: 1px solid #666666;
+  padding: 12px;
+  text-align: left;
+  color: #e0e0e0;
+}
+
+.description-box th {
+  background-color: #3a2b4d;
+  font-weight: bold;
+}
+
+.description-box td {
+  background-color: #2a1b3d;
+}
+
+.description-box tr:nth-child(even) td {
+  background-color: #32244a;
+}
+
+.description-box a {
+  color: #1e88e5;
+  text-decoration: underline;
+}
+
+.description-box a:hover {
+  color: #4fc3f7;
+}
+
+.description-box code {
+  background-color: #1f1f1f;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #ffca28;
+}
+
+.description-box pre {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 10px 0;
+}
+
+.description-box pre code {
+  background-color: transparent;
+  padding: 0;
 }
 
 /* Links */
@@ -114,19 +229,33 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #4fc3f7;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .card {
-    width: 100%;
+  .card-container {
+    grid-template-columns: 1fr;
   }
 
   .header-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .final-content-card h3 {
     font-size: 1.5rem;
   }
 
   .description-box {
-    padding: 10px;
+    padding: 15px;
+  }
+
+  .description-box th,
+  .description-box td {
+    padding: 8px;
   }
 }
