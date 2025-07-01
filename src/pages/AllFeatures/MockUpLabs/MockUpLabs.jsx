@@ -332,7 +332,7 @@ const MockUpLabs = () => {
 
       try {
         const response = await axios.post(
-          "https://shrenitai-backend.onrender.com/api/speech",
+          "http://localhost:8000/api/speech",
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -418,9 +418,9 @@ const MockUpLabs = () => {
 
     try {
       const response = await axios.post(
-        "https://shrenitai-backend.onrender.com/api/review",
+        "http://localhost:8000/api/review",
         { answers },
-        { timeout: 30000 } // 30-second timeout
+        { timeout: 30000 }
       );
 
       setReview(response.data);
