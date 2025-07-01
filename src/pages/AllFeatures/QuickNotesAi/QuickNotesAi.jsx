@@ -4,6 +4,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import "./QuickNotesAi.css";
 
 const QuickNotesAi = () => {
   const [universities, setUniversities] = useState([]);
@@ -15,7 +16,6 @@ const QuickNotesAi = () => {
   const [contentTitles, setContentTitles] = useState([]);
   const [allContent, setAllContent] = useState([]);
   const [filteredContent, setFilteredContent] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   const [selectedUniversity, setSelectedUniversity] = useState("");
   const [selectedCourse, setSelectedCourse] = useState("");
@@ -27,7 +27,6 @@ const QuickNotesAi = () => {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        setIsLoading(true);
         const response = await axios.get(
           "https://shrenitai-backend.onrender.com/api/v1/contents"
         );
@@ -40,8 +39,6 @@ const QuickNotesAi = () => {
         setUniversities(uniqueUniversities);
       } catch (error) {
         console.error("Error fetching content:", error);
-      } finally {
-        setIsLoading(false);
       }
     };
     fetchContent();
@@ -207,34 +204,21 @@ const QuickNotesAi = () => {
     allContent,
   ]);
 
-  const Loader = () => (
-    <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-80 z-50">
-      <div className="flex flex-col items-center">
-        <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
-        <p className="mt-4 text-lg text-gray-600 font-medium">
-          Loading content...
-        </p>
-      </div>
-    </div>
-  );
-
   const Card = ({ text, onClick, isSelected }) => (
     <motion.div
       whileHover={{ scale: 1.04 }}
       whileTap={{ scale: 0.96 }}
-      className={`p-4 m-2 bg-white rounded-lg shadow-md cursor-pointer transition-all duration-200 hover:shadow-lg border-2 ${
-        isSelected ? "border-blue-500 bg-blue-50" : "border-gray-200"
-      }`}
+      className={`card ${isSelected ? "card-selected" : ""}`}
       onClick={onClick}
     >
-      <p className="text-gray-800 font-medium">{text}</p>
+      <p className="card-text">{text}</p>
     </motion.div>
   );
 
   const Section = ({ title, items, selectedItem, onSelect }) => (
-    <div className="mb-8">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">{title}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="section">
+      <h2 className="section-title">{title}</h2>
+      <div className="card-container">
         {items.map((item) => (
           <Card
             key={item}
@@ -247,15 +231,11 @@ const QuickNotesAi = () => {
     </div>
   );
 
-  if (isLoading) {
-    return <Loader />;
-  }
-
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="container">
+      <div className="content-wrapper">
         <motion.h1
-          className="text-4xl font-bold text-center mb-12 text-gray-800"
+          className="header-title"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -325,46 +305,39 @@ const QuickNotesAi = () => {
         )}
 
         {selectedTopic && filteredContent.length > 0 && (
-          <div className="mt-8">
+          <div className="final-content-section">
             {filteredContent.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white rounded-lg shadow-lg p-6 mb-6"
+                className="final-content-card"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <h3 className="text-xl font-bold mb-4 text-gray-800">
-                  {item.contentTitle}
-                </h3>
-                <div className="bg-gray-50 p-4 rounded-lg mb-4">
-                  <strong className="text-gray-700">Description:</strong>
-                  <div className="mt-2 prose prose-sm max-w-none">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                      {item.description}
-                    </ReactMarkdown>
-                  </div>
+                <h3>{item.contentTitle}</h3>
+                <div className="description-box">
+                  <strong>Description:</strong>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {item.description}
+                  </ReactMarkdown>
                 </div>
                 {item.fileUrl && (
-                  <p className="mb-2">
-                    <strong className="text-gray-700">File:</strong>{" "}
+                  <p>
+                    <strong>File:</strong>{" "}
                     <a
                       href={item.fileUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
                     >
                       View File
                     </a>
                   </p>
                 )}
-                <p className="mb-2">
-                  <strong className="text-gray-700">Type:</strong>{" "}
-                  {item.contentType}
+                <p>
+                  <strong>Type:</strong> {item.contentType}
                 </p>
                 <p>
-                  <strong className="text-gray-700">Status:</strong>{" "}
-                  {item.status}
+                  <strong>Status:</strong> {item.status}
                 </p>
               </motion.div>
             ))}
