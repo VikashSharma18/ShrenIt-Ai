@@ -40,14 +40,30 @@ const MockUpLabs = () => {
   const faceMeshInstanceRef = useRef(null);
   const cameraRef = useRef(null);
 
-  // Fetch questions
+  // Function to get 5 random items from an array
+  const getRandomItems = (array, count = 5) => {
+    const shuffled = [...array].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, Math.min(count, array.length));
+  };
+
+  // Fetch questions and select 5 random categories and 5 random questions per category
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
         setIsLoadingQuestions(true);
         const response = await axios.get("/questions.json");
         console.log("Fetched questions:", response.data); // Debug log
-        setQuestions(response.data);
+        // Select 5 random categories
+        const allCategories = Object.keys(response.data);
+        const randomCategories = getRandomItems(allCategories);
+        // Randomize 5 questions for each selected category
+        const randomizedQuestions = {};
+        randomCategories.forEach((category) => {
+          randomizedQuestions[category] = getRandomItems(
+            response.data[category]
+          );
+        });
+        setQuestions(randomizedQuestions);
       } catch (error) {
         console.error("Failed to fetch questions:", error);
         setErrorMessage("Failed to load questions. Please try again.");
@@ -370,7 +386,7 @@ const MockUpLabs = () => {
 
         // Play a success sound to indicate successful recording
         const audio = new Audio(
-          "data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLHPM7OKwZiQVQZ/b+tiKUw8dYaf83JdQBwkxdaqyloJkSUdtdnNza2TCubKqp6mrtK+npaOhoJ+koqaorLO5v8DAwLSqoZyenJRxWldwlbDGxAHk3cvb5PP27qUAAAwcLDMxGwYA95OktczV5OLImnyKoG8qFDRMbYqVm5csBggjhOl9MAphpqyaMQsgeHl4UDwQNllpa1g/EwMUFBALCRQ0W4fN3H8oLC4bECQoODgXBjDJ5dO/egoNASHTVJTMoTkGDkZSVUUnKzRPSCAIIFyjtrvl5PbS1N0sAwlZhoR0TSMUUqK4sqKORBAuUF1YRSssPmuEbVRVcaSRmJ+YmZeVlpiamos9KS4uIg4cdtLq5cm3SQ4mV2tVzszFlGtEQU5pe3QoHDx1iYFSNkVQSkRIO0I9MgUIGRoXEQcFCAzC4PDcvDYCCQASy3kQ1pM/JzpSWVE5MjU9UllhUxgMJlSxqpmkbjo5P0VTUSYAGlFdY1QLN5E9FUt+ZEkXEjJGU1BOFwQtdaSuoo1LBwsYLDkyKycjJCgoJB8M1/4TgQcPhXYyHDhPYmhgGSQyOzs5MjU1MzExMTExMTExMTExL28bHP0o5yAnIhkMIy4uKyroY4FMZZlhBBBADzVqdl8GJE94e2gQB1GOFLRNfJGIqJwbO2BlZVsN9T1QXGMGpJ0AAAAAAAB3r7u5sncZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAA"
+          "data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLHPM7OKwZiQVQZ/b+tiKUw8dYaf83JdQBwkxdaqyloJkSUdtdnNza2TCubKqp6mrtK+npaOhoJ+koqaorLO5v8DAwLSqoZyenJRxWldwlbDGxAHk3cvb5PP27qUAAAwcLDMxGwYA95OktczV5OLImnyKoG8qFDRMbYqVm5csBggjhOl9MAphpqyaMQsgeHl4UDwQNllpa1g/EwMUFBALCRQ0W4fN3H8oLC4bECQoODgXBjDJ5dO/egoNASHTVJTMoTkGDkZSVUUnKzRPSCAIIFyjtrvl5PbS1N0sAwlZhoR0TSMUUqK4sqKORBAuUF1YRSssPmuEbVRVcaSRmJ+YmZeVlpiamos9KS4uIg4cdtLq5cm3SQ4mV2tVzszFlGtEQU5pe3QoHDx1iYFSNkVQSkRIO0I9MgUIGRoXEQcFCAzC4PDcvDYCCQASy3kQ1pM/JzpSWVE5MjU9UllhUxgMJlSxqpmkbjo5P0VTUSYAGlFdY1QLN5E9FUt+ZEkXEjJGU1BOFwQtdaSuoo1LBwsYLDkyKycjJCgoJB8M1/4TgQcPhXYyHDhPYmhgGSQyOzs5MjU1MzExMTExMTExMTExL28bHP0o5yAnIhkMIy4uKyroY4FMZZlhBBBADzVqdl8GJE94e2gQB1GOFLRNfJGIqJwbO2BlZVsN9T1QXGMGpJ0AAAAAAAB3r7u5sncZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAA"
         );
         audio.play();
       } catch (error) {
