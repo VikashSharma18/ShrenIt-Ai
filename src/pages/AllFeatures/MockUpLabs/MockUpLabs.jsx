@@ -1,4 +1,3 @@
-// frontend/src/components/MockUpLabs.js
 import React, {
   useEffect,
   useState,
@@ -21,7 +20,7 @@ const MockUpLabs = () => {
   });
   const [questions, setQuestions] = useState({});
   const [isLoadingQuestions, setIsLoadingQuestions] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState("data_scientist");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [canStartInterview, setCanStartInterview] = useState(false);
   const [interviewStarted, setInterviewStarted] = useState(false);
   const [recording, setRecording] = useState(false);
@@ -47,6 +46,7 @@ const MockUpLabs = () => {
       try {
         setIsLoadingQuestions(true);
         const response = await axios.get("/questions.json");
+        console.log("Fetched questions:", response.data); // Debug log
         setQuestions(response.data);
       } catch (error) {
         console.error("Failed to fetch questions:", error);
@@ -332,7 +332,7 @@ const MockUpLabs = () => {
 
       try {
         const response = await axios.post(
-          "http://localhost:8000/api/speech",
+          "https://shrenitai-backend.onrender.com/api/speech",
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -370,7 +370,7 @@ const MockUpLabs = () => {
 
         // Play a success sound to indicate successful recording
         const audio = new Audio(
-          "data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLHPM7OKwZiQVQZ/b+tiKUw8dYaf83JdQBwkxdaqyloJkSUdtdnNza2TCubKqp6mrtK+npaOhoJ+koqaorLO5v8DAwLSqoZyenJRxWldwlbDGxAHk3cvb5PP27qUAAAwcLDMxGwYA95OktczV5OLImnyKoG8qFDRMbYqVm5csBggjhOl9MAphpqyaMQsgeHl4UDwQNllpa1g/EwMUFBALCRQ0W4fN3H8oLC4bECQoODgXBjDJ5dO/egoNASHTVJTMoTkGDkZSVUUnKzRPSCAIIFyjtrvl5PbS1N0sAwlZhoR0TSMUUqK4sqKORBAuUF1YRSssPmuEbVRVcaSRmJ+YmZeVlpiamos9KS4uIg4cdtLq5cm3SQ4mV2tVzszFlGtEQU5pe3QoHDx1iYFSNkVQSkRIO0I9MgUIGRoXEQcFCAzC4PDcvDYCCQASy3kQ1pM/JzpSWVE5MjU9UllhUxgMJlSxqpmkbjo5P0VTUSYAGlFdY1QLN5E9FUt+ZEkXEjJGU1BOFwQtdaSuoo1LBwsYLDkyKycjJCgoJB8M1/4TgQcPhXYyHDhPYmhgGSQyOzs5MjU1MzExMTExMTExMTExL28bHP0o5yAnIhkMIy4uKyroY4FMZZlhBBBADzVqdl8GJE94e2gQB1GOFLRNfJGIqJwbO2BlZVsN9T1QXGMGpJ0AAAAAAAB3r7u5sncZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAA"
+          "data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLHPM7OKwZiQVQZ/b+tiKUw8dYaf83JdQBwkxdaqyloJkSUdtdnNza2TCubKqp6mrtK+npaOhoJ+koqaorLO5v8DAwLSqoZyenJRxWldwlbDGxAHk3cvb5PP27qUAAAwcLDMxGwYA95OktczV5OLImnyKoG8qFDRMbYqVm5csBggjhOl9MAphpqyaMQsgeHl4UDwQNllpa1g/EwMUFBALCRQ0W4fN3H8oLC4bECQoODgXBjDJ5dO/egoNASHTVJTMoTkGDkZSVUUnKzRPSCAIIFyjtrvl5PbS1N0sAwlZhoR0TSMUUqK4sqKORBAuUF1YRSssPmuEbVRVcaSRmJ+YmZeVlpiamos9KS4uIg4cdtLq5cm3SQ4mV2tVzszFlGtEQU5pe3QoHDx1iYFSNkVQSkRIO0I9MgUIGRoXEQcFCAzC4PDcvDYCCQASy3kQ1pM/JzpSWVE5MjU9UllhUxgMJlSxqpmkbjo5P0VTUSYAGlFdY1QLN5E9FUt+ZEkXEjJGU1BOFwQtdaSuoo1LBwsYLDkyKycjJCgoJB8M1/4TgQcPhXYyHDhPYmhgGSQyOzs5MjU1MzExMTExMTExMTExL28bHP0o5yAnIhkMIy4uKyroY4FMZZlhBBBADzVqdl8GJE94e2gQB1GOFLRNfJGIqJwbO2BlZVsN9T1QXGMGpJ0AAAAAAAB3r7u5sncZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAAd6+8vLN4GRsAAAAAAAB3r7y8s3gZGwAAAAAAAHevvLyzeBkbAAAAAAAA"
         );
         audio.play();
       } catch (error) {
@@ -469,6 +469,9 @@ const MockUpLabs = () => {
 
   // Memoized current question
   const currentQuestion = useMemo(() => {
+    if (!selectedCategory) {
+      return "Please select a category to start.";
+    }
     return questions[selectedCategory]?.[currentQuestionIndex] || "Loading...";
   }, [questions, selectedCategory, currentQuestionIndex]);
 
@@ -553,15 +556,32 @@ const MockUpLabs = () => {
               className="mul-category-select"
               disabled={interviewStarted || isProcessing}
             >
-              <option value="data_scientist">Data Scientist</option>
-              <option value="software_engineer">Software Engineer</option>
+              <option value="" disabled>
+                Select a category
+              </option>
+              {Object.keys(questions).length > 0 ? (
+                Object.keys(questions).map((category) => (
+                  <option key={category} value={category}>
+                    {category
+                      .split("_")
+                      .map(
+                        (word) => word.charAt(0).toUpperCase() + word.slice(1)
+                      )
+                      .join(" ")}
+                  </option>
+                ))
+              ) : (
+                <option value="" disabled>
+                  Loading categories...
+                </option>
+              )}
             </select>
           </div>
           {isLoadingQuestions ? (
             <div className="mul-loading">Loading questions...</div>
           ) : (
             <>
-              {canStartInterview && !interviewStarted && (
+              {canStartInterview && !interviewStarted && selectedCategory && (
                 <div className="mul-interview-section">
                   <h2 className="mul-section-title">Ready to Start</h2>
                   <button onClick={startInterview} className="mul-start-button">
