@@ -505,8 +505,7 @@
     "What’s your role in agile testing?",
     "What’s the difference between severity and priority?"
   ],
- 
-  
+
   "network_engineer": [
     "What’s the difference between TCP and UDP?",
     "How do you troubleshoot a network outage?",
@@ -529,7 +528,7 @@
     "How do you ensure redundancy in a network?",
     "How do you stay current with networking trends?"
   ],
- 
+
   "technical_support_engineer": [
     "Describe how you handle a frustrated customer",
     "How do you troubleshoot software issues?",
