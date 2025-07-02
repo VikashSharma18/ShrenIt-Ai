@@ -16,6 +16,7 @@ const QuickNotesAi = () => {
   const [contentTitles, setContentTitles] = useState([]);
   const [allContent, setAllContent] = useState([]);
   const [filteredContent, setFilteredContent] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // New loading state
 
   const [selectedUniversity, setSelectedUniversity] = useState("");
   const [selectedCourse, setSelectedCourse] = useState("");
@@ -27,6 +28,7 @@ const QuickNotesAi = () => {
   useEffect(() => {
     const fetchContent = async () => {
       try {
+        setIsLoading(true); // Set loading to true before fetching
         const response = await axios.get(
           "https://shrenitai-backend.onrender.com/api/v1/contents"
         );
@@ -39,6 +41,8 @@ const QuickNotesAi = () => {
         setUniversities(uniqueUniversities);
       } catch (error) {
         console.error("Error fetching content:", error);
+      } finally {
+        setIsLoading(false); // Set loading to false after fetching
       }
     };
     fetchContent();
@@ -233,117 +237,123 @@ const QuickNotesAi = () => {
 
   return (
     <div className="container">
-      <div className="content-wrapper">
-        <motion.h1
-          className="header-title"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          🎓 Student Learning Portal
-        </motion.h1>
+      {isLoading ? (
+        <div className="loader-container">
+          <div className="spinner"></div>
+        </div>
+      ) : (
+        <div className="content-wrapper">
+          <motion.h1
+            className="header-title"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            🎓 Student Learning Portal
+          </motion.h1>
 
-        <Section
-          title="University"
-          items={universities}
-          selectedItem={selectedUniversity}
-          onSelect={(item) => setSelectedUniversity(item)}
-        />
-
-        {selectedUniversity && (
           <Section
-            title="Course"
-            items={courses}
-            selectedItem={selectedCourse}
-            onSelect={(item) => setSelectedCourse(item)}
+            title="University"
+            items={universities}
+            selectedItem={selectedUniversity}
+            onSelect={(item) => setSelectedUniversity(item)}
           />
-        )}
 
-        {selectedCourse && (
-          <Section
-            title="Semester"
-            items={semesters}
-            selectedItem={selectedSemester}
-            onSelect={(item) => setSelectedSemester(item)}
-          />
-        )}
+          {selectedUniversity && (
+            <Section
+              title="Course"
+              items={courses}
+              selectedItem={selectedCourse}
+              onSelect={(item) => setSelectedCourse(item)}
+            />
+          )}
 
-        {selectedSemester && (
-          <Section
-            title="Subject"
-            items={subjects}
-            selectedItem={selectedSubject}
-            onSelect={(item) => setSelectedSubject(item)}
-          />
-        )}
+          {selectedCourse && (
+            <Section
+              title="Semester"
+              items={semesters}
+              selectedItem={selectedSemester}
+              onSelect={(item) => setSelectedSemester(item)}
+            />
+          )}
 
-        {selectedSubject && (
-          <Section
-            title="Unit"
-            items={units}
-            selectedItem={selectedUnit}
-            onSelect={(item) => setSelectedUnit(item)}
-          />
-        )}
+          {selectedSemester && (
+            <Section
+              title="Subject"
+              items={subjects}
+              selectedItem={selectedSubject}
+              onSelect={(item) => setSelectedSubject(item)}
+            />
+          )}
 
-        {selectedUnit && (
-          <Section
-            title="Topic"
-            items={topics}
-            selectedItem={selectedTopic}
-            onSelect={(item) => setSelectedTopic(item)}
-          />
-        )}
+          {selectedSubject && (
+            <Section
+              title="Unit"
+              items={units}
+              selectedItem={selectedUnit}
+              onSelect={(item) => setSelectedUnit(item)}
+            />
+          )}
 
-        {selectedTopic && (
-          <Section
-            title="Content Titles"
-            items={contentTitles}
-            selectedItem={""}
-            onSelect={() => {}}
-          />
-        )}
+          {selectedUnit && (
+            <Section
+              title="Topic"
+              items={topics}
+              selectedItem={selectedTopic}
+              onSelect={(item) => setSelectedTopic(item)}
+            />
+          )}
 
-        {selectedTopic && filteredContent.length > 0 && (
-          <div className="final-content-section">
-            {filteredContent.map((item, idx) => (
-              <motion.div
-                key={idx}
-                className="final-content-card"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: idx * 0.1 }}
-              >
-                <h3>{item.contentTitle}</h3>
-                <div className="description-box">
-                  <strong>Description:</strong>
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                    {item.description}
-                  </ReactMarkdown>
-                </div>
-                {item.fileUrl && (
+          {selectedTopic && (
+            <Section
+              title="Content Titles"
+              items={contentTitles}
+              selectedItem={""}
+              onSelect={() => {}}
+            />
+          )}
+
+          {selectedTopic && filteredContent.length > 0 && (
+            <div className="final-content-section">
+              {filteredContent.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="final-content-card"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: idx * 0.1 }}
+                >
+                  <h3>{item.contentTitle}</h3>
+                  <div className="description-box">
+                    <strong>Description:</strong>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {item.description}
+                    </ReactMarkdown>
+                  </div>
+                  {item.fileUrl && (
+                    <p>
+                      <strong>File:</strong>{" "}
+                      <a
+                        href={item.fileUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View File
+                      </a>
+                    </p>
+                  )}
                   <p>
-                    <strong>File:</strong>{" "}
-                    <a
-                      href={item.fileUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View File
-                    </a>
+                    <strong>Type:</strong> {item.contentType}
                   </p>
-                )}
-                <p>
-                  <strong>Type:</strong> {item.contentType}
-                </p>
-                <p>
-                  <strong>Status:</strong> {item.status}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        )}
-      </div>
+                  <p>
+                    <strong>Status:</strong> {item.status}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
