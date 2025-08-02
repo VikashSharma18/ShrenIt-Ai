@@ -19,6 +19,7 @@ const MockUpLabs = () => {
     eyes: "red",
   });
   const [questions, setQuestions] = useState({});
+  const [allCategories, setAllCategories] = useState([]);
   const [isLoadingQuestions, setIsLoadingQuestions] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [canStartInterview, setCanStartInterview] = useState(false);
@@ -46,21 +47,25 @@ const MockUpLabs = () => {
     return shuffled.slice(0, Math.min(count, array.length));
   };
 
-  // Fetch questions and select 5 random categories and 5 random questions per category
+  // Fetch questions and select 5 random categories for questions
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
         setIsLoadingQuestions(true);
         const response = await axios.get("/questions.json");
-        console.log("Fetched questions:", response.data); // Debug log
-        // Select 5 random categories
-        const allCategories = Object.keys(response.data);
-        const randomCategories = getRandomItems(allCategories);
-        // Randomize 5 questions for each selected category
+        console.log("Fetched questions:", response.data);
+
+        // Store all categories
+        const categories = Object.keys(response.data);
+        setAllCategories(categories);
+
+        // Select 5 random categories for questions
+        const randomCategories = getRandomItems(categories);
         const randomizedQuestions = {};
         randomCategories.forEach((category) => {
           randomizedQuestions[category] = getRandomItems(
-            response.data[category]
+            response.data[category],
+            5
           );
         });
         setQuestions(randomizedQuestions);
@@ -73,7 +78,6 @@ const MockUpLabs = () => {
     };
     fetchQuestions();
   }, []);
-
   // Check camera permissions
   useEffect(() => {
     const checkPermissions = async () => {
@@ -575,8 +579,8 @@ const MockUpLabs = () => {
               <option value="" disabled>
                 Select a category
               </option>
-              {Object.keys(questions).length > 0 ? (
-                Object.keys(questions).map((category) => (
+              {allCategories.length > 0 ? (
+                allCategories.map((category) => (
                   <option key={category} value={category}>
                     {category
                       .split("_")
